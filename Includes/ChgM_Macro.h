@@ -71,6 +71,19 @@
 #define AC_CUR_STEP  20  /* cur step 2A */
 /* end of config down current parameter */
 
+#define ELOCK_INVERT_OPEN    0x00U
+#define ELOCK_POS_OPEN       0x01U
+#define ELOCK_INVERT_CLOSE   0x02U
+#define ELOCK_POS_CLOSE      0x03U
+#define ELOCK_LOW_LEVEL      0x0U
+#define ELOCK_HIGH_LEVEL     0x1U
+
+
+
+#define ELOCK_FDSIGNAL_TYPE  ELOCK_HIGH_LEVEL 
+#define ELOCK_CMD_OPEN       ELOCK_INVERT_OPEN
+#define ELOCK_CMD_CLOSE      ELOCK_POS_CLOSE
+
 
 #define CHGM_JUDGE_CUR          300                  /* 30 A*/
 #define CHGM_ERR_MAX_CUR        (OFFSET_CUR - 300)   /* 30A */

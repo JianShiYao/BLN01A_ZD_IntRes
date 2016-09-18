@@ -1,51 +1,51 @@
 Units and locations in library 'F:\BLN01A_LIB\ISO\BLN01A_Lib\lib\Lib.lib'
 Unit name              size     from       to
-AiIf.c.o               5787   779305   785092
-AiIf_Lcfg.c.o          6052   785092   791144
-AppRelay.c.o          13595  1086423  1100018
+AiIf.c.o               5787   780609   786396
+AiIf_Lcfg.c.o          6052   786396   792448
+AppRelay.c.o          13595  1087727  1101322
 BalM-E.c.o            70630   156822   227452
-CanIf.c.o             32913   725439   758352
-CanTp.c.o             20953   758352   779305
-Can_Lcfg.c.o          23234   702205   725439
-CellvDet.c.o          39656   500617   540273
-CellvIf.c.o           28756   926347   955103
-ClockIf.c.o           14271   966674   980945
-Clock_Lcfg.c.o        11571   955103   966674
-CpuEEIf.c.o            8926   840892   849818
-CurDet.c.o            30062   540273   570335
-CurrentIf.c.o         25116   988518  1013634
-Current_Lcfg.c.o       7573   980945   988518
+CanIf.c.o             32913   726743   759656
+CanTp.c.o             20953   759656   780609
+Can_Lcfg.c.o          23234   703509   726743
+CellvDet.c.o          39656   501921   541577
+CellvIf.c.o           28756   927651   956407
+ClockIf.c.o           14271   967978   982249
+Clock_Lcfg.c.o        11571   956407   967978
+CpuEEIf.c.o            8926   842196   851122
+CurDet.c.o            30062   541577   571639
+CurrentIf.c.o         25116   989822  1014938
+Current_Lcfg.c.o       7573   982249   989822
 DataStore.c.o         59021       97    59118
-DiIf.c.o               4755   796892   801647
-Di_Lcfg.c.o            5748   791144   796892
-DoIf.c.o               4082   801647   805729
+DiIf.c.o               4755   798196   802951
+Di_Lcfg.c.o            5748   792448   798196
+DoIf.c.o               4082   802951   807033
 EE.c.o                92029    59118   151147
 EE_CRC16.c.o           5675   151147   156822
 ExctCmd.c.o          163291   240226   403517
-ExternEEIf.c.o        12834   849818   862652
-ExternFlashIf.c.o     23368   895267   918635
-IntCan.c.o            97100   403517   500617
-IocIf.c.o             15221   815675   830896
-Ioc_Lcfg.c.o           9946   805729   815675
-IsoDet.c.o            23743   575990   599733
-IsoIf.c.o             19115  1020274  1039389
-Iso_Lcfg.c.o           6640  1013634  1020274
+ExternEEIf.c.o        12834   851122   863956
+ExternFlashIf.c.o     23368   896571   919939
+IntCan.c.o            98404   403517   501921
+IocIf.c.o             15221   816979   832200
+Ioc_Lcfg.c.o           9946   807033   816979
+IsoDet.c.o            23743   577294   601037
+IsoIf.c.o             19115  1021578  1040693
+Iso_Lcfg.c.o           6640  1014938  1021578
 LvM.c.o               12774   227452   240226
-NvmIf.c.o              6286   888981   895267
-Nvm_Lcfg.c.o          26329   862652   888981
-RelayIf.c.o            4823   836069   840892
-Relay_Lcfg.c.o         5173   830896   836069
-SOC-A.c.o             54727   629937   684664
-SOH-A.c.o             17541   684664   702205
-SensorDi.c.o           5655   570335   575990
-SumvDet.c.o           17977   599733   617710
-SumvIf.c.o            21595  1049233  1070828
-Sumv_Lcfg.c.o          9844  1039389  1049233
-TemperDet.c.o         12227   617710   629937
-TemperIf.c.o           5203  1081220  1086423
-Temper_Lcfg.c.o       10392  1070828  1081220
-WdgIf.c.o              3577   918635   922212
-WdgM.c.o               4135   922212   926347
+NvmIf.c.o              6286   890285   896571
+Nvm_Lcfg.c.o          26329   863956   890285
+RelayIf.c.o            4823   837373   842196
+Relay_Lcfg.c.o         5173   832200   837373
+SOC-A.c.o             54727   631241   685968
+SOH-A.c.o             17541   685968   703509
+SensorDi.c.o           5655   571639   577294
+SumvDet.c.o           17977   601037   619014
+SumvIf.c.o            21595  1050537  1072132
+Sumv_Lcfg.c.o          9844  1040693  1050537
+TemperDet.c.o         12227   619014   631241
+TemperIf.c.o           5203  1082524  1087727
+Temper_Lcfg.c.o       10392  1072132  1082524
+WdgIf.c.o              3577   919939   923516
+WdgM.c.o               4135   923516   927651
 
 EXPORTED OBJECTS
 AC_CP_IOC_CntrState                    I   (Ioc_Lcfg.c.o)
@@ -477,6 +477,9 @@ Chg_GetChgStage                        I   (SOH-A.c.o)
 Chg_GetCpDutyCycle                     I   (IntCan.c.o)
 Chg_GetDcLinkSt                        I   (IntCan.c.o)
 Chg_GetDownCurrentStep                 I   (IntCan.c.o)
+Chg_GetElockRecSt                      I   (IntCan.c.o)
+Chg_GetFdSignalType                    I   (IntCan.c.o)
+Chg_GetNtcType                         I   (IntCan.c.o)
 Chg_GetOutPutCurrent                   I   (IntCan.c.o)
 Chg_GetOutPutEnergy                    I   (IntCan.c.o)
 Chg_GetOutPutVoltage                   I   (IntCan.c.o)
@@ -490,6 +493,11 @@ Chg_GetPermitMaxSumV                   I   (IntCan.c.o)
 Chg_GetPermitMaxT                      I   (IntCan.c.o)
 Chg_GetPermitMinCurrent                I   (IntCan.c.o)
 Chg_GetRemainChgTime                   I   (IntCan.c.o)
+Chg_GetSeteLockCmd                     I   (IntCan.c.o)
+Chg_UpdateElockHdErr                   I   (IntCan.c.o)
+Chg_UpdateElockRecSt                   I   (IntCan.c.o)
+Chg_UpdateElockStErr                   I   (IntCan.c.o)
+Chg_UpdateElockTemper                  I   (IntCan.c.o)
 ClockIf_Init                           F   (ClockIf.c.o)
 ClockIf_ReadTime                       F   (ClockIf.c.o)
 ClockIf_ReadTime                       I   (ExctCmd.c.o)

@@ -429,4 +429,99 @@ void Chg_UpdateErrorCode(uWord err_code)
     Chg_Info.Chg_ChargerInfo.ErrorCode = err_code;
 }
 
+uByte Chg_GetSeteLockCmd(void)
+{
+    return Chg_Info.ElockInfo.SetLockCmd;
+}
+
+void Chg_UpdateSeteLockCmd(uByte Cmd)
+{
+    Chg_Info.ElockInfo.SetLockCmd = Cmd;
+}
+
+uByte Chg_GetFdSignalType(void)
+{
+    return Chg_Info.ElockInfo.SetFdSignalType;
+}
+void Chg_UpdateFdSignalType(uByte Type)
+{
+    Chg_Info.ElockInfo.SetFdSignalType = Type;
+}
+
+
+
+
+
+uByte Chg_GetNtcType(uByte St)
+{
+    return Chg_Info.ElockInfo.SetNtcType;
+}
+void Chg_UpdateNtcType(uByte St)
+{
+    Chg_Info.ElockInfo.SetNtcType = St;
+}
+
+
+uByte Chg_GetElockRecSt(void)
+{
+    return Chg_Info.ElockInfo.ElockSt;
+}
+void Chg_UpdateElockRecSt(uByte St)
+{
+     Chg_Info.ElockInfo.ElockSt = St;
+}
+
+
+uByte Chg_GetElockStErr(void)
+{
+    return Chg_Info.ElockInfo.ElockStErr;
+}
+
+void Chg_UpdateElockStErr(uByte Err)
+{
+     Chg_Info.ElockInfo.ElockStErr = Err ;
+}
+
+uByte Chg_GetElockTemper(uByte local)
+{
+    uByte i;
+   
+    i = local;
+    if((i > 0) && (i <= 6))
+    {
+       i = local - 1;
+       return Chg_Info.ElockInfo.ElockTemper[i];
+    }
+    else
+    {
+       return 0xFF;
+    }
+}
+
+void Chg_UpdateElockTemper(uByte local, uByte Temper)
+{
+    uByte i;
+    
+     i = local;
+    if((i > 0) && (i <= 6)) 
+    {
+       i = local - 1;
+       Chg_Info.ElockInfo.ElockTemper[i] = Temper;
+    }   
+}
+
+
+uByte Chg_GetElockHdErr(void)
+{
+    return Chg_Info.ElockInfo.ElockHdErr;
+}
+void Chg_UpdateElockHdErr(uByte Err)
+{
+     Chg_Info.ElockInfo.ElockHdErr = Err;
+}
+   
+   
+   
+
+
 #pragma DATA_SEG DEFAULT

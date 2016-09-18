@@ -410,7 +410,7 @@ void ChgM_ChgCtrl(uByte ChgSt, uByte ChgStage)
                 ChgM_Ctrl.Data.ChgStage = CHG_STAGE_CV_MODE;       
             }
             
-            if(ChgM_Ctrl.Data.Cur > OFFSET_CUR)
+            /*if(ChgM_Ctrl.Data.Cur > OFFSET_CUR)
             {
                 ChgM_Ctrl.Cnt.NoCurErr++;
                 if(ChgM_Ctrl.Cnt.NoCurErr > CHGM_CNT_NO_CHG_CUR)
@@ -418,7 +418,7 @@ void ChgM_ChgCtrl(uByte ChgSt, uByte ChgStage)
                     ChgM_Ctrl.Cnt.NoCurErr = CHGM_CNT_NO_CHG_CUR;
                     ChgM_Ctrl.Data.ChgSt = CHG_ST_ERR;
                 }
-            }
+            }*/
 
             break;
         }
@@ -514,10 +514,7 @@ void ChgM_ChgCtrl(uByte ChgSt, uByte ChgStage)
         /* Not allow Charg */
         ChgM_Ctrl.Data.PmtChgCur = 0;
         ChgM_Ctrl.Data.ChgEnable = CHGM_FLAG_DISABLE;
-        if((ChgM_Ctrl.Flag.ChgRx == CHGM_FLAG_OK) && (ChgM_Ctrl.Data.LinkSt == CHGM_FLAG_OK) && (ChgM_Ctrl.ChgEndReason.LWd == 0) )
-        {
-           ChgM_Ctrl.Data.ChgSt = CHG_ST_OFF;           
-        }
+       
         break;
     }
     case CHG_ST_END:

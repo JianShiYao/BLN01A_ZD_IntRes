@@ -208,11 +208,25 @@ typedef struct
 
 typedef struct
 {
+   uByte  SetLockCmd;
+   uByte  SetFdSignalType;
+   uByte  SetNtcType;
+   
+   uByte  ElockSt;
+   uByte  ElockStErr;
+   uByte  ElockTemper[6];
+   uByte  ElockHdErr;
+}sChg_ElecLockInfoType;
+
+
+typedef struct
+{
     sChg_InterfaceType  Chg_Interface;
     sChg_ParameterType  Chg_Parameter;
     sChg_CtrlType       Chg_Ctrl;
     sChg_EndReasonType  Chg_EndReason;
     sChg_ChargerInfoType  Chg_ChargerInfo;
+    sChg_ElecLockInfoType  ElockInfo;
 } sChg_InfoType;
 
 extern void ChgInfo_Init(void);
@@ -330,5 +344,31 @@ extern  void Chg_UpdateOutPutEnergy(uWord energy);
 
 extern  uWord Chg_GetErrorCode(void);
 extern  void Chg_UpdateErrorCode(uWord err_code);
+
+extern uByte Chg_GetSeteLockCmd(void);
+extern void Chg_UpdateSeteLockCmd(uByte Cmd);
+
+extern uByte Chg_GetSeteLockCmd(void);
+extern void Chg_UpdateSeteLockCmd(uByte Cmd);
+
+extern uByte Chg_GetFdSignalType(void);
+extern void Chg_UpdateFdSignalType(uByte Type);
+
+
+extern uByte Chg_GetNtcType(void);
+extern void Chg_UpdateNtcType(uByte Type);
+
+extern uByte Chg_GetElockRecSt(void);
+extern void Chg_UpdateElockRecSt(uByte St);
+
+extern uByte Chg_GetElockStErr(void);
+extern void Chg_UpdateElockStErr(uByte StErr);
+
+extern uByte Chg_GetElockTemper(uByte local);
+extern void Chg_UpdateElockTemper(uByte local, uByte Temper);
+
+extern uByte Chg_GetElockHdErr(void);
+extern void Chg_UpdateElockHdErr(uByte HdErr);
+
 
 #endif  /* ChargeSt_H */

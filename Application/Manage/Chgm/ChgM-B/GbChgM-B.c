@@ -167,6 +167,8 @@ void GbChgM_ModuleInit(void)
     }
     
     GbChgM_Ctrl.ChgStep = ChgStep11;
+    Chg_UpdateSeteLockCmd(ELOCK_CMD_OPEN);
+    Chg_UpdateFdSignalType(ELOCK_FDSIGNAL_TYPE);
 }
 
 void GbChgM_ModuleCountCbk(void)
@@ -378,6 +380,8 @@ void GbChgM_LinkModeJudge(void)
         }
        
         lwd_ac_chg_pmt_cur = lwd_cc_cur;
+        
+        break;
 
     }
     case AC_CHG_MODE3_A:
