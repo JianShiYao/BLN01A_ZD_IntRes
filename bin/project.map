@@ -1,5 +1,5 @@
 
-PROGRAM "F:\BLN01A_LIB\BLN01A_Lib_testOK\BLN01A_Lib_test\bin\project"
+PROGRAM "F:\BLN01A_LIB\ISO\BLN01A_Lib_(V02Lib)\bin\project"
 
 *********************************************************************************************
 TARGET SECTION
@@ -173,7 +173,7 @@ Section Name                    Size  Type     From       To       Segment
 .rodata                         6810     R     0xC05B     0xDAF4   ROM_C000
 NON_BANKED                      1137     R     0xDAF5     0xDF65   ROM_C000
 .copy                           2966     R     0x4000     0x4B95   ROM_4000
-.text                          16053     R   0xFE8000   0xFEBEB4   PAGE_FE
+.text                          16181     R   0xFE8000   0xFEBF34   PAGE_FE
 .data                            123   R/W     0x2000     0x207A   RAM
 BOOT_RAM                           2   N/I     0x3FEF     0x3FF0   BOOTRAM
 PAGED_RAM                      10031   R/W  0xF0000'G    0xF272E   RAM_FABCD
@@ -969,12 +969,12 @@ PAGE_FB_741                    15725     R   0xFB8000   0xFBBD6C   PAGE_FB
 PAGE_FA_742                    16267     R   0xFA8000   0xFABF8A   PAGE_FA
 PAGE_F9_743                    16200     R   0xF98000   0xF9BF47   PAGE_F9
 PAGE_F8_744                    15955     R   0xF88000   0xF8BE52   PAGE_F8
-PAGE_F7_745                    15742     R   0xF78000   0xF7BD7D   PAGE_F7
+PAGE_F7_745                    15743     R   0xF78000   0xF7BD7E   PAGE_F7
 PAGE_F6_746                    12965     R   0xF68000   0xF6B2A4   PAGE_F6
 PAGE_F5_747                      214     R   0xF58000   0xF580D5   PAGE_F5
 
 Summary of section sizes per section type:
-READ_ONLY (R):       223DA (dec:   140250)
+READ_ONLY (R):       2245B (dec:   140379)
 READ_WRITE (R/W):     36FE (dec:    14078)
 NO_INIT (N/I):         385 (dec:      901)
 
@@ -1240,20 +1240,20 @@ MODULE:                 -- ErrorAlarm.c.o --
      Err_Main                                FE9401      AA     170       2   .text       
      Err_CheckErrChanged                     FE94AB      88     136       2   .text       
      Err_JudgeHighThrhd                      FE9533     20F     527      26   .text       
-     Err_JudgeLowThrhd                       FE9742     20F     527      10   .text       
+     Err_JudgeLowThrhd                       FE9742     20F     527      12   .text       
      Err_JudgeBatErrLevel                    FE9951     9A3    2467       2   .text       
-     Err_JudgeBatSysErrLevel                 FEA2F4      E6     230       2   .text       
-     Err_DealHwErrLevel                      FEA3DA     67E    1662       2   .text       
-     Err_DealHwErrDetail                     FEAA58      52      82       2   .text       
+     Err_JudgeBatSysErrLevel                 FEA2F4     166     358       2   .text       
+     Err_DealHwErrLevel                      FEA45A     67E    1662       2   .text       
+     Err_DealHwErrDetail                     FEAAD8      52      82       2   .text       
 - VARIABLES:
      gby_ReadErrThrhd                         F0BAD'G       1       1       4   PAGED_RAM   
      Err_TmCnt                                F0BAE'G       2       2      12   PAGED_RAM   
-     Err_HystrsThrhd                          F0BB0'G       C      12     152   PAGED_RAM   
-     Err_HystrsCnt                            F0BBC'G      E4     228      20   PAGED_RAM   
+     Err_HystrsThrhd                          F0BB0'G       C      12     160   PAGED_RAM   
+     Err_HystrsCnt                            F0BBC'G      E4     228      21   PAGED_RAM   
      Err_Thrhd                                F0CA0'G      54      84      70   PAGED_RAM   
      Err_BatErrCode                           F0CF4'G       8       8      70   PAGED_RAM   
      Err_BatErrCodeBak                        F0CFC'G       8       8       5   PAGED_RAM   
-     Err_BatSysErrCode                        F0D04'G      10      16      18   PAGED_RAM   
+     Err_BatSysErrCode                        F0D04'G      10      16      21   PAGED_RAM   
      Err_BatSysErrCodeBak                     F0D14'G      10      16       6   PAGED_RAM   
      Err_HwErrCodeBmu                         F0D24'G       8       8      38   PAGED_RAM   
      Err_HwErrDetailBmu                       F0D2C'G      40      64       6   PAGED_RAM   
@@ -1263,229 +1263,229 @@ MODULE:                 -- ErrorAlarm.c.o --
      Err_HwErrDetailBak                       F0DBC'G      40      64       2   PAGED_RAM   
 MODULE:                 -- ChargeSt.c.o --
 - PROCEDURES:
-     ChgInfo_Init                            FEAAAA      39      57       2   .text       
-     Chg_GetAcLinkSt                         FEAAE3       9       9      34   .text       
-     Chg_UpdateAcLinkSt                      FEAAEC       9       9       2   .text       
-     Chg_GetCableCap                         FEAAF5       9       9       2   .text       
-     Chg_UpdateCableCap                      FEAAFE       A      10       4   .text       
-     Chg_GetCcVolt                           FEAB08       9       9       6   .text       
-     Chg_UpdateCCVolt                        FEAB11       A      10       2   .text       
-     Chg_UpdateCpPeriod                      FEAB1B       A      10       2   .text       
-     Chg_GetCpDutyCycle                      FEAB25       9       9       6   .text       
-     Chg_UpdateCpDutyCycle                   FEAB2E       9       9       2   .text       
-     Chg_GetDcLinkSt                         FEAB37       9       9      16   .text       
-     Chg_UpdateDcLinkSt                      FEAB40       9       9       2   .text       
-     Chg_GetCc2Volt                          FEAB49       9       9       4   .text       
-     Chg_UpdateCc2Volt                       FEAB52       A      10       2   .text       
-     Chg_GetPermitMaxT                       FEAB5C       9       9       6   .text       
-     Chg_UpdatePermitMaxT                    FEAB65       9       9       2   .text       
-     Chg_GetPermitMinT                       FEAB6E       9       9       2   .text       
-     Chg_UpdatePermitMinT                    FEAB77       9       9       2   .text       
-     Chg_GetPermitMaxSumV                    FEAB80       9       9      14   .text       
-     Chg_UpdatePermitMaxSumV                 FEAB89       A      10       2   .text       
-     Chg_GetPermitMaxCellV                   FEAB93       9       9      14   .text       
-     Chg_UpdatePermitMaxCellV                FEAB9C       A      10       2   .text       
-     Chg_GetPermitMinCellV                   FEABA6       9       9       2   .text       
-     Chg_UpdatePermitMinCellV                FEABAF       A      10       2   .text       
-     Chg_GetPermitMaxCurrent                 FEABB9       9       9       4   .text       
-     Chg_UpdatePermitMaxCurrent              FEABC2       A      10       2   .text       
-     Chg_GetPermitMinCurrent                 FEABCC       9       9       4   .text       
-     Chg_UpdatePermitMinCurrent              FEABD5       A      10       2   .text       
-     Chg_GetDownCurrentStep                  FEABDF       9       9       4   .text       
-     Chg_UpdateDownCurrentStep               FEABE8       A      10       2   .text       
-     Chg_GetPermitChgExtSt                   FEABF2       9       9      10   .text       
-     Chg_UpdatePermitChgExtSt                FEABFB       9       9       2   .text       
-     Chg_GetPermitChgOnSt                    FEAC04       9       9       6   .text       
-     Chg_UpdatePermitChgOnSt                 FEAC0D       9       9       4   .text       
-     Chg_GetPermitChgCurOn                   FEAC16       9       9       4   .text       
-     Chg_UpdatePermitChgCurOn                FEAC1F       A      10       2   .text       
-     Chg_GetPermitChgCurExt                  FEAC29       9       9       6   .text       
-     Chg_UpdatePermitChgCurExt               FEAC32       A      10       2   .text       
-     Chg_GetChgSt                            FEAC3C       9       9      26   .text       
-     Chg_UpdateChgSt                         FEAC45       9       9       2   .text       
-     Chg_GetChgStage                         FEAC4E       9       9      10   .text       
-     Chg_UpdateChgStage                      FEAC57       9       9       2   .text       
-     Chg_GetAccumulatedChgTime               FEAC60       9       9       2   .text       
-     Chg_GetRemainChgTime                    FEAC69       9       9       4   .text       
-     Chg_UpdateRemainChgTime                 FEAC72       A      10       2   .text       
-     Chg_GetBmsStopReason                    FEAC7C       D      13       2   .text       
-     Chg_UpdateBmsStopReason                 FEAC89       E      14       2   .text       
-     Chg_GetChargerStopReason                FEAC97       9       9       2   .text       
-     Chg_UpdateChargerStopReason             FEACA0      48      72       2   .text       
-     Chg_GetChargerFault                     FEACE8       9       9       2   .text       
-     Chg_UpdateChargerFault                  FEACF1      9B     155       2   .text       
-     Chg_GetChargerSt                        FEAD8C       9       9       2   .text       
-     Chg_GetOutPutVoltage                    FEAD95       9       9       2   .text       
-     Chg_UpdateOutPutVoltage                 FEAD9E       A      10       2   .text       
-     Chg_GetOutPutCurrent                    FEADA8       9       9       2   .text       
-     Chg_UpdateOutPutCurrent                 FEADB1       A      10       2   .text       
-     Chg_UpdateMaxOutPutVoltage              FEADBB       A      10       2   .text       
-     Chg_UpdateMinOutPutVoltage              FEADC5       A      10       2   .text       
-     Chg_GetOutPutMinCurrent                 FEADCF       9       9       2   .text       
-     Chg_UpdateOutPutMinCurrent              FEADD8       A      10       2   .text       
-     Chg_GetOutPutMaxCurrent                 FEADE2       9       9       2   .text       
-     Chg_UpdateOutPutMaxCurrent              FEADEB       A      10       2   .text       
-     Chg_GetOutPutEnergy                     FEADF5       9       9       2   .text       
-     Chg_GetSeteLockCmd                      FEADFE       9       9       2   .text       
-     Chg_UpdateSeteLockCmd                   FEAE07       9       9       2   .text       
-     Chg_GetFdSignalType                     FEAE10       9       9       2   .text       
-     Chg_UpdateFdSignalType                  FEAE19       9       9       2   .text       
-     Chg_GetNtcType                          FEAE22       9       9       2   .text       
-     Chg_GetElockRecSt                       FEAE2B       9       9       2   .text       
-     Chg_UpdateElockRecSt                    FEAE34       9       9       2   .text       
-     Chg_UpdateElockStErr                    FEAE3D       9       9       2   .text       
-     Chg_UpdateElockTemper                   FEAE46      1F      31       2   .text       
-     Chg_UpdateElockHdErr                    FEAE65       9       9       2   .text       
+     ChgInfo_Init                            FEAB2A      39      57       2   .text       
+     Chg_GetAcLinkSt                         FEAB63       9       9      34   .text       
+     Chg_UpdateAcLinkSt                      FEAB6C       9       9       2   .text       
+     Chg_GetCableCap                         FEAB75       9       9       2   .text       
+     Chg_UpdateCableCap                      FEAB7E       A      10       4   .text       
+     Chg_GetCcVolt                           FEAB88       9       9       6   .text       
+     Chg_UpdateCCVolt                        FEAB91       A      10       2   .text       
+     Chg_UpdateCpPeriod                      FEAB9B       A      10       2   .text       
+     Chg_GetCpDutyCycle                      FEABA5       9       9       6   .text       
+     Chg_UpdateCpDutyCycle                   FEABAE       9       9       2   .text       
+     Chg_GetDcLinkSt                         FEABB7       9       9      16   .text       
+     Chg_UpdateDcLinkSt                      FEABC0       9       9       2   .text       
+     Chg_GetCc2Volt                          FEABC9       9       9       4   .text       
+     Chg_UpdateCc2Volt                       FEABD2       A      10       2   .text       
+     Chg_GetPermitMaxT                       FEABDC       9       9       6   .text       
+     Chg_UpdatePermitMaxT                    FEABE5       9       9       2   .text       
+     Chg_GetPermitMinT                       FEABEE       9       9       2   .text       
+     Chg_UpdatePermitMinT                    FEABF7       9       9       2   .text       
+     Chg_GetPermitMaxSumV                    FEAC00       9       9      14   .text       
+     Chg_UpdatePermitMaxSumV                 FEAC09       A      10       2   .text       
+     Chg_GetPermitMaxCellV                   FEAC13       9       9      14   .text       
+     Chg_UpdatePermitMaxCellV                FEAC1C       A      10       2   .text       
+     Chg_GetPermitMinCellV                   FEAC26       9       9       2   .text       
+     Chg_UpdatePermitMinCellV                FEAC2F       A      10       2   .text       
+     Chg_GetPermitMaxCurrent                 FEAC39       9       9       4   .text       
+     Chg_UpdatePermitMaxCurrent              FEAC42       A      10       2   .text       
+     Chg_GetPermitMinCurrent                 FEAC4C       9       9       4   .text       
+     Chg_UpdatePermitMinCurrent              FEAC55       A      10       2   .text       
+     Chg_GetDownCurrentStep                  FEAC5F       9       9       4   .text       
+     Chg_UpdateDownCurrentStep               FEAC68       A      10       2   .text       
+     Chg_GetPermitChgExtSt                   FEAC72       9       9      10   .text       
+     Chg_UpdatePermitChgExtSt                FEAC7B       9       9       2   .text       
+     Chg_GetPermitChgOnSt                    FEAC84       9       9       6   .text       
+     Chg_UpdatePermitChgOnSt                 FEAC8D       9       9       4   .text       
+     Chg_GetPermitChgCurOn                   FEAC96       9       9       4   .text       
+     Chg_UpdatePermitChgCurOn                FEAC9F       A      10       2   .text       
+     Chg_GetPermitChgCurExt                  FEACA9       9       9       6   .text       
+     Chg_UpdatePermitChgCurExt               FEACB2       A      10       2   .text       
+     Chg_GetChgSt                            FEACBC       9       9      26   .text       
+     Chg_UpdateChgSt                         FEACC5       9       9       2   .text       
+     Chg_GetChgStage                         FEACCE       9       9      10   .text       
+     Chg_UpdateChgStage                      FEACD7       9       9       2   .text       
+     Chg_GetAccumulatedChgTime               FEACE0       9       9       2   .text       
+     Chg_GetRemainChgTime                    FEACE9       9       9       4   .text       
+     Chg_UpdateRemainChgTime                 FEACF2       A      10       2   .text       
+     Chg_GetBmsStopReason                    FEACFC       D      13       2   .text       
+     Chg_UpdateBmsStopReason                 FEAD09       E      14       2   .text       
+     Chg_GetChargerStopReason                FEAD17       9       9       2   .text       
+     Chg_UpdateChargerStopReason             FEAD20      48      72       2   .text       
+     Chg_GetChargerFault                     FEAD68       9       9       2   .text       
+     Chg_UpdateChargerFault                  FEAD71      9B     155       2   .text       
+     Chg_GetChargerSt                        FEAE0C       9       9       2   .text       
+     Chg_GetOutPutVoltage                    FEAE15       9       9       2   .text       
+     Chg_UpdateOutPutVoltage                 FEAE1E       A      10       2   .text       
+     Chg_GetOutPutCurrent                    FEAE28       9       9       2   .text       
+     Chg_UpdateOutPutCurrent                 FEAE31       A      10       2   .text       
+     Chg_UpdateMaxOutPutVoltage              FEAE3B       A      10       2   .text       
+     Chg_UpdateMinOutPutVoltage              FEAE45       A      10       2   .text       
+     Chg_GetOutPutMinCurrent                 FEAE4F       9       9       2   .text       
+     Chg_UpdateOutPutMinCurrent              FEAE58       A      10       2   .text       
+     Chg_GetOutPutMaxCurrent                 FEAE62       9       9       2   .text       
+     Chg_UpdateOutPutMaxCurrent              FEAE6B       A      10       2   .text       
+     Chg_GetOutPutEnergy                     FEAE75       9       9       2   .text       
+     Chg_GetSeteLockCmd                      FEAE7E       9       9       2   .text       
+     Chg_UpdateSeteLockCmd                   FEAE87       9       9       2   .text       
+     Chg_GetFdSignalType                     FEAE90       9       9       2   .text       
+     Chg_UpdateFdSignalType                  FEAE99       9       9       2   .text       
+     Chg_GetNtcType                          FEAEA2       9       9       2   .text       
+     Chg_GetElockRecSt                       FEAEAB       9       9       2   .text       
+     Chg_UpdateElockRecSt                    FEAEB4       9       9       2   .text       
+     Chg_UpdateElockStErr                    FEAEBD       9       9       2   .text       
+     Chg_UpdateElockTemper                   FEAEC6      1F      31       2   .text       
+     Chg_UpdateElockHdErr                    FEAEE5       9       9       2   .text       
 - VARIABLES:
      Chg_Info                                 F0DFC'G      50      80     167   PAGED_RAM   
 MODULE:                 -- BatteryStAllPack.c.o --
 - PROCEDURES:
-     BatPackInfo_Init                        FEAE6E     125     293       2   .text       
-     Bat_StatusInit                          FEAF93      BF     191       2   .text       
-     Bat_GetCurrent                          FEB052      2E      46      34   .text       
-     Bat_UpdateCurrent                       FEB080      38      56       8   .text       
-     Bat_GetSumV                             FEB0B8      5E      94      32   .text       
-     Bat_UpdateSumV                          FEB116      74     116      10   .text       
-     Bat_GetSOC                              FEB18A      13      19      26   .text       
-     Bat_UpdateSOC                           FEB19D      18      24       6   .text       
-     Bat_GetTemper                           FEB1B5      77     119      14   .text       
-     Bat_UpdateTemper                        FEB22C      7B     123       4   .text       
-     Bat_GetMaxV                             FEB2A7      12      18      24   .text       
-     Bat_UpdateMaxV                          FEB2B9      17      23       4   .text       
-     Bat_GetMinV                             FEB2D0      12      18      20   .text       
-     Bat_UpdateMinV                          FEB2E2      17      23       4   .text       
-     Bat_GetMaxVTotalNo                      FEB2F9      12      18       6   .text       
-     Bat_UpdateMaxVTotalNo                   FEB30B      17      23       4   .text       
-     Bat_GetMinVTotalNo                      FEB322      12      18       4   .text       
-     Bat_UpdateMinVTotalNo                   FEB334      17      23       4   .text       
-     Bat_UpdateMaxVSingleNo                  FEB34B      12      18       2   .text       
-     Bat_UpdateMinVSingleNo                  FEB35D      12      18       2   .text       
-     Bat_GetMaxVBmuNo                        FEB36F      12      18       2   .text       
-     Bat_UpdateMaxVBmuNo                     FEB381      12      18       2   .text       
-     Bat_UpdateMinVBmuNo                     FEB393      12      18       2   .text       
-     Bat_GetMaxT                             FEB3A5      12      18      44   .text       
-     Bat_UpdateMaxT                          FEB3B7      12      18       4   .text       
-     Bat_GetMinT                             FEB3C9      12      18      22   .text       
-     Bat_UpdateMinT                          FEB3DB      12      18       4   .text       
-     Bat_GetMaxTTotalNo                      FEB3ED      12      18       6   .text       
-     Bat_UpdateMaxTTotalNo                   FEB3FF      17      23       4   .text       
-     Bat_GetMinTTotalNo                      FEB416      13      19       6   .text       
-     Bat_UpdateMinTTotalNo                   FEB429      18      24       4   .text       
-     Bat_UpdateMaxTSingleNo                  FEB441      13      19       2   .text       
-     Bat_UpdateMinTSingleNo                  FEB454      13      19       2   .text       
-     Bat_UpdateMaxTBmuNo                     FEB467      13      19       2   .text       
-     Bat_UpdateMinTBmuNo                     FEB47A      13      19       2   .text       
-     Bat_GetMaxR                             FEB48D      13      19       8   .text       
-     Bat_GetMinR                             FEB4A0      13      19       6   .text       
-     Bat_GetMaxRTotalNo                      FEB4B3      13      19       4   .text       
-     Bat_GetMinRTotalNo                      FEB4C6      13      19       4   .text       
-     Bat_GetMaxPermitDchCur                  FEB4D9      13      19       4   .text       
-     Bat_UpdateMaxPermitDchCur               FEB4EC      18      24       2   .text       
-     Bat_GetMaxFeedBackCur                   FEB504      13      19       4   .text       
-     Bat_UpdateMaxFeedBackCur                FEB517      18      24       2   .text       
-     Bat_UpdateMaxPermitFeedbackPower        FEB52F      18      24       2   .text       
-     Bat_UpdateMaxPermitDchPower             FEB547      18      24       2   .text       
-     Bat_UpdateMaxPulseDchCur                FEB55F      18      24       2   .text       
-     Bat_UpdateMaxPulseFeedBackCur           FEB577      18      24       2   .text       
-     Bat_UpdateMaxPulseDchPower              FEB58F      18      24       2   .text       
-     Bat_UpdateMaxPulseFeedbackPower         FEB5A7      18      24       2   .text       
-     Bat_GetHisMaxV                          FEB5BF      12      18       2   .text       
-     Bat_UpdateHisMaxV                       FEB5D1      17      23       2   .text       
-     Bat_GetHisMinV                          FEB5E8      12      18       2   .text       
-     Bat_UpdateHisMinV                       FEB5FA      17      23       2   .text       
-     Bat_GetHisDeltaV                        FEB611      12      18       2   .text       
-     Bat_UpdateHisDeltaV                     FEB623      17      23       2   .text       
-     Bat_GetHisMaxAvgV                       FEB63A      12      18       2   .text       
-     Bat_UpdateHisMaxAvgV                    FEB64C      17      23       2   .text       
-     Bat_GetHisMinAvgV                       FEB663      12      18       2   .text       
-     Bat_UpdateHisMinAvgV                    FEB675      17      23       2   .text       
-     Bat_GetHisMaxT                          FEB68C      12      18       2   .text       
-     Bat_UpdateHisMaxT                       FEB69E      12      18       2   .text       
-     Bat_GetHisMinT                          FEB6B0      12      18       2   .text       
-     Bat_UpdateHisMinT                       FEB6C2      12      18       2   .text       
-     Bat_GetHisMaxDeltaT                     FEB6D4      13      19       2   .text       
-     Bat_UpdateHisMaxDeltaT                  FEB6E7      13      19       2   .text       
-     Bat_GetHisMaxAvgT                       FEB6FA      13      19       2   .text       
-     Bat_UpdateHisMaxAvgT                    FEB70D      13      19       2   .text       
-     Bat_GetHisMinAvgT                       FEB720      13      19       2   .text       
-     Bat_UpdateHisMinAvgT                    FEB733      13      19       2   .text       
-     Bat_GetHisMaxR                          FEB746      13      19       2   .text       
-     Bat_UpdateHisMaxR                       FEB759      18      24       2   .text       
-     Bat_GetHisMinR                          FEB771      13      19       2   .text       
-     Bat_UpdateHisMinR                       FEB784      18      24       2   .text       
-     Bat_GetHisMaxChgCur                     FEB79C      13      19       2   .text       
-     Bat_UpdateHisMaxChgCur                  FEB7AF      18      24       2   .text       
-     Bat_GetHisMaxDchCur                     FEB7C7      13      19       2   .text       
-     Bat_UpdateHisMaxDchCur                  FEB7DA      18      24       2   .text       
-     Bat_GetHisMaxChgPwr                     FEB7F2      13      19       2   .text       
-     Bat_UpdateHisMaxChgPwr                  FEB805      18      24       2   .text       
-     Bat_GetHisMaxDchPwr                     FEB81D      13      19       2   .text       
-     Bat_UpdateHisMaxDchPwr                  FEB830      18      24       2   .text       
-     Bat_GetHisMaxSumV                       FEB848      12      18       2   .text       
-     Bat_UpdateHisMaxSumV                    FEB85A      17      23       2   .text       
-     Bat_GetHisMinSumV                       FEB871      12      18       2   .text       
-     Bat_UpdateHisMinSumV                    FEB883      17      23       2   .text       
-     Bat_GetMaxTDistribution                 FEB89A      21      33       2   .text       
-     Bat_UpdateMaxTDistribution              FEB8BB      29      41       2   .text       
-     Bat_GetMinTDistribution                 FEB8E4      21      33       2   .text       
-     Bat_UpdateMinTDistribution              FEB905      29      41       2   .text       
-     Bat_GetMaxDeltaTDistribution            FEB92E      21      33       2   .text       
-     Bat_UpdateMaxDeltaTDistribution         FEB94F      29      41       2   .text       
-     Bat_GetAvgTDistribution                 FEB978      21      33       2   .text       
-     Bat_UpdateAvgTDistribution              FEB999      29      41       2   .text       
-     Bat_GetCurDistribution                  FEB9C2      23      35       2   .text       
-     Bat_UpdateCurDistribution               FEB9E5      2B      43       2   .text       
-     Bat_GetSocDistribution                  FEBA10      23      35       2   .text       
-     Bat_UpdateSocDistribution               FEBA33      2B      43       2   .text       
-     Bat_GetHisChgTimes                      FEBA5E      13      19       4   .text       
-     Bat_UpdateHisChgTimes                   FEBA71      18      24       2   .text       
-     Bat_GetHisChgFullTimes                  FEBA89      13      19       2   .text       
-     Bat_UpdateHisChgFullTimes               FEBA9C      18      24       2   .text       
-     Bat_GetDchEmptyTimes                    FEBAB4      13      19       2   .text       
-     Bat_UpdateDchEmptyTimes                 FEBAC7      18      24       2   .text       
-     Bat_GetSerialNum                        FEBADF      12      18       4   .text       
-     Bat_GetManufacturer                     FEBAF1      13      19       2   .text       
-     Bat_GetMaterialType                     FEBB04      14      20      30   .text       
-     Bat_UpdateMaterialType                  FEBB18      17      23       2   .text       
-     Bat_GetRatedEnergy                      FEBB2F      13      19       2   .text       
-     Bat_GetPropertyId                       FEBB42      13      19       2   .text       
-     Bat_GetBatDate                          FEBB55      2A      42       2   .text       
-     Bat_GetAllPackNo                        FEBB7F      19      25       6   .text       
-     Bat_GetSoh                              FEBB98      13      19      14   .text       
-     Bat_UpdateSoh                           FEBBAB      18      24       4   .text       
-     Bat_GetAvgV                             FEBBC3      13      19       8   .text       
-     Bat_UpdateAvgV                          FEBBD6      18      24       2   .text       
-     Bat_GetDeltaV                           FEBBEE      13      19       4   .text       
-     Bat_UpdateDeltaV                        FEBC01      18      24       2   .text       
-     Bat_GetAvgT                             FEBC19      13      19       8   .text       
-     Bat_UpdateAvgT                          FEBC2C      13      19       2   .text       
-     Bat_GetDeltaT                           FEBC3F      13      19       6   .text       
-     Bat_UpdateDeltaT                        FEBC52      13      19       2   .text       
-     Bat_UpdateBatteryTemperRise             FEBC65      13      19       2   .text       
-     Bat_UpdateTemperRisePerHour             FEBC78      13      19       2   .text       
-     Bat_UpdateMaxTRiseRate                  FEBC8B      13      19       2   .text       
-     Bat_GetPwr                              FEBC9E      13      19       4   .text       
-     Bat_UpdatePwr                           FEBCB1      18      24       2   .text       
-     Bat_GetAccumulateChgAh                  FEBCC9      19      25       4   .text       
-     Bat_UpdateAccumulateChgAh               FEBCE2      1D      29       4   .text       
-     Bat_GetAccumulateDchgAh                 FEBCFF      19      25       4   .text       
-     Bat_UpdateAccumulateDchgAh              FEBD18      1D      29       4   .text       
-     Bat_GetTotalChgAh                       FEBD35      19      25       6   .text       
-     Bat_UpdateTotalChgAh                    FEBD4E      1D      29       4   .text       
-     Bat_GetTotalDchAh                       FEBD6B      19      25       6   .text       
-     Bat_UpdateTotalDChAh                    FEBD84      1D      29       4   .text       
-     Bat_GetRatedCapacityCalc                FEBDA1      19      25      20   .text       
-     Bat_GetActualCapacityCalc               FEBDBA      19      25      14   .text       
-     Bat_UpdateActualCapacityCalc            FEBDD3      1D      29       8   .text       
-     Bat_GetRemainCapacity                   FEBDF0      19      25       6   .text       
-     Bat_UpdateRemainCapacity                FEBE09      1D      29       8   .text       
-     Bat_UpdateMainBalanceSt                 FEBE26      13      19       8   .text       
-     Bat_GetBmuNum                           FEBE39      13      19      12   .text       
-     Bat_UpdateBmuNum                        FEBE4C      13      19       2   .text       
-     Bat_GetTemperNum                        FEBE5F      13      19       2   .text       
-     Bat_UpdateTemperNum                     FEBE72      18      24       2   .text       
-     Bat_GetBatNum                           FEBE8A      13      19       8   .text       
-     Bat_UpdateBatNum                        FEBE9D      18      24       2   .text       
+     BatPackInfo_Init                        FEAEEE     125     293       2   .text       
+     Bat_StatusInit                          FEB013      BF     191       2   .text       
+     Bat_GetCurrent                          FEB0D2      2E      46      34   .text       
+     Bat_UpdateCurrent                       FEB100      38      56       8   .text       
+     Bat_GetSumV                             FEB138      5E      94      32   .text       
+     Bat_UpdateSumV                          FEB196      74     116      10   .text       
+     Bat_GetSOC                              FEB20A      13      19      26   .text       
+     Bat_UpdateSOC                           FEB21D      18      24       6   .text       
+     Bat_GetTemper                           FEB235      77     119      14   .text       
+     Bat_UpdateTemper                        FEB2AC      7B     123       4   .text       
+     Bat_GetMaxV                             FEB327      12      18      24   .text       
+     Bat_UpdateMaxV                          FEB339      17      23       4   .text       
+     Bat_GetMinV                             FEB350      12      18      20   .text       
+     Bat_UpdateMinV                          FEB362      17      23       4   .text       
+     Bat_GetMaxVTotalNo                      FEB379      12      18       6   .text       
+     Bat_UpdateMaxVTotalNo                   FEB38B      17      23       4   .text       
+     Bat_GetMinVTotalNo                      FEB3A2      12      18       4   .text       
+     Bat_UpdateMinVTotalNo                   FEB3B4      17      23       4   .text       
+     Bat_UpdateMaxVSingleNo                  FEB3CB      12      18       2   .text       
+     Bat_UpdateMinVSingleNo                  FEB3DD      12      18       2   .text       
+     Bat_GetMaxVBmuNo                        FEB3EF      12      18       2   .text       
+     Bat_UpdateMaxVBmuNo                     FEB401      12      18       2   .text       
+     Bat_UpdateMinVBmuNo                     FEB413      12      18       2   .text       
+     Bat_GetMaxT                             FEB425      12      18      44   .text       
+     Bat_UpdateMaxT                          FEB437      12      18       4   .text       
+     Bat_GetMinT                             FEB449      12      18      22   .text       
+     Bat_UpdateMinT                          FEB45B      12      18       4   .text       
+     Bat_GetMaxTTotalNo                      FEB46D      12      18       6   .text       
+     Bat_UpdateMaxTTotalNo                   FEB47F      17      23       4   .text       
+     Bat_GetMinTTotalNo                      FEB496      13      19       6   .text       
+     Bat_UpdateMinTTotalNo                   FEB4A9      18      24       4   .text       
+     Bat_UpdateMaxTSingleNo                  FEB4C1      13      19       2   .text       
+     Bat_UpdateMinTSingleNo                  FEB4D4      13      19       2   .text       
+     Bat_UpdateMaxTBmuNo                     FEB4E7      13      19       2   .text       
+     Bat_UpdateMinTBmuNo                     FEB4FA      13      19       2   .text       
+     Bat_GetMaxR                             FEB50D      13      19       8   .text       
+     Bat_GetMinR                             FEB520      13      19       6   .text       
+     Bat_GetMaxRTotalNo                      FEB533      13      19       4   .text       
+     Bat_GetMinRTotalNo                      FEB546      13      19       4   .text       
+     Bat_GetMaxPermitDchCur                  FEB559      13      19       4   .text       
+     Bat_UpdateMaxPermitDchCur               FEB56C      18      24       2   .text       
+     Bat_GetMaxFeedBackCur                   FEB584      13      19       4   .text       
+     Bat_UpdateMaxFeedBackCur                FEB597      18      24       2   .text       
+     Bat_UpdateMaxPermitFeedbackPower        FEB5AF      18      24       2   .text       
+     Bat_UpdateMaxPermitDchPower             FEB5C7      18      24       2   .text       
+     Bat_UpdateMaxPulseDchCur                FEB5DF      18      24       2   .text       
+     Bat_UpdateMaxPulseFeedBackCur           FEB5F7      18      24       2   .text       
+     Bat_UpdateMaxPulseDchPower              FEB60F      18      24       2   .text       
+     Bat_UpdateMaxPulseFeedbackPower         FEB627      18      24       2   .text       
+     Bat_GetHisMaxV                          FEB63F      12      18       2   .text       
+     Bat_UpdateHisMaxV                       FEB651      17      23       2   .text       
+     Bat_GetHisMinV                          FEB668      12      18       2   .text       
+     Bat_UpdateHisMinV                       FEB67A      17      23       2   .text       
+     Bat_GetHisDeltaV                        FEB691      12      18       2   .text       
+     Bat_UpdateHisDeltaV                     FEB6A3      17      23       2   .text       
+     Bat_GetHisMaxAvgV                       FEB6BA      12      18       2   .text       
+     Bat_UpdateHisMaxAvgV                    FEB6CC      17      23       2   .text       
+     Bat_GetHisMinAvgV                       FEB6E3      12      18       2   .text       
+     Bat_UpdateHisMinAvgV                    FEB6F5      17      23       2   .text       
+     Bat_GetHisMaxT                          FEB70C      12      18       2   .text       
+     Bat_UpdateHisMaxT                       FEB71E      12      18       2   .text       
+     Bat_GetHisMinT                          FEB730      12      18       2   .text       
+     Bat_UpdateHisMinT                       FEB742      12      18       2   .text       
+     Bat_GetHisMaxDeltaT                     FEB754      13      19       2   .text       
+     Bat_UpdateHisMaxDeltaT                  FEB767      13      19       2   .text       
+     Bat_GetHisMaxAvgT                       FEB77A      13      19       2   .text       
+     Bat_UpdateHisMaxAvgT                    FEB78D      13      19       2   .text       
+     Bat_GetHisMinAvgT                       FEB7A0      13      19       2   .text       
+     Bat_UpdateHisMinAvgT                    FEB7B3      13      19       2   .text       
+     Bat_GetHisMaxR                          FEB7C6      13      19       2   .text       
+     Bat_UpdateHisMaxR                       FEB7D9      18      24       2   .text       
+     Bat_GetHisMinR                          FEB7F1      13      19       2   .text       
+     Bat_UpdateHisMinR                       FEB804      18      24       2   .text       
+     Bat_GetHisMaxChgCur                     FEB81C      13      19       2   .text       
+     Bat_UpdateHisMaxChgCur                  FEB82F      18      24       2   .text       
+     Bat_GetHisMaxDchCur                     FEB847      13      19       2   .text       
+     Bat_UpdateHisMaxDchCur                  FEB85A      18      24       2   .text       
+     Bat_GetHisMaxChgPwr                     FEB872      13      19       2   .text       
+     Bat_UpdateHisMaxChgPwr                  FEB885      18      24       2   .text       
+     Bat_GetHisMaxDchPwr                     FEB89D      13      19       2   .text       
+     Bat_UpdateHisMaxDchPwr                  FEB8B0      18      24       2   .text       
+     Bat_GetHisMaxSumV                       FEB8C8      12      18       2   .text       
+     Bat_UpdateHisMaxSumV                    FEB8DA      17      23       2   .text       
+     Bat_GetHisMinSumV                       FEB8F1      12      18       2   .text       
+     Bat_UpdateHisMinSumV                    FEB903      17      23       2   .text       
+     Bat_GetMaxTDistribution                 FEB91A      21      33       2   .text       
+     Bat_UpdateMaxTDistribution              FEB93B      29      41       2   .text       
+     Bat_GetMinTDistribution                 FEB964      21      33       2   .text       
+     Bat_UpdateMinTDistribution              FEB985      29      41       2   .text       
+     Bat_GetMaxDeltaTDistribution            FEB9AE      21      33       2   .text       
+     Bat_UpdateMaxDeltaTDistribution         FEB9CF      29      41       2   .text       
+     Bat_GetAvgTDistribution                 FEB9F8      21      33       2   .text       
+     Bat_UpdateAvgTDistribution              FEBA19      29      41       2   .text       
+     Bat_GetCurDistribution                  FEBA42      23      35       2   .text       
+     Bat_UpdateCurDistribution               FEBA65      2B      43       2   .text       
+     Bat_GetSocDistribution                  FEBA90      23      35       2   .text       
+     Bat_UpdateSocDistribution               FEBAB3      2B      43       2   .text       
+     Bat_GetHisChgTimes                      FEBADE      13      19       4   .text       
+     Bat_UpdateHisChgTimes                   FEBAF1      18      24       2   .text       
+     Bat_GetHisChgFullTimes                  FEBB09      13      19       2   .text       
+     Bat_UpdateHisChgFullTimes               FEBB1C      18      24       2   .text       
+     Bat_GetDchEmptyTimes                    FEBB34      13      19       2   .text       
+     Bat_UpdateDchEmptyTimes                 FEBB47      18      24       2   .text       
+     Bat_GetSerialNum                        FEBB5F      12      18       4   .text       
+     Bat_GetManufacturer                     FEBB71      13      19       2   .text       
+     Bat_GetMaterialType                     FEBB84      14      20      30   .text       
+     Bat_UpdateMaterialType                  FEBB98      17      23       2   .text       
+     Bat_GetRatedEnergy                      FEBBAF      13      19       2   .text       
+     Bat_GetPropertyId                       FEBBC2      13      19       2   .text       
+     Bat_GetBatDate                          FEBBD5      2A      42       2   .text       
+     Bat_GetAllPackNo                        FEBBFF      19      25       6   .text       
+     Bat_GetSoh                              FEBC18      13      19      14   .text       
+     Bat_UpdateSoh                           FEBC2B      18      24       4   .text       
+     Bat_GetAvgV                             FEBC43      13      19       8   .text       
+     Bat_UpdateAvgV                          FEBC56      18      24       2   .text       
+     Bat_GetDeltaV                           FEBC6E      13      19       4   .text       
+     Bat_UpdateDeltaV                        FEBC81      18      24       2   .text       
+     Bat_GetAvgT                             FEBC99      13      19       8   .text       
+     Bat_UpdateAvgT                          FEBCAC      13      19       2   .text       
+     Bat_GetDeltaT                           FEBCBF      13      19       6   .text       
+     Bat_UpdateDeltaT                        FEBCD2      13      19       2   .text       
+     Bat_UpdateBatteryTemperRise             FEBCE5      13      19       2   .text       
+     Bat_UpdateTemperRisePerHour             FEBCF8      13      19       2   .text       
+     Bat_UpdateMaxTRiseRate                  FEBD0B      13      19       2   .text       
+     Bat_GetPwr                              FEBD1E      13      19       4   .text       
+     Bat_UpdatePwr                           FEBD31      18      24       2   .text       
+     Bat_GetAccumulateChgAh                  FEBD49      19      25       4   .text       
+     Bat_UpdateAccumulateChgAh               FEBD62      1D      29       4   .text       
+     Bat_GetAccumulateDchgAh                 FEBD7F      19      25       4   .text       
+     Bat_UpdateAccumulateDchgAh              FEBD98      1D      29       4   .text       
+     Bat_GetTotalChgAh                       FEBDB5      19      25       6   .text       
+     Bat_UpdateTotalChgAh                    FEBDCE      1D      29       4   .text       
+     Bat_GetTotalDchAh                       FEBDEB      19      25       6   .text       
+     Bat_UpdateTotalDChAh                    FEBE04      1D      29       4   .text       
+     Bat_GetRatedCapacityCalc                FEBE21      19      25      20   .text       
+     Bat_GetActualCapacityCalc               FEBE3A      19      25      14   .text       
+     Bat_UpdateActualCapacityCalc            FEBE53      1D      29       8   .text       
+     Bat_GetRemainCapacity                   FEBE70      19      25       6   .text       
+     Bat_UpdateRemainCapacity                FEBE89      1D      29       8   .text       
+     Bat_UpdateMainBalanceSt                 FEBEA6      13      19       8   .text       
+     Bat_GetBmuNum                           FEBEB9      13      19      12   .text       
+     Bat_UpdateBmuNum                        FEBECC      13      19       2   .text       
+     Bat_GetTemperNum                        FEBEDF      13      19       2   .text       
+     Bat_UpdateTemperNum                     FEBEF2      18      24       2   .text       
+     Bat_GetBatNum                           FEBF0A      13      19       8   .text       
+     Bat_UpdateBatNum                        FEBF1D      18      24       2   .text       
 - VARIABLES:
      Bat_AllPackInfo                          F0E4C'G       3       3       2   PAGED_RAM   
      Bat_AllInfo                              F0E4F'G       C      12     701   PAGED_RAM   
@@ -1611,7 +1611,7 @@ MODULE:                 -- BmsSysSt.c.o --
      BmsSys_UpdateK15St                      FCBB41       9       9       2   PAGE_FC_740 
      BmsSys_GetK15Volt                       FCBB4A       9       9       2   PAGE_FC_740 
      BmsSys_UpdateK15Volt                    FCBB53       A      10       2   PAGE_FC_740 
-     BmsSys_GetK30Volt                       FCBB5D       9       9      82   PAGE_FC_740 
+     BmsSys_GetK30Volt                       FCBB5D       9       9      84   PAGE_FC_740 
      BmsSys_UpdateK30Volt                    FCBB66       A      10       2   PAGE_FC_740 
      BmsSys_GetOnBDChgVolt                   FCBB70       9       9       2   PAGE_FC_740 
      BmsSys_UpdateOnBDChgVolt                FCBB79       A      10       4   PAGE_FC_740 
@@ -3186,18 +3186,18 @@ MODULE:                 -- CurDet.c.o (Lib.lib) --
      CurDet_GetVesionModuleVer               F8BE15       E      14       2   PAGE_F8_744 
      CurDet_Init                             F8BE23       E      14       2   PAGE_F8_744 
      CurDet_Count                            F8BE31      22      34       2   PAGE_F8_744 
-     CurDet_Main                             F78000     235     565       2   PAGE_F7_745 
-     CurDet_InitCurDet                       F78235     167     359       2   PAGE_F7_745 
-     CurrentDet_CalcAh                       F7839C     118     280       3   PAGE_F7_745 
-     CurDet_BakupConfigTo                    F784B4      35      53       2   PAGE_F7_745 
-     CurDet_CompareConfigWith                F784E9      45      69       2   PAGE_F7_745 
-     CurDet_SaveConfAndCompare               F7852E      B4     180      12   PAGE_F7_745 
-     CurDet_UpdateGainAndOffset              F785E2      16      22       2   PAGE_F7_745 
-     CurDet_ClbCurCurChnOffset               F785F8      67     103       4   PAGE_F7_745 
-     CurDet_ClbCurCurChnGain                 F7865F      51      81       4   PAGE_F7_745 
-     CurDet_ClbCurVolChnOffset               F786B0      2C      44       4   PAGE_F7_745 
-     CurDet_ClbCurVolChnGain                 F786DC      2E      46       4   PAGE_F7_745 
-     CurDet_UpdateAhCalcThrhd                F7870A      3C      60      28   PAGE_F7_745 
+     CurDet_Main                             F78000     230     560       2   PAGE_F7_745 
+     CurDet_InitCurDet                       F78230     16D     365       2   PAGE_F7_745 
+     CurrentDet_CalcAh                       F7839D     118     280       3   PAGE_F7_745 
+     CurDet_BakupConfigTo                    F784B5      35      53       2   PAGE_F7_745 
+     CurDet_CompareConfigWith                F784EA      45      69       2   PAGE_F7_745 
+     CurDet_SaveConfAndCompare               F7852F      B4     180      12   PAGE_F7_745 
+     CurDet_UpdateGainAndOffset              F785E3      16      22       2   PAGE_F7_745 
+     CurDet_ClbCurCurChnOffset               F785F9      67     103       4   PAGE_F7_745 
+     CurDet_ClbCurCurChnGain                 F78660      51      81       4   PAGE_F7_745 
+     CurDet_ClbCurVolChnOffset               F786B1      2C      44       4   PAGE_F7_745 
+     CurDet_ClbCurVolChnGain                 F786DD      2E      46       4   PAGE_F7_745 
+     CurDet_UpdateAhCalcThrhd                F7870B      3C      60      28   PAGE_F7_745 
 - VARIABLES:
      CurDet_VerDef                             D200      1C      28       1   .rodata     
      gwd_cur_ad                                2086       2       2       1   .bss        
@@ -3214,17 +3214,17 @@ MODULE:                 -- CurDet.c.o (Lib.lib) --
      CurDet_TmCnt                              29F4       2       2      11   .common     
 MODULE:                 -- SensorDi.c.o (Lib.lib) --
 - PROCEDURES:
-     SensorDi_GetVesionModuleVer             F78746       E      14       2   PAGE_F7_745 
-     Sensor_GetDiSt                          F78754      2F      47       8   PAGE_F7_745 
+     SensorDi_GetVesionModuleVer             F78747       E      14       2   PAGE_F7_745 
+     Sensor_GetDiSt                          F78755      2F      47       8   PAGE_F7_745 
 - VARIABLES:
      SensorDi_VerDef                           D21C      1C      28       1   .rodata     
 MODULE:                 -- IsoDet.c.o (Lib.lib) --
 - PROCEDURES:
-     IsoDet_GetVesionModuleVer               F78783       E      14       2   PAGE_F7_745 
-     IsoDet_Init                             F78791      12      18       2   PAGE_F7_745 
-     IsoDet_MainCountCbk                     F787A3      25      37       2   PAGE_F7_745 
-     IsoDet_ErrJudge                         F787C8      2F      47       2   PAGE_F7_745 
-     IsoDet_MainCbk                          F787F7     668    1640       6   PAGE_F7_745 
+     IsoDet_GetVesionModuleVer               F78784       E      14       2   PAGE_F7_745 
+     IsoDet_Init                             F78792      12      18       2   PAGE_F7_745 
+     IsoDet_MainCountCbk                     F787A4      25      37       2   PAGE_F7_745 
+     IsoDet_ErrJudge                         F787C9      2F      47       2   PAGE_F7_745 
+     IsoDet_MainCbk                          F787F8     668    1640       6   PAGE_F7_745 
 - VARIABLES:
      IsoDet_VerDef                             D238      1C      28       1   .rodata     
      SumVToAdArray                             D254     150     336     108   .rodata     
@@ -3240,13 +3240,13 @@ MODULE:                 -- IsoDet.c.o (Lib.lib) --
      AlarmTimeCnt                              2A0F       2       2       2   .common     
 MODULE:                 -- SumvDet.c.o (Lib.lib) --
 - PROCEDURES:
-     SumvDet_GetVesionModuleVer              F78E5F       E      14       2   PAGE_F7_745 
-     SumvDet_Init                            F78E6D       8       8       2   PAGE_F7_745 
-     SumvDet_MainCountCbk                    F78E75      11      17       2   PAGE_F7_745 
-     SumvDet_MainCbk                         F78E86       F      15       2   PAGE_F7_745 
-     SumvDet_InitSumvDet                     F78E95     154     340       2   PAGE_F7_745 
-     SumvDet_ProcSumvDet                     F78FE9     2B7     695       3   PAGE_F7_745 
-     SumvDet_UpdateGainAndOffset             F792A0      54      84       4   PAGE_F7_745 
+     SumvDet_GetVesionModuleVer              F78E60       E      14       2   PAGE_F7_745 
+     SumvDet_Init                            F78E6E       8       8       2   PAGE_F7_745 
+     SumvDet_MainCountCbk                    F78E76      11      17       2   PAGE_F7_745 
+     SumvDet_MainCbk                         F78E87       F      15       2   PAGE_F7_745 
+     SumvDet_InitSumvDet                     F78E96     154     340       2   PAGE_F7_745 
+     SumvDet_ProcSumvDet                     F78FEA     2B7     695       3   PAGE_F7_745 
+     SumvDet_UpdateGainAndOffset             F792A1      54      84       4   PAGE_F7_745 
 - VARIABLES:
      SumvDet_VerDef                            D3A4      1C      28       1   .rodata     
      CvntChanFlg.3                             2095       1       1       4   .bss        
@@ -3262,12 +3262,12 @@ MODULE:                 -- SumvDet.c.o (Lib.lib) --
      gwd_SumvAdValue                           2A9E       2       2       5   .common     
 MODULE:                 -- TemperDet.c.o (Lib.lib) --
 - PROCEDURES:
-     TemperDet_GetVesionModuleVer            F792F4       E      14       2   PAGE_F7_745 
-     TemperDet_Init                          F79302      33      51       2   PAGE_F7_745 
-     TemperDet_GetNtcTemper                  F79335      FC     252       2   PAGE_F7_745 
-     TemperDet_GetTemper                     F79431      D5     213       2   PAGE_F7_745 
-     TemperDet_CountCbk                      F79506      11      17       2   PAGE_F7_745 
-     TemperDet_MainTemperDet                 F79517       F      15       2   PAGE_F7_745 
+     TemperDet_GetVesionModuleVer            F792F5       E      14       2   PAGE_F7_745 
+     TemperDet_Init                          F79303      33      51       2   PAGE_F7_745 
+     TemperDet_GetNtcTemper                  F79336      FC     252       2   PAGE_F7_745 
+     TemperDet_GetTemper                     F79432      D5     213       2   PAGE_F7_745 
+     TemperDet_CountCbk                      F79507      11      17       2   PAGE_F7_745 
+     TemperDet_MainTemperDet                 F79518       F      15       2   PAGE_F7_745 
 - VARIABLES:
      TemperDet_VerDef                          D3C0      1C      28       1   .rodata     
      AD_T_10K                                  D3DC     14C     332       1   .rodata     
@@ -3278,18 +3278,18 @@ MODULE:                 -- TemperDet.c.o (Lib.lib) --
      gwd_temper_ad_test                        2AAF      10      16       1   .common     
 MODULE:                 -- SOC-A.c.o (Lib.lib) --
 - PROCEDURES:
-     SOC_AhIntglProcess                      F79526     2C8     712       4   PAGE_F7_745 
-     SOC_GetBatSt                            F797EE      E0     224       2   PAGE_F7_745 
-     SOC_EstmatOCV                           F798CE     5C5    1477       6   PAGE_F7_745 
-     SOC_EstmatCharge                        F79E93     257     599       4   PAGE_F7_745 
-     SOC_EstmatDchDyn                        F7A0EA     3BD     957       8   PAGE_F7_745 
-     SOC_EstmatLimit                         F7A4A7      D4     212       2   PAGE_F7_745 
-     SOC_EstmatActualAH                      F7A57B     227     551       3   PAGE_F7_745 
-     SOC_CurAhSmooth                         F7A7A2     1FC     508       3   PAGE_F7_745 
-     SOC_EstmatProcess                       F7A99E     1F5     501       4   PAGE_F7_745 
-     SOC_ModuleInit                          F7AB93      93     147       2   PAGE_F7_745 
-     SOC_ModuleCountCbk                      F7AC26      22      34       2   PAGE_F7_745 
-     SOC_ModuleCbk                           F7AC48      D5     213       2   PAGE_F7_745 
+     SOC_AhIntglProcess                      F79527     2C8     712       4   PAGE_F7_745 
+     SOC_GetBatSt                            F797EF      E0     224       2   PAGE_F7_745 
+     SOC_EstmatOCV                           F798CF     5C5    1477       6   PAGE_F7_745 
+     SOC_EstmatCharge                        F79E94     257     599       4   PAGE_F7_745 
+     SOC_EstmatDchDyn                        F7A0EB     3BD     957       8   PAGE_F7_745 
+     SOC_EstmatLimit                         F7A4A8      D4     212       2   PAGE_F7_745 
+     SOC_EstmatActualAH                      F7A57C     227     551       3   PAGE_F7_745 
+     SOC_CurAhSmooth                         F7A7A3     1FC     508       3   PAGE_F7_745 
+     SOC_EstmatProcess                       F7A99F     1F5     501       4   PAGE_F7_745 
+     SOC_ModuleInit                          F7AB94      93     147       2   PAGE_F7_745 
+     SOC_ModuleCountCbk                      F7AC27      22      34       2   PAGE_F7_745 
+     SOC_ModuleCbk                           F7AC49      D5     213       2   PAGE_F7_745 
 - VARIABLES:
      SOC_TmCnt                                 2ABF       2       2      11   .common     
      SOC_EstmatDataIn                          2AC1      49      73      70   .common     
@@ -3299,30 +3299,30 @@ MODULE:                 -- SOC-A.c.o (Lib.lib) --
      SOC_AhIntgl                               2B37      1D      29     255   .common     
 MODULE:                 -- SOH-A.c.o (Lib.lib) --
 - PROCEDURES:
-     SOH_ModuleInit                          F7AD1D     10E     270       2   PAGE_F7_745 
+     SOH_ModuleInit                          F7AD1E     10E     270       2   PAGE_F7_745 
 - VARIABLES:
      SOH_CtrlPara                             F1969'G      11      17      12   PAGED_RAM   
      SOH_TmCnt                                 2B54       1       1       1   .common     
 MODULE:                 -- Can_Lcfg.c.o (Lib.lib) --
 - PROCEDURES:
-     CAN0_SetBaudrate                        F7AE2B      2A      42       2   PAGE_F7_745 
-     CAN1_SetBaudrate                        F7AE55      2A      42       2   PAGE_F7_745 
-     CAN4_SetBaudrate                        F7AE7F      2A      42       2   PAGE_F7_745 
-     CAN4_EnableEvent_Func                   F7AEA9       6       6       2   PAGE_F7_745 
-     CAN4_DisableEvent_Func                  F7AEAF       4       4       2   PAGE_F7_745 
-     CAN0_EnableEvent_Func                   F7AEB3       6       6       2   PAGE_F7_745 
-     CAN0_DisableEvent_Func                  F7AEB9       4       4       2   PAGE_F7_745 
-     CAN1_EnableEvent_Func                   F7AEBD       6       6       2   PAGE_F7_745 
-     CAN1_DisableEvent_Func                  F7AEC3       4       4       2   PAGE_F7_745 
-     CAN4_EnableMSCANandHw                   F7AEC7      10      16       2   PAGE_F7_745 
-     CAN4_DisableMSCANandHw                  F7AED7      11      17       2   PAGE_F7_745 
-     CAN0_EnableMSCANandHw                   F7AEE8      10      16       2   PAGE_F7_745 
-     CAN0_DisableMSCANandHw                  F7AEF8      11      17       2   PAGE_F7_745 
-     CAN1_EnableMSCANandHw                   F7AF09      10      16       2   PAGE_F7_745 
-     CAN1_DisableMSCANandHw                  F7AF19      11      17       2   PAGE_F7_745 
-     Can4_WakeAndSleepCtrl                   F7AF2A       1       1       2   PAGE_F7_745 
-     Can0_WakeAndSleepCtrl                   F7AF2B       1       1       2   PAGE_F7_745 
-     Can1_WakeAndSleepCtrl                   F7AF2C       1       1       2   PAGE_F7_745 
+     CAN0_SetBaudrate                        F7AE2C      2A      42       2   PAGE_F7_745 
+     CAN1_SetBaudrate                        F7AE56      2A      42       2   PAGE_F7_745 
+     CAN4_SetBaudrate                        F7AE80      2A      42       2   PAGE_F7_745 
+     CAN4_EnableEvent_Func                   F7AEAA       6       6       2   PAGE_F7_745 
+     CAN4_DisableEvent_Func                  F7AEB0       4       4       2   PAGE_F7_745 
+     CAN0_EnableEvent_Func                   F7AEB4       6       6       2   PAGE_F7_745 
+     CAN0_DisableEvent_Func                  F7AEBA       4       4       2   PAGE_F7_745 
+     CAN1_EnableEvent_Func                   F7AEBE       6       6       2   PAGE_F7_745 
+     CAN1_DisableEvent_Func                  F7AEC4       4       4       2   PAGE_F7_745 
+     CAN4_EnableMSCANandHw                   F7AEC8      10      16       2   PAGE_F7_745 
+     CAN4_DisableMSCANandHw                  F7AED8      11      17       2   PAGE_F7_745 
+     CAN0_EnableMSCANandHw                   F7AEE9      10      16       2   PAGE_F7_745 
+     CAN0_DisableMSCANandHw                  F7AEF9      11      17       2   PAGE_F7_745 
+     CAN1_EnableMSCANandHw                   F7AF0A      10      16       2   PAGE_F7_745 
+     CAN1_DisableMSCANandHw                  F7AF1A      11      17       2   PAGE_F7_745 
+     Can4_WakeAndSleepCtrl                   F7AF2B       1       1       2   PAGE_F7_745 
+     Can0_WakeAndSleepCtrl                   F7AF2C       1       1       2   PAGE_F7_745 
+     Can1_WakeAndSleepCtrl                   F7AF2D       1       1       2   PAGE_F7_745 
 - VARIABLES:
      Can_RxTxHandle                            D528      12      18       3   .rodata     
      Can_CtrlHandle                            D53A      3F      63       3   .rodata     
@@ -3330,22 +3330,22 @@ MODULE:                 -- Can_Lcfg.c.o (Lib.lib) --
      Can_NmCtrl                                2036       9       9       3   .data       
 MODULE:                 -- CanIf.c.o (Lib.lib) --
 - PROCEDURES:
-     Buf_Init                                F7AF2D     1E6     486       2   PAGE_F7_745 
-     Wr_FrameToBuf                           F7B113     200     512       5   PAGE_F7_745 
-     Rd_BufToFrame                           F7B313     16A     362       5   PAGE_F7_745 
-     Rd_BufToFrameCbk                        F7B47D      B0     176       4   PAGE_F7_745 
-     CanIf_Init                              F7B52D      26      38       6   PAGE_F7_745 
-     CanIf_StartSend                         F7B553      20      32       2   PAGE_F7_745 
-     CanIf_RequestSend                       F7B573      71     113      54   PAGE_F7_745 
-     CanIf_RxIndication                      F7B5E4      5A      90       6   PAGE_F7_745 
-     CanIf_GetRxBufferLength                 F7B63E      3A      58       6   PAGE_F7_745 
-     Can_TxConfirm                           F7B678      3D      61       6   PAGE_F7_745 
-     Can_SendTask                            F7B6B5      9D     157       8   PAGE_F7_745 
-     Can_ReceiveTask                         F7B752      52      82       6   PAGE_F7_745 
-     CanIf_SetCanMode                        F7B7A4      22      34       2   PAGE_F7_745 
-     CanIf_SetAcceptanceCode                 F7B7C6      24      36       2   PAGE_F7_745 
-     CanIf_SetAcceptanceMask                 F7B7EA      24      36       2   PAGE_F7_745 
-     CanIf_SetAcceptanceMaskCode             F7B80E      17      23       6   PAGE_F7_745 
+     Buf_Init                                F7AF2E     1E6     486       2   PAGE_F7_745 
+     Wr_FrameToBuf                           F7B114     200     512       5   PAGE_F7_745 
+     Rd_BufToFrame                           F7B314     16A     362       5   PAGE_F7_745 
+     Rd_BufToFrameCbk                        F7B47E      B0     176       4   PAGE_F7_745 
+     CanIf_Init                              F7B52E      26      38       6   PAGE_F7_745 
+     CanIf_StartSend                         F7B554      20      32       2   PAGE_F7_745 
+     CanIf_RequestSend                       F7B574      71     113      54   PAGE_F7_745 
+     CanIf_RxIndication                      F7B5E5      5A      90       6   PAGE_F7_745 
+     CanIf_GetRxBufferLength                 F7B63F      3A      58       6   PAGE_F7_745 
+     Can_TxConfirm                           F7B679      3D      61       6   PAGE_F7_745 
+     Can_SendTask                            F7B6B6      9D     157       8   PAGE_F7_745 
+     Can_ReceiveTask                         F7B753      52      82       6   PAGE_F7_745 
+     CanIf_SetCanMode                        F7B7A5      22      34       2   PAGE_F7_745 
+     CanIf_SetAcceptanceCode                 F7B7C7      24      36       2   PAGE_F7_745 
+     CanIf_SetAcceptanceMask                 F7B7EB      24      36       2   PAGE_F7_745 
+     CanIf_SetAcceptanceMaskCode             F7B80F      17      23       6   PAGE_F7_745 
 - VARIABLES:
      CanIf_ChannelBuf                         F197A'G      5A      90      10   PAGED_RAM   
      CanIf_ChannelHandResult                  F19D4'G      18      24       4   PAGED_RAM   
@@ -3353,8 +3353,8 @@ MODULE:                 -- CanIf.c.o (Lib.lib) --
      CanIf_TxBuffer                           F1F8C'G     5A0    1440      18   PAGED_RAM   
 MODULE:                 -- CanTp.c.o (Lib.lib) --
 - PROCEDURES:
-     CanTp_MainTx                            F7B825     429    1065      13   PAGE_F7_745 
-     CanTp_CopyDataToBuf                     F7BC4E     130     304      10   PAGE_F7_745 
+     CanTp_MainTx                            F7B826     429    1065      13   PAGE_F7_745 
+     CanTp_CopyDataToBuf                     F7BC4F     130     304      10   PAGE_F7_745 
      CanTp_EventRx                           F68000     5C6    1478      50   PAGE_F6_746 
      CanTp_OverTimeProcess                   F685C6      89     137       2   PAGE_F6_746 
 - VARIABLES:
@@ -3735,7 +3735,7 @@ MODULE STATISTIC
   Version_ProjectDef.c.o                       2      0     28
   Version_ModuleLcfg.c.o                       0      0    117
   BatterySysSt.c.o                            68    435      0
-  ErrorAlarm.c.o                             591   7013      0
+  ErrorAlarm.c.o                             591   7141      0
   ChargeSt.c.o                                80    964      0
   BatteryStAllPack.c.o                      1080   4167      0
   BatteryStCalc.c.o                          130   5296      0
@@ -3815,7 +3815,7 @@ MODULE STATISTIC
   ExctCmd.c.o (Lib.lib)                       74  17961      0
   IntCan.c.o (Lib.lib)                       914  10785     28
   CellvDet.c.o (Lib.lib)                     539   2028     28
-  CurDet.c.o (Lib.lib)                        74   1924     28
+  CurDet.c.o (Lib.lib)                        74   1925     28
   SensorDi.c.o (Lib.lib)                       0     61     28
   IsoDet.c.o (Lib.lib)                        27   1756    364
   SumvDet.c.o (Lib.lib)                      165   1173     28
@@ -7226,87 +7226,87 @@ OBJECT LIST SORTED BY ADDRESS
      ExtEE_Sda_SetOutput                     F6BF9C      15      21       2   ExtEE_Sda_CODE
      ExtEE_Wp_SetOutput                      F6BFB1      12      18       2   ExtEE_Wp_CODE
      CPUEE_SetByte                           F6BFC3      31      49       2   CPUEE_CODE  
-     CurDet_Main                             F78000     235     565       2   PAGE_F7_745 
-     CurDet_InitCurDet                       F78235     167     359       2   PAGE_F7_745 
-     CurrentDet_CalcAh                       F7839C     118     280       3   PAGE_F7_745 
-     CurDet_BakupConfigTo                    F784B4      35      53       2   PAGE_F7_745 
-     CurDet_CompareConfigWith                F784E9      45      69       2   PAGE_F7_745 
-     CurDet_SaveConfAndCompare               F7852E      B4     180      12   PAGE_F7_745 
-     CurDet_UpdateGainAndOffset              F785E2      16      22       2   PAGE_F7_745 
-     CurDet_ClbCurCurChnOffset               F785F8      67     103       4   PAGE_F7_745 
-     CurDet_ClbCurCurChnGain                 F7865F      51      81       4   PAGE_F7_745 
-     CurDet_ClbCurVolChnOffset               F786B0      2C      44       4   PAGE_F7_745 
-     CurDet_ClbCurVolChnGain                 F786DC      2E      46       4   PAGE_F7_745 
-     CurDet_UpdateAhCalcThrhd                F7870A      3C      60      28   PAGE_F7_745 
-     SensorDi_GetVesionModuleVer             F78746       E      14       2   PAGE_F7_745 
-     Sensor_GetDiSt                          F78754      2F      47       8   PAGE_F7_745 
-     IsoDet_GetVesionModuleVer               F78783       E      14       2   PAGE_F7_745 
-     IsoDet_Init                             F78791      12      18       2   PAGE_F7_745 
-     IsoDet_MainCountCbk                     F787A3      25      37       2   PAGE_F7_745 
-     IsoDet_ErrJudge                         F787C8      2F      47       2   PAGE_F7_745 
-     IsoDet_MainCbk                          F787F7     668    1640       6   PAGE_F7_745 
-     SumvDet_GetVesionModuleVer              F78E5F       E      14       2   PAGE_F7_745 
-     SumvDet_Init                            F78E6D       8       8       2   PAGE_F7_745 
-     SumvDet_MainCountCbk                    F78E75      11      17       2   PAGE_F7_745 
-     SumvDet_MainCbk                         F78E86       F      15       2   PAGE_F7_745 
-     SumvDet_InitSumvDet                     F78E95     154     340       2   PAGE_F7_745 
-     SumvDet_ProcSumvDet                     F78FE9     2B7     695       3   PAGE_F7_745 
-     SumvDet_UpdateGainAndOffset             F792A0      54      84       4   PAGE_F7_745 
-     TemperDet_GetVesionModuleVer            F792F4       E      14       2   PAGE_F7_745 
-     TemperDet_Init                          F79302      33      51       2   PAGE_F7_745 
-     TemperDet_GetNtcTemper                  F79335      FC     252       2   PAGE_F7_745 
-     TemperDet_GetTemper                     F79431      D5     213       2   PAGE_F7_745 
-     TemperDet_CountCbk                      F79506      11      17       2   PAGE_F7_745 
-     TemperDet_MainTemperDet                 F79517       F      15       2   PAGE_F7_745 
-     SOC_AhIntglProcess                      F79526     2C8     712       4   PAGE_F7_745 
-     SOC_GetBatSt                            F797EE      E0     224       2   PAGE_F7_745 
-     SOC_EstmatOCV                           F798CE     5C5    1477       6   PAGE_F7_745 
-     SOC_EstmatCharge                        F79E93     257     599       4   PAGE_F7_745 
-     SOC_EstmatDchDyn                        F7A0EA     3BD     957       8   PAGE_F7_745 
-     SOC_EstmatLimit                         F7A4A7      D4     212       2   PAGE_F7_745 
-     SOC_EstmatActualAH                      F7A57B     227     551       3   PAGE_F7_745 
-     SOC_CurAhSmooth                         F7A7A2     1FC     508       3   PAGE_F7_745 
-     SOC_EstmatProcess                       F7A99E     1F5     501       4   PAGE_F7_745 
-     SOC_ModuleInit                          F7AB93      93     147       2   PAGE_F7_745 
-     SOC_ModuleCountCbk                      F7AC26      22      34       2   PAGE_F7_745 
-     SOC_ModuleCbk                           F7AC48      D5     213       2   PAGE_F7_745 
-     SOH_ModuleInit                          F7AD1D     10E     270       2   PAGE_F7_745 
-     CAN0_SetBaudrate                        F7AE2B      2A      42       2   PAGE_F7_745 
-     CAN1_SetBaudrate                        F7AE55      2A      42       2   PAGE_F7_745 
-     CAN4_SetBaudrate                        F7AE7F      2A      42       2   PAGE_F7_745 
-     CAN4_EnableEvent_Func                   F7AEA9       6       6       2   PAGE_F7_745 
-     CAN4_DisableEvent_Func                  F7AEAF       4       4       2   PAGE_F7_745 
-     CAN0_EnableEvent_Func                   F7AEB3       6       6       2   PAGE_F7_745 
-     CAN0_DisableEvent_Func                  F7AEB9       4       4       2   PAGE_F7_745 
-     CAN1_EnableEvent_Func                   F7AEBD       6       6       2   PAGE_F7_745 
-     CAN1_DisableEvent_Func                  F7AEC3       4       4       2   PAGE_F7_745 
-     CAN4_EnableMSCANandHw                   F7AEC7      10      16       2   PAGE_F7_745 
-     CAN4_DisableMSCANandHw                  F7AED7      11      17       2   PAGE_F7_745 
-     CAN0_EnableMSCANandHw                   F7AEE8      10      16       2   PAGE_F7_745 
-     CAN0_DisableMSCANandHw                  F7AEF8      11      17       2   PAGE_F7_745 
-     CAN1_EnableMSCANandHw                   F7AF09      10      16       2   PAGE_F7_745 
-     CAN1_DisableMSCANandHw                  F7AF19      11      17       2   PAGE_F7_745 
-     Can4_WakeAndSleepCtrl                   F7AF2A       1       1       2   PAGE_F7_745 
-     Can0_WakeAndSleepCtrl                   F7AF2B       1       1       2   PAGE_F7_745 
-     Can1_WakeAndSleepCtrl                   F7AF2C       1       1       2   PAGE_F7_745 
-     Buf_Init                                F7AF2D     1E6     486       2   PAGE_F7_745 
-     Wr_FrameToBuf                           F7B113     200     512       5   PAGE_F7_745 
-     Rd_BufToFrame                           F7B313     16A     362       5   PAGE_F7_745 
-     Rd_BufToFrameCbk                        F7B47D      B0     176       4   PAGE_F7_745 
-     CanIf_Init                              F7B52D      26      38       6   PAGE_F7_745 
-     CanIf_StartSend                         F7B553      20      32       2   PAGE_F7_745 
-     CanIf_RequestSend                       F7B573      71     113      54   PAGE_F7_745 
-     CanIf_RxIndication                      F7B5E4      5A      90       6   PAGE_F7_745 
-     CanIf_GetRxBufferLength                 F7B63E      3A      58       6   PAGE_F7_745 
-     Can_TxConfirm                           F7B678      3D      61       6   PAGE_F7_745 
-     Can_SendTask                            F7B6B5      9D     157       8   PAGE_F7_745 
-     Can_ReceiveTask                         F7B752      52      82       6   PAGE_F7_745 
-     CanIf_SetCanMode                        F7B7A4      22      34       2   PAGE_F7_745 
-     CanIf_SetAcceptanceCode                 F7B7C6      24      36       2   PAGE_F7_745 
-     CanIf_SetAcceptanceMask                 F7B7EA      24      36       2   PAGE_F7_745 
-     CanIf_SetAcceptanceMaskCode             F7B80E      17      23       6   PAGE_F7_745 
-     CanTp_MainTx                            F7B825     429    1065      13   PAGE_F7_745 
-     CanTp_CopyDataToBuf                     F7BC4E     130     304      10   PAGE_F7_745 
+     CurDet_Main                             F78000     230     560       2   PAGE_F7_745 
+     CurDet_InitCurDet                       F78230     16D     365       2   PAGE_F7_745 
+     CurrentDet_CalcAh                       F7839D     118     280       3   PAGE_F7_745 
+     CurDet_BakupConfigTo                    F784B5      35      53       2   PAGE_F7_745 
+     CurDet_CompareConfigWith                F784EA      45      69       2   PAGE_F7_745 
+     CurDet_SaveConfAndCompare               F7852F      B4     180      12   PAGE_F7_745 
+     CurDet_UpdateGainAndOffset              F785E3      16      22       2   PAGE_F7_745 
+     CurDet_ClbCurCurChnOffset               F785F9      67     103       4   PAGE_F7_745 
+     CurDet_ClbCurCurChnGain                 F78660      51      81       4   PAGE_F7_745 
+     CurDet_ClbCurVolChnOffset               F786B1      2C      44       4   PAGE_F7_745 
+     CurDet_ClbCurVolChnGain                 F786DD      2E      46       4   PAGE_F7_745 
+     CurDet_UpdateAhCalcThrhd                F7870B      3C      60      28   PAGE_F7_745 
+     SensorDi_GetVesionModuleVer             F78747       E      14       2   PAGE_F7_745 
+     Sensor_GetDiSt                          F78755      2F      47       8   PAGE_F7_745 
+     IsoDet_GetVesionModuleVer               F78784       E      14       2   PAGE_F7_745 
+     IsoDet_Init                             F78792      12      18       2   PAGE_F7_745 
+     IsoDet_MainCountCbk                     F787A4      25      37       2   PAGE_F7_745 
+     IsoDet_ErrJudge                         F787C9      2F      47       2   PAGE_F7_745 
+     IsoDet_MainCbk                          F787F8     668    1640       6   PAGE_F7_745 
+     SumvDet_GetVesionModuleVer              F78E60       E      14       2   PAGE_F7_745 
+     SumvDet_Init                            F78E6E       8       8       2   PAGE_F7_745 
+     SumvDet_MainCountCbk                    F78E76      11      17       2   PAGE_F7_745 
+     SumvDet_MainCbk                         F78E87       F      15       2   PAGE_F7_745 
+     SumvDet_InitSumvDet                     F78E96     154     340       2   PAGE_F7_745 
+     SumvDet_ProcSumvDet                     F78FEA     2B7     695       3   PAGE_F7_745 
+     SumvDet_UpdateGainAndOffset             F792A1      54      84       4   PAGE_F7_745 
+     TemperDet_GetVesionModuleVer            F792F5       E      14       2   PAGE_F7_745 
+     TemperDet_Init                          F79303      33      51       2   PAGE_F7_745 
+     TemperDet_GetNtcTemper                  F79336      FC     252       2   PAGE_F7_745 
+     TemperDet_GetTemper                     F79432      D5     213       2   PAGE_F7_745 
+     TemperDet_CountCbk                      F79507      11      17       2   PAGE_F7_745 
+     TemperDet_MainTemperDet                 F79518       F      15       2   PAGE_F7_745 
+     SOC_AhIntglProcess                      F79527     2C8     712       4   PAGE_F7_745 
+     SOC_GetBatSt                            F797EF      E0     224       2   PAGE_F7_745 
+     SOC_EstmatOCV                           F798CF     5C5    1477       6   PAGE_F7_745 
+     SOC_EstmatCharge                        F79E94     257     599       4   PAGE_F7_745 
+     SOC_EstmatDchDyn                        F7A0EB     3BD     957       8   PAGE_F7_745 
+     SOC_EstmatLimit                         F7A4A8      D4     212       2   PAGE_F7_745 
+     SOC_EstmatActualAH                      F7A57C     227     551       3   PAGE_F7_745 
+     SOC_CurAhSmooth                         F7A7A3     1FC     508       3   PAGE_F7_745 
+     SOC_EstmatProcess                       F7A99F     1F5     501       4   PAGE_F7_745 
+     SOC_ModuleInit                          F7AB94      93     147       2   PAGE_F7_745 
+     SOC_ModuleCountCbk                      F7AC27      22      34       2   PAGE_F7_745 
+     SOC_ModuleCbk                           F7AC49      D5     213       2   PAGE_F7_745 
+     SOH_ModuleInit                          F7AD1E     10E     270       2   PAGE_F7_745 
+     CAN0_SetBaudrate                        F7AE2C      2A      42       2   PAGE_F7_745 
+     CAN1_SetBaudrate                        F7AE56      2A      42       2   PAGE_F7_745 
+     CAN4_SetBaudrate                        F7AE80      2A      42       2   PAGE_F7_745 
+     CAN4_EnableEvent_Func                   F7AEAA       6       6       2   PAGE_F7_745 
+     CAN4_DisableEvent_Func                  F7AEB0       4       4       2   PAGE_F7_745 
+     CAN0_EnableEvent_Func                   F7AEB4       6       6       2   PAGE_F7_745 
+     CAN0_DisableEvent_Func                  F7AEBA       4       4       2   PAGE_F7_745 
+     CAN1_EnableEvent_Func                   F7AEBE       6       6       2   PAGE_F7_745 
+     CAN1_DisableEvent_Func                  F7AEC4       4       4       2   PAGE_F7_745 
+     CAN4_EnableMSCANandHw                   F7AEC8      10      16       2   PAGE_F7_745 
+     CAN4_DisableMSCANandHw                  F7AED8      11      17       2   PAGE_F7_745 
+     CAN0_EnableMSCANandHw                   F7AEE9      10      16       2   PAGE_F7_745 
+     CAN0_DisableMSCANandHw                  F7AEF9      11      17       2   PAGE_F7_745 
+     CAN1_EnableMSCANandHw                   F7AF0A      10      16       2   PAGE_F7_745 
+     CAN1_DisableMSCANandHw                  F7AF1A      11      17       2   PAGE_F7_745 
+     Can4_WakeAndSleepCtrl                   F7AF2B       1       1       2   PAGE_F7_745 
+     Can0_WakeAndSleepCtrl                   F7AF2C       1       1       2   PAGE_F7_745 
+     Can1_WakeAndSleepCtrl                   F7AF2D       1       1       2   PAGE_F7_745 
+     Buf_Init                                F7AF2E     1E6     486       2   PAGE_F7_745 
+     Wr_FrameToBuf                           F7B114     200     512       5   PAGE_F7_745 
+     Rd_BufToFrame                           F7B314     16A     362       5   PAGE_F7_745 
+     Rd_BufToFrameCbk                        F7B47E      B0     176       4   PAGE_F7_745 
+     CanIf_Init                              F7B52E      26      38       6   PAGE_F7_745 
+     CanIf_StartSend                         F7B554      20      32       2   PAGE_F7_745 
+     CanIf_RequestSend                       F7B574      71     113      54   PAGE_F7_745 
+     CanIf_RxIndication                      F7B5E5      5A      90       6   PAGE_F7_745 
+     CanIf_GetRxBufferLength                 F7B63F      3A      58       6   PAGE_F7_745 
+     Can_TxConfirm                           F7B679      3D      61       6   PAGE_F7_745 
+     Can_SendTask                            F7B6B6      9D     157       8   PAGE_F7_745 
+     Can_ReceiveTask                         F7B753      52      82       6   PAGE_F7_745 
+     CanIf_SetCanMode                        F7B7A5      22      34       2   PAGE_F7_745 
+     CanIf_SetAcceptanceCode                 F7B7C7      24      36       2   PAGE_F7_745 
+     CanIf_SetAcceptanceMask                 F7B7EB      24      36       2   PAGE_F7_745 
+     CanIf_SetAcceptanceMaskCode             F7B80F      17      23       6   PAGE_F7_745 
+     CanTp_MainTx                            F7B826     429    1065      13   PAGE_F7_745 
+     CanTp_CopyDataToBuf                     F7BC4F     130     304      10   PAGE_F7_745 
      RD_BCUHistorySocInfo                    F88000      ED     237       2   PAGE_F8_744 
      RD_BCUHistoryCapacityInfo               F880ED      ED     237       2   PAGE_F8_744 
      RD_BCUBatPackInfo1                      F881DA      97     151       2   PAGE_F8_744 
@@ -7695,7 +7695,7 @@ OBJECT LIST SORTED BY ADDRESS
      BmsSys_UpdateK15St                      FCBB41       9       9       2   PAGE_FC_740 
      BmsSys_GetK15Volt                       FCBB4A       9       9       2   PAGE_FC_740 
      BmsSys_UpdateK15Volt                    FCBB53       A      10       2   PAGE_FC_740 
-     BmsSys_GetK30Volt                       FCBB5D       9       9      82   PAGE_FC_740 
+     BmsSys_GetK30Volt                       FCBB5D       9       9      84   PAGE_FC_740 
      BmsSys_UpdateK30Volt                    FCBB66       A      10       2   PAGE_FC_740 
      BmsSys_GetOnBDChgVolt                   FCBB70       9       9       2   PAGE_FC_740 
      BmsSys_UpdateOnBDChgVolt                FCBB79       A      10       4   PAGE_FC_740 
@@ -7838,230 +7838,230 @@ OBJECT LIST SORTED BY ADDRESS
      Err_Main                                FE9401      AA     170       2   .text       
      Err_CheckErrChanged                     FE94AB      88     136       2   .text       
      Err_JudgeHighThrhd                      FE9533     20F     527      26   .text       
-     Err_JudgeLowThrhd                       FE9742     20F     527      10   .text       
+     Err_JudgeLowThrhd                       FE9742     20F     527      12   .text       
      Err_JudgeBatErrLevel                    FE9951     9A3    2467       2   .text       
-     Err_JudgeBatSysErrLevel                 FEA2F4      E6     230       2   .text       
-     Err_DealHwErrLevel                      FEA3DA     67E    1662       2   .text       
-     Err_DealHwErrDetail                     FEAA58      52      82       2   .text       
-     ChgInfo_Init                            FEAAAA      39      57       2   .text       
-     Chg_GetAcLinkSt                         FEAAE3       9       9      34   .text       
-     Chg_UpdateAcLinkSt                      FEAAEC       9       9       2   .text       
-     Chg_GetCableCap                         FEAAF5       9       9       2   .text       
-     Chg_UpdateCableCap                      FEAAFE       A      10       4   .text       
-     Chg_GetCcVolt                           FEAB08       9       9       6   .text       
-     Chg_UpdateCCVolt                        FEAB11       A      10       2   .text       
-     Chg_UpdateCpPeriod                      FEAB1B       A      10       2   .text       
-     Chg_GetCpDutyCycle                      FEAB25       9       9       6   .text       
-     Chg_UpdateCpDutyCycle                   FEAB2E       9       9       2   .text       
-     Chg_GetDcLinkSt                         FEAB37       9       9      16   .text       
-     Chg_UpdateDcLinkSt                      FEAB40       9       9       2   .text       
-     Chg_GetCc2Volt                          FEAB49       9       9       4   .text       
-     Chg_UpdateCc2Volt                       FEAB52       A      10       2   .text       
-     Chg_GetPermitMaxT                       FEAB5C       9       9       6   .text       
-     Chg_UpdatePermitMaxT                    FEAB65       9       9       2   .text       
-     Chg_GetPermitMinT                       FEAB6E       9       9       2   .text       
-     Chg_UpdatePermitMinT                    FEAB77       9       9       2   .text       
-     Chg_GetPermitMaxSumV                    FEAB80       9       9      14   .text       
-     Chg_UpdatePermitMaxSumV                 FEAB89       A      10       2   .text       
-     Chg_GetPermitMaxCellV                   FEAB93       9       9      14   .text       
-     Chg_UpdatePermitMaxCellV                FEAB9C       A      10       2   .text       
-     Chg_GetPermitMinCellV                   FEABA6       9       9       2   .text       
-     Chg_UpdatePermitMinCellV                FEABAF       A      10       2   .text       
-     Chg_GetPermitMaxCurrent                 FEABB9       9       9       4   .text       
-     Chg_UpdatePermitMaxCurrent              FEABC2       A      10       2   .text       
-     Chg_GetPermitMinCurrent                 FEABCC       9       9       4   .text       
-     Chg_UpdatePermitMinCurrent              FEABD5       A      10       2   .text       
-     Chg_GetDownCurrentStep                  FEABDF       9       9       4   .text       
-     Chg_UpdateDownCurrentStep               FEABE8       A      10       2   .text       
-     Chg_GetPermitChgExtSt                   FEABF2       9       9      10   .text       
-     Chg_UpdatePermitChgExtSt                FEABFB       9       9       2   .text       
-     Chg_GetPermitChgOnSt                    FEAC04       9       9       6   .text       
-     Chg_UpdatePermitChgOnSt                 FEAC0D       9       9       4   .text       
-     Chg_GetPermitChgCurOn                   FEAC16       9       9       4   .text       
-     Chg_UpdatePermitChgCurOn                FEAC1F       A      10       2   .text       
-     Chg_GetPermitChgCurExt                  FEAC29       9       9       6   .text       
-     Chg_UpdatePermitChgCurExt               FEAC32       A      10       2   .text       
-     Chg_GetChgSt                            FEAC3C       9       9      26   .text       
-     Chg_UpdateChgSt                         FEAC45       9       9       2   .text       
-     Chg_GetChgStage                         FEAC4E       9       9      10   .text       
-     Chg_UpdateChgStage                      FEAC57       9       9       2   .text       
-     Chg_GetAccumulatedChgTime               FEAC60       9       9       2   .text       
-     Chg_GetRemainChgTime                    FEAC69       9       9       4   .text       
-     Chg_UpdateRemainChgTime                 FEAC72       A      10       2   .text       
-     Chg_GetBmsStopReason                    FEAC7C       D      13       2   .text       
-     Chg_UpdateBmsStopReason                 FEAC89       E      14       2   .text       
-     Chg_GetChargerStopReason                FEAC97       9       9       2   .text       
-     Chg_UpdateChargerStopReason             FEACA0      48      72       2   .text       
-     Chg_GetChargerFault                     FEACE8       9       9       2   .text       
-     Chg_UpdateChargerFault                  FEACF1      9B     155       2   .text       
-     Chg_GetChargerSt                        FEAD8C       9       9       2   .text       
-     Chg_GetOutPutVoltage                    FEAD95       9       9       2   .text       
-     Chg_UpdateOutPutVoltage                 FEAD9E       A      10       2   .text       
-     Chg_GetOutPutCurrent                    FEADA8       9       9       2   .text       
-     Chg_UpdateOutPutCurrent                 FEADB1       A      10       2   .text       
-     Chg_UpdateMaxOutPutVoltage              FEADBB       A      10       2   .text       
-     Chg_UpdateMinOutPutVoltage              FEADC5       A      10       2   .text       
-     Chg_GetOutPutMinCurrent                 FEADCF       9       9       2   .text       
-     Chg_UpdateOutPutMinCurrent              FEADD8       A      10       2   .text       
-     Chg_GetOutPutMaxCurrent                 FEADE2       9       9       2   .text       
-     Chg_UpdateOutPutMaxCurrent              FEADEB       A      10       2   .text       
-     Chg_GetOutPutEnergy                     FEADF5       9       9       2   .text       
-     Chg_GetSeteLockCmd                      FEADFE       9       9       2   .text       
-     Chg_UpdateSeteLockCmd                   FEAE07       9       9       2   .text       
-     Chg_GetFdSignalType                     FEAE10       9       9       2   .text       
-     Chg_UpdateFdSignalType                  FEAE19       9       9       2   .text       
-     Chg_GetNtcType                          FEAE22       9       9       2   .text       
-     Chg_GetElockRecSt                       FEAE2B       9       9       2   .text       
-     Chg_UpdateElockRecSt                    FEAE34       9       9       2   .text       
-     Chg_UpdateElockStErr                    FEAE3D       9       9       2   .text       
-     Chg_UpdateElockTemper                   FEAE46      1F      31       2   .text       
-     Chg_UpdateElockHdErr                    FEAE65       9       9       2   .text       
-     BatPackInfo_Init                        FEAE6E     125     293       2   .text       
-     Bat_StatusInit                          FEAF93      BF     191       2   .text       
-     Bat_GetCurrent                          FEB052      2E      46      34   .text       
-     Bat_UpdateCurrent                       FEB080      38      56       8   .text       
-     Bat_GetSumV                             FEB0B8      5E      94      32   .text       
-     Bat_UpdateSumV                          FEB116      74     116      10   .text       
-     Bat_GetSOC                              FEB18A      13      19      26   .text       
-     Bat_UpdateSOC                           FEB19D      18      24       6   .text       
-     Bat_GetTemper                           FEB1B5      77     119      14   .text       
-     Bat_UpdateTemper                        FEB22C      7B     123       4   .text       
-     Bat_GetMaxV                             FEB2A7      12      18      24   .text       
-     Bat_UpdateMaxV                          FEB2B9      17      23       4   .text       
-     Bat_GetMinV                             FEB2D0      12      18      20   .text       
-     Bat_UpdateMinV                          FEB2E2      17      23       4   .text       
-     Bat_GetMaxVTotalNo                      FEB2F9      12      18       6   .text       
-     Bat_UpdateMaxVTotalNo                   FEB30B      17      23       4   .text       
-     Bat_GetMinVTotalNo                      FEB322      12      18       4   .text       
-     Bat_UpdateMinVTotalNo                   FEB334      17      23       4   .text       
-     Bat_UpdateMaxVSingleNo                  FEB34B      12      18       2   .text       
-     Bat_UpdateMinVSingleNo                  FEB35D      12      18       2   .text       
-     Bat_GetMaxVBmuNo                        FEB36F      12      18       2   .text       
-     Bat_UpdateMaxVBmuNo                     FEB381      12      18       2   .text       
-     Bat_UpdateMinVBmuNo                     FEB393      12      18       2   .text       
-     Bat_GetMaxT                             FEB3A5      12      18      44   .text       
-     Bat_UpdateMaxT                          FEB3B7      12      18       4   .text       
-     Bat_GetMinT                             FEB3C9      12      18      22   .text       
-     Bat_UpdateMinT                          FEB3DB      12      18       4   .text       
-     Bat_GetMaxTTotalNo                      FEB3ED      12      18       6   .text       
-     Bat_UpdateMaxTTotalNo                   FEB3FF      17      23       4   .text       
-     Bat_GetMinTTotalNo                      FEB416      13      19       6   .text       
-     Bat_UpdateMinTTotalNo                   FEB429      18      24       4   .text       
-     Bat_UpdateMaxTSingleNo                  FEB441      13      19       2   .text       
-     Bat_UpdateMinTSingleNo                  FEB454      13      19       2   .text       
-     Bat_UpdateMaxTBmuNo                     FEB467      13      19       2   .text       
-     Bat_UpdateMinTBmuNo                     FEB47A      13      19       2   .text       
-     Bat_GetMaxR                             FEB48D      13      19       8   .text       
-     Bat_GetMinR                             FEB4A0      13      19       6   .text       
-     Bat_GetMaxRTotalNo                      FEB4B3      13      19       4   .text       
-     Bat_GetMinRTotalNo                      FEB4C6      13      19       4   .text       
-     Bat_GetMaxPermitDchCur                  FEB4D9      13      19       4   .text       
-     Bat_UpdateMaxPermitDchCur               FEB4EC      18      24       2   .text       
-     Bat_GetMaxFeedBackCur                   FEB504      13      19       4   .text       
-     Bat_UpdateMaxFeedBackCur                FEB517      18      24       2   .text       
-     Bat_UpdateMaxPermitFeedbackPower        FEB52F      18      24       2   .text       
-     Bat_UpdateMaxPermitDchPower             FEB547      18      24       2   .text       
-     Bat_UpdateMaxPulseDchCur                FEB55F      18      24       2   .text       
-     Bat_UpdateMaxPulseFeedBackCur           FEB577      18      24       2   .text       
-     Bat_UpdateMaxPulseDchPower              FEB58F      18      24       2   .text       
-     Bat_UpdateMaxPulseFeedbackPower         FEB5A7      18      24       2   .text       
-     Bat_GetHisMaxV                          FEB5BF      12      18       2   .text       
-     Bat_UpdateHisMaxV                       FEB5D1      17      23       2   .text       
-     Bat_GetHisMinV                          FEB5E8      12      18       2   .text       
-     Bat_UpdateHisMinV                       FEB5FA      17      23       2   .text       
-     Bat_GetHisDeltaV                        FEB611      12      18       2   .text       
-     Bat_UpdateHisDeltaV                     FEB623      17      23       2   .text       
-     Bat_GetHisMaxAvgV                       FEB63A      12      18       2   .text       
-     Bat_UpdateHisMaxAvgV                    FEB64C      17      23       2   .text       
-     Bat_GetHisMinAvgV                       FEB663      12      18       2   .text       
-     Bat_UpdateHisMinAvgV                    FEB675      17      23       2   .text       
-     Bat_GetHisMaxT                          FEB68C      12      18       2   .text       
-     Bat_UpdateHisMaxT                       FEB69E      12      18       2   .text       
-     Bat_GetHisMinT                          FEB6B0      12      18       2   .text       
-     Bat_UpdateHisMinT                       FEB6C2      12      18       2   .text       
-     Bat_GetHisMaxDeltaT                     FEB6D4      13      19       2   .text       
-     Bat_UpdateHisMaxDeltaT                  FEB6E7      13      19       2   .text       
-     Bat_GetHisMaxAvgT                       FEB6FA      13      19       2   .text       
-     Bat_UpdateHisMaxAvgT                    FEB70D      13      19       2   .text       
-     Bat_GetHisMinAvgT                       FEB720      13      19       2   .text       
-     Bat_UpdateHisMinAvgT                    FEB733      13      19       2   .text       
-     Bat_GetHisMaxR                          FEB746      13      19       2   .text       
-     Bat_UpdateHisMaxR                       FEB759      18      24       2   .text       
-     Bat_GetHisMinR                          FEB771      13      19       2   .text       
-     Bat_UpdateHisMinR                       FEB784      18      24       2   .text       
-     Bat_GetHisMaxChgCur                     FEB79C      13      19       2   .text       
-     Bat_UpdateHisMaxChgCur                  FEB7AF      18      24       2   .text       
-     Bat_GetHisMaxDchCur                     FEB7C7      13      19       2   .text       
-     Bat_UpdateHisMaxDchCur                  FEB7DA      18      24       2   .text       
-     Bat_GetHisMaxChgPwr                     FEB7F2      13      19       2   .text       
-     Bat_UpdateHisMaxChgPwr                  FEB805      18      24       2   .text       
-     Bat_GetHisMaxDchPwr                     FEB81D      13      19       2   .text       
-     Bat_UpdateHisMaxDchPwr                  FEB830      18      24       2   .text       
-     Bat_GetHisMaxSumV                       FEB848      12      18       2   .text       
-     Bat_UpdateHisMaxSumV                    FEB85A      17      23       2   .text       
-     Bat_GetHisMinSumV                       FEB871      12      18       2   .text       
-     Bat_UpdateHisMinSumV                    FEB883      17      23       2   .text       
-     Bat_GetMaxTDistribution                 FEB89A      21      33       2   .text       
-     Bat_UpdateMaxTDistribution              FEB8BB      29      41       2   .text       
-     Bat_GetMinTDistribution                 FEB8E4      21      33       2   .text       
-     Bat_UpdateMinTDistribution              FEB905      29      41       2   .text       
-     Bat_GetMaxDeltaTDistribution            FEB92E      21      33       2   .text       
-     Bat_UpdateMaxDeltaTDistribution         FEB94F      29      41       2   .text       
-     Bat_GetAvgTDistribution                 FEB978      21      33       2   .text       
-     Bat_UpdateAvgTDistribution              FEB999      29      41       2   .text       
-     Bat_GetCurDistribution                  FEB9C2      23      35       2   .text       
-     Bat_UpdateCurDistribution               FEB9E5      2B      43       2   .text       
-     Bat_GetSocDistribution                  FEBA10      23      35       2   .text       
-     Bat_UpdateSocDistribution               FEBA33      2B      43       2   .text       
-     Bat_GetHisChgTimes                      FEBA5E      13      19       4   .text       
-     Bat_UpdateHisChgTimes                   FEBA71      18      24       2   .text       
-     Bat_GetHisChgFullTimes                  FEBA89      13      19       2   .text       
-     Bat_UpdateHisChgFullTimes               FEBA9C      18      24       2   .text       
-     Bat_GetDchEmptyTimes                    FEBAB4      13      19       2   .text       
-     Bat_UpdateDchEmptyTimes                 FEBAC7      18      24       2   .text       
-     Bat_GetSerialNum                        FEBADF      12      18       4   .text       
-     Bat_GetManufacturer                     FEBAF1      13      19       2   .text       
-     Bat_GetMaterialType                     FEBB04      14      20      30   .text       
-     Bat_UpdateMaterialType                  FEBB18      17      23       2   .text       
-     Bat_GetRatedEnergy                      FEBB2F      13      19       2   .text       
-     Bat_GetPropertyId                       FEBB42      13      19       2   .text       
-     Bat_GetBatDate                          FEBB55      2A      42       2   .text       
-     Bat_GetAllPackNo                        FEBB7F      19      25       6   .text       
-     Bat_GetSoh                              FEBB98      13      19      14   .text       
-     Bat_UpdateSoh                           FEBBAB      18      24       4   .text       
-     Bat_GetAvgV                             FEBBC3      13      19       8   .text       
-     Bat_UpdateAvgV                          FEBBD6      18      24       2   .text       
-     Bat_GetDeltaV                           FEBBEE      13      19       4   .text       
-     Bat_UpdateDeltaV                        FEBC01      18      24       2   .text       
-     Bat_GetAvgT                             FEBC19      13      19       8   .text       
-     Bat_UpdateAvgT                          FEBC2C      13      19       2   .text       
-     Bat_GetDeltaT                           FEBC3F      13      19       6   .text       
-     Bat_UpdateDeltaT                        FEBC52      13      19       2   .text       
-     Bat_UpdateBatteryTemperRise             FEBC65      13      19       2   .text       
-     Bat_UpdateTemperRisePerHour             FEBC78      13      19       2   .text       
-     Bat_UpdateMaxTRiseRate                  FEBC8B      13      19       2   .text       
-     Bat_GetPwr                              FEBC9E      13      19       4   .text       
-     Bat_UpdatePwr                           FEBCB1      18      24       2   .text       
-     Bat_GetAccumulateChgAh                  FEBCC9      19      25       4   .text       
-     Bat_UpdateAccumulateChgAh               FEBCE2      1D      29       4   .text       
-     Bat_GetAccumulateDchgAh                 FEBCFF      19      25       4   .text       
-     Bat_UpdateAccumulateDchgAh              FEBD18      1D      29       4   .text       
-     Bat_GetTotalChgAh                       FEBD35      19      25       6   .text       
-     Bat_UpdateTotalChgAh                    FEBD4E      1D      29       4   .text       
-     Bat_GetTotalDchAh                       FEBD6B      19      25       6   .text       
-     Bat_UpdateTotalDChAh                    FEBD84      1D      29       4   .text       
-     Bat_GetRatedCapacityCalc                FEBDA1      19      25      20   .text       
-     Bat_GetActualCapacityCalc               FEBDBA      19      25      14   .text       
-     Bat_UpdateActualCapacityCalc            FEBDD3      1D      29       8   .text       
-     Bat_GetRemainCapacity                   FEBDF0      19      25       6   .text       
-     Bat_UpdateRemainCapacity                FEBE09      1D      29       8   .text       
-     Bat_UpdateMainBalanceSt                 FEBE26      13      19       8   .text       
-     Bat_GetBmuNum                           FEBE39      13      19      12   .text       
-     Bat_UpdateBmuNum                        FEBE4C      13      19       2   .text       
-     Bat_GetTemperNum                        FEBE5F      13      19       2   .text       
-     Bat_UpdateTemperNum                     FEBE72      18      24       2   .text       
-     Bat_GetBatNum                           FEBE8A      13      19       8   .text       
-     Bat_UpdateBatNum                        FEBE9D      18      24       2   .text       
+     Err_JudgeBatSysErrLevel                 FEA2F4     166     358       2   .text       
+     Err_DealHwErrLevel                      FEA45A     67E    1662       2   .text       
+     Err_DealHwErrDetail                     FEAAD8      52      82       2   .text       
+     ChgInfo_Init                            FEAB2A      39      57       2   .text       
+     Chg_GetAcLinkSt                         FEAB63       9       9      34   .text       
+     Chg_UpdateAcLinkSt                      FEAB6C       9       9       2   .text       
+     Chg_GetCableCap                         FEAB75       9       9       2   .text       
+     Chg_UpdateCableCap                      FEAB7E       A      10       4   .text       
+     Chg_GetCcVolt                           FEAB88       9       9       6   .text       
+     Chg_UpdateCCVolt                        FEAB91       A      10       2   .text       
+     Chg_UpdateCpPeriod                      FEAB9B       A      10       2   .text       
+     Chg_GetCpDutyCycle                      FEABA5       9       9       6   .text       
+     Chg_UpdateCpDutyCycle                   FEABAE       9       9       2   .text       
+     Chg_GetDcLinkSt                         FEABB7       9       9      16   .text       
+     Chg_UpdateDcLinkSt                      FEABC0       9       9       2   .text       
+     Chg_GetCc2Volt                          FEABC9       9       9       4   .text       
+     Chg_UpdateCc2Volt                       FEABD2       A      10       2   .text       
+     Chg_GetPermitMaxT                       FEABDC       9       9       6   .text       
+     Chg_UpdatePermitMaxT                    FEABE5       9       9       2   .text       
+     Chg_GetPermitMinT                       FEABEE       9       9       2   .text       
+     Chg_UpdatePermitMinT                    FEABF7       9       9       2   .text       
+     Chg_GetPermitMaxSumV                    FEAC00       9       9      14   .text       
+     Chg_UpdatePermitMaxSumV                 FEAC09       A      10       2   .text       
+     Chg_GetPermitMaxCellV                   FEAC13       9       9      14   .text       
+     Chg_UpdatePermitMaxCellV                FEAC1C       A      10       2   .text       
+     Chg_GetPermitMinCellV                   FEAC26       9       9       2   .text       
+     Chg_UpdatePermitMinCellV                FEAC2F       A      10       2   .text       
+     Chg_GetPermitMaxCurrent                 FEAC39       9       9       4   .text       
+     Chg_UpdatePermitMaxCurrent              FEAC42       A      10       2   .text       
+     Chg_GetPermitMinCurrent                 FEAC4C       9       9       4   .text       
+     Chg_UpdatePermitMinCurrent              FEAC55       A      10       2   .text       
+     Chg_GetDownCurrentStep                  FEAC5F       9       9       4   .text       
+     Chg_UpdateDownCurrentStep               FEAC68       A      10       2   .text       
+     Chg_GetPermitChgExtSt                   FEAC72       9       9      10   .text       
+     Chg_UpdatePermitChgExtSt                FEAC7B       9       9       2   .text       
+     Chg_GetPermitChgOnSt                    FEAC84       9       9       6   .text       
+     Chg_UpdatePermitChgOnSt                 FEAC8D       9       9       4   .text       
+     Chg_GetPermitChgCurOn                   FEAC96       9       9       4   .text       
+     Chg_UpdatePermitChgCurOn                FEAC9F       A      10       2   .text       
+     Chg_GetPermitChgCurExt                  FEACA9       9       9       6   .text       
+     Chg_UpdatePermitChgCurExt               FEACB2       A      10       2   .text       
+     Chg_GetChgSt                            FEACBC       9       9      26   .text       
+     Chg_UpdateChgSt                         FEACC5       9       9       2   .text       
+     Chg_GetChgStage                         FEACCE       9       9      10   .text       
+     Chg_UpdateChgStage                      FEACD7       9       9       2   .text       
+     Chg_GetAccumulatedChgTime               FEACE0       9       9       2   .text       
+     Chg_GetRemainChgTime                    FEACE9       9       9       4   .text       
+     Chg_UpdateRemainChgTime                 FEACF2       A      10       2   .text       
+     Chg_GetBmsStopReason                    FEACFC       D      13       2   .text       
+     Chg_UpdateBmsStopReason                 FEAD09       E      14       2   .text       
+     Chg_GetChargerStopReason                FEAD17       9       9       2   .text       
+     Chg_UpdateChargerStopReason             FEAD20      48      72       2   .text       
+     Chg_GetChargerFault                     FEAD68       9       9       2   .text       
+     Chg_UpdateChargerFault                  FEAD71      9B     155       2   .text       
+     Chg_GetChargerSt                        FEAE0C       9       9       2   .text       
+     Chg_GetOutPutVoltage                    FEAE15       9       9       2   .text       
+     Chg_UpdateOutPutVoltage                 FEAE1E       A      10       2   .text       
+     Chg_GetOutPutCurrent                    FEAE28       9       9       2   .text       
+     Chg_UpdateOutPutCurrent                 FEAE31       A      10       2   .text       
+     Chg_UpdateMaxOutPutVoltage              FEAE3B       A      10       2   .text       
+     Chg_UpdateMinOutPutVoltage              FEAE45       A      10       2   .text       
+     Chg_GetOutPutMinCurrent                 FEAE4F       9       9       2   .text       
+     Chg_UpdateOutPutMinCurrent              FEAE58       A      10       2   .text       
+     Chg_GetOutPutMaxCurrent                 FEAE62       9       9       2   .text       
+     Chg_UpdateOutPutMaxCurrent              FEAE6B       A      10       2   .text       
+     Chg_GetOutPutEnergy                     FEAE75       9       9       2   .text       
+     Chg_GetSeteLockCmd                      FEAE7E       9       9       2   .text       
+     Chg_UpdateSeteLockCmd                   FEAE87       9       9       2   .text       
+     Chg_GetFdSignalType                     FEAE90       9       9       2   .text       
+     Chg_UpdateFdSignalType                  FEAE99       9       9       2   .text       
+     Chg_GetNtcType                          FEAEA2       9       9       2   .text       
+     Chg_GetElockRecSt                       FEAEAB       9       9       2   .text       
+     Chg_UpdateElockRecSt                    FEAEB4       9       9       2   .text       
+     Chg_UpdateElockStErr                    FEAEBD       9       9       2   .text       
+     Chg_UpdateElockTemper                   FEAEC6      1F      31       2   .text       
+     Chg_UpdateElockHdErr                    FEAEE5       9       9       2   .text       
+     BatPackInfo_Init                        FEAEEE     125     293       2   .text       
+     Bat_StatusInit                          FEB013      BF     191       2   .text       
+     Bat_GetCurrent                          FEB0D2      2E      46      34   .text       
+     Bat_UpdateCurrent                       FEB100      38      56       8   .text       
+     Bat_GetSumV                             FEB138      5E      94      32   .text       
+     Bat_UpdateSumV                          FEB196      74     116      10   .text       
+     Bat_GetSOC                              FEB20A      13      19      26   .text       
+     Bat_UpdateSOC                           FEB21D      18      24       6   .text       
+     Bat_GetTemper                           FEB235      77     119      14   .text       
+     Bat_UpdateTemper                        FEB2AC      7B     123       4   .text       
+     Bat_GetMaxV                             FEB327      12      18      24   .text       
+     Bat_UpdateMaxV                          FEB339      17      23       4   .text       
+     Bat_GetMinV                             FEB350      12      18      20   .text       
+     Bat_UpdateMinV                          FEB362      17      23       4   .text       
+     Bat_GetMaxVTotalNo                      FEB379      12      18       6   .text       
+     Bat_UpdateMaxVTotalNo                   FEB38B      17      23       4   .text       
+     Bat_GetMinVTotalNo                      FEB3A2      12      18       4   .text       
+     Bat_UpdateMinVTotalNo                   FEB3B4      17      23       4   .text       
+     Bat_UpdateMaxVSingleNo                  FEB3CB      12      18       2   .text       
+     Bat_UpdateMinVSingleNo                  FEB3DD      12      18       2   .text       
+     Bat_GetMaxVBmuNo                        FEB3EF      12      18       2   .text       
+     Bat_UpdateMaxVBmuNo                     FEB401      12      18       2   .text       
+     Bat_UpdateMinVBmuNo                     FEB413      12      18       2   .text       
+     Bat_GetMaxT                             FEB425      12      18      44   .text       
+     Bat_UpdateMaxT                          FEB437      12      18       4   .text       
+     Bat_GetMinT                             FEB449      12      18      22   .text       
+     Bat_UpdateMinT                          FEB45B      12      18       4   .text       
+     Bat_GetMaxTTotalNo                      FEB46D      12      18       6   .text       
+     Bat_UpdateMaxTTotalNo                   FEB47F      17      23       4   .text       
+     Bat_GetMinTTotalNo                      FEB496      13      19       6   .text       
+     Bat_UpdateMinTTotalNo                   FEB4A9      18      24       4   .text       
+     Bat_UpdateMaxTSingleNo                  FEB4C1      13      19       2   .text       
+     Bat_UpdateMinTSingleNo                  FEB4D4      13      19       2   .text       
+     Bat_UpdateMaxTBmuNo                     FEB4E7      13      19       2   .text       
+     Bat_UpdateMinTBmuNo                     FEB4FA      13      19       2   .text       
+     Bat_GetMaxR                             FEB50D      13      19       8   .text       
+     Bat_GetMinR                             FEB520      13      19       6   .text       
+     Bat_GetMaxRTotalNo                      FEB533      13      19       4   .text       
+     Bat_GetMinRTotalNo                      FEB546      13      19       4   .text       
+     Bat_GetMaxPermitDchCur                  FEB559      13      19       4   .text       
+     Bat_UpdateMaxPermitDchCur               FEB56C      18      24       2   .text       
+     Bat_GetMaxFeedBackCur                   FEB584      13      19       4   .text       
+     Bat_UpdateMaxFeedBackCur                FEB597      18      24       2   .text       
+     Bat_UpdateMaxPermitFeedbackPower        FEB5AF      18      24       2   .text       
+     Bat_UpdateMaxPermitDchPower             FEB5C7      18      24       2   .text       
+     Bat_UpdateMaxPulseDchCur                FEB5DF      18      24       2   .text       
+     Bat_UpdateMaxPulseFeedBackCur           FEB5F7      18      24       2   .text       
+     Bat_UpdateMaxPulseDchPower              FEB60F      18      24       2   .text       
+     Bat_UpdateMaxPulseFeedbackPower         FEB627      18      24       2   .text       
+     Bat_GetHisMaxV                          FEB63F      12      18       2   .text       
+     Bat_UpdateHisMaxV                       FEB651      17      23       2   .text       
+     Bat_GetHisMinV                          FEB668      12      18       2   .text       
+     Bat_UpdateHisMinV                       FEB67A      17      23       2   .text       
+     Bat_GetHisDeltaV                        FEB691      12      18       2   .text       
+     Bat_UpdateHisDeltaV                     FEB6A3      17      23       2   .text       
+     Bat_GetHisMaxAvgV                       FEB6BA      12      18       2   .text       
+     Bat_UpdateHisMaxAvgV                    FEB6CC      17      23       2   .text       
+     Bat_GetHisMinAvgV                       FEB6E3      12      18       2   .text       
+     Bat_UpdateHisMinAvgV                    FEB6F5      17      23       2   .text       
+     Bat_GetHisMaxT                          FEB70C      12      18       2   .text       
+     Bat_UpdateHisMaxT                       FEB71E      12      18       2   .text       
+     Bat_GetHisMinT                          FEB730      12      18       2   .text       
+     Bat_UpdateHisMinT                       FEB742      12      18       2   .text       
+     Bat_GetHisMaxDeltaT                     FEB754      13      19       2   .text       
+     Bat_UpdateHisMaxDeltaT                  FEB767      13      19       2   .text       
+     Bat_GetHisMaxAvgT                       FEB77A      13      19       2   .text       
+     Bat_UpdateHisMaxAvgT                    FEB78D      13      19       2   .text       
+     Bat_GetHisMinAvgT                       FEB7A0      13      19       2   .text       
+     Bat_UpdateHisMinAvgT                    FEB7B3      13      19       2   .text       
+     Bat_GetHisMaxR                          FEB7C6      13      19       2   .text       
+     Bat_UpdateHisMaxR                       FEB7D9      18      24       2   .text       
+     Bat_GetHisMinR                          FEB7F1      13      19       2   .text       
+     Bat_UpdateHisMinR                       FEB804      18      24       2   .text       
+     Bat_GetHisMaxChgCur                     FEB81C      13      19       2   .text       
+     Bat_UpdateHisMaxChgCur                  FEB82F      18      24       2   .text       
+     Bat_GetHisMaxDchCur                     FEB847      13      19       2   .text       
+     Bat_UpdateHisMaxDchCur                  FEB85A      18      24       2   .text       
+     Bat_GetHisMaxChgPwr                     FEB872      13      19       2   .text       
+     Bat_UpdateHisMaxChgPwr                  FEB885      18      24       2   .text       
+     Bat_GetHisMaxDchPwr                     FEB89D      13      19       2   .text       
+     Bat_UpdateHisMaxDchPwr                  FEB8B0      18      24       2   .text       
+     Bat_GetHisMaxSumV                       FEB8C8      12      18       2   .text       
+     Bat_UpdateHisMaxSumV                    FEB8DA      17      23       2   .text       
+     Bat_GetHisMinSumV                       FEB8F1      12      18       2   .text       
+     Bat_UpdateHisMinSumV                    FEB903      17      23       2   .text       
+     Bat_GetMaxTDistribution                 FEB91A      21      33       2   .text       
+     Bat_UpdateMaxTDistribution              FEB93B      29      41       2   .text       
+     Bat_GetMinTDistribution                 FEB964      21      33       2   .text       
+     Bat_UpdateMinTDistribution              FEB985      29      41       2   .text       
+     Bat_GetMaxDeltaTDistribution            FEB9AE      21      33       2   .text       
+     Bat_UpdateMaxDeltaTDistribution         FEB9CF      29      41       2   .text       
+     Bat_GetAvgTDistribution                 FEB9F8      21      33       2   .text       
+     Bat_UpdateAvgTDistribution              FEBA19      29      41       2   .text       
+     Bat_GetCurDistribution                  FEBA42      23      35       2   .text       
+     Bat_UpdateCurDistribution               FEBA65      2B      43       2   .text       
+     Bat_GetSocDistribution                  FEBA90      23      35       2   .text       
+     Bat_UpdateSocDistribution               FEBAB3      2B      43       2   .text       
+     Bat_GetHisChgTimes                      FEBADE      13      19       4   .text       
+     Bat_UpdateHisChgTimes                   FEBAF1      18      24       2   .text       
+     Bat_GetHisChgFullTimes                  FEBB09      13      19       2   .text       
+     Bat_UpdateHisChgFullTimes               FEBB1C      18      24       2   .text       
+     Bat_GetDchEmptyTimes                    FEBB34      13      19       2   .text       
+     Bat_UpdateDchEmptyTimes                 FEBB47      18      24       2   .text       
+     Bat_GetSerialNum                        FEBB5F      12      18       4   .text       
+     Bat_GetManufacturer                     FEBB71      13      19       2   .text       
+     Bat_GetMaterialType                     FEBB84      14      20      30   .text       
+     Bat_UpdateMaterialType                  FEBB98      17      23       2   .text       
+     Bat_GetRatedEnergy                      FEBBAF      13      19       2   .text       
+     Bat_GetPropertyId                       FEBBC2      13      19       2   .text       
+     Bat_GetBatDate                          FEBBD5      2A      42       2   .text       
+     Bat_GetAllPackNo                        FEBBFF      19      25       6   .text       
+     Bat_GetSoh                              FEBC18      13      19      14   .text       
+     Bat_UpdateSoh                           FEBC2B      18      24       4   .text       
+     Bat_GetAvgV                             FEBC43      13      19       8   .text       
+     Bat_UpdateAvgV                          FEBC56      18      24       2   .text       
+     Bat_GetDeltaV                           FEBC6E      13      19       4   .text       
+     Bat_UpdateDeltaV                        FEBC81      18      24       2   .text       
+     Bat_GetAvgT                             FEBC99      13      19       8   .text       
+     Bat_UpdateAvgT                          FEBCAC      13      19       2   .text       
+     Bat_GetDeltaT                           FEBCBF      13      19       6   .text       
+     Bat_UpdateDeltaT                        FEBCD2      13      19       2   .text       
+     Bat_UpdateBatteryTemperRise             FEBCE5      13      19       2   .text       
+     Bat_UpdateTemperRisePerHour             FEBCF8      13      19       2   .text       
+     Bat_UpdateMaxTRiseRate                  FEBD0B      13      19       2   .text       
+     Bat_GetPwr                              FEBD1E      13      19       4   .text       
+     Bat_UpdatePwr                           FEBD31      18      24       2   .text       
+     Bat_GetAccumulateChgAh                  FEBD49      19      25       4   .text       
+     Bat_UpdateAccumulateChgAh               FEBD62      1D      29       4   .text       
+     Bat_GetAccumulateDchgAh                 FEBD7F      19      25       4   .text       
+     Bat_UpdateAccumulateDchgAh              FEBD98      1D      29       4   .text       
+     Bat_GetTotalChgAh                       FEBDB5      19      25       6   .text       
+     Bat_UpdateTotalChgAh                    FEBDCE      1D      29       4   .text       
+     Bat_GetTotalDchAh                       FEBDEB      19      25       6   .text       
+     Bat_UpdateTotalDChAh                    FEBE04      1D      29       4   .text       
+     Bat_GetRatedCapacityCalc                FEBE21      19      25      20   .text       
+     Bat_GetActualCapacityCalc               FEBE3A      19      25      14   .text       
+     Bat_UpdateActualCapacityCalc            FEBE53      1D      29       8   .text       
+     Bat_GetRemainCapacity                   FEBE70      19      25       6   .text       
+     Bat_UpdateRemainCapacity                FEBE89      1D      29       8   .text       
+     Bat_UpdateMainBalanceSt                 FEBEA6      13      19       8   .text       
+     Bat_GetBmuNum                           FEBEB9      13      19      12   .text       
+     Bat_UpdateBmuNum                        FEBECC      13      19       2   .text       
+     Bat_GetTemperNum                        FEBEDF      13      19       2   .text       
+     Bat_UpdateTemperNum                     FEBEF2      18      24       2   .text       
+     Bat_GetBatNum                           FEBF0A      13      19       8   .text       
+     Bat_UpdateBatNum                        FEBF1D      18      24       2   .text       
      gby_para_CfgVer                          F0000'G       8       8       4   PAGED_RAM   
      gby_para_CfgSt                           F0008'G       1       1       3   PAGED_RAM   
      ParameterIndexTable                      F0009'G     37E     894      10   PAGED_RAM   
@@ -8091,12 +8091,12 @@ OBJECT LIST SORTED BY ADDRESS
      BatSys_StInfo                            F0B69'G      44      68      72   PAGED_RAM   
      gby_ReadErrThrhd                         F0BAD'G       1       1       4   PAGED_RAM   
      Err_TmCnt                                F0BAE'G       2       2      12   PAGED_RAM   
-     Err_HystrsThrhd                          F0BB0'G       C      12     152   PAGED_RAM   
-     Err_HystrsCnt                            F0BBC'G      E4     228      20   PAGED_RAM   
+     Err_HystrsThrhd                          F0BB0'G       C      12     160   PAGED_RAM   
+     Err_HystrsCnt                            F0BBC'G      E4     228      21   PAGED_RAM   
      Err_Thrhd                                F0CA0'G      54      84      70   PAGED_RAM   
      Err_BatErrCode                           F0CF4'G       8       8      70   PAGED_RAM   
      Err_BatErrCodeBak                        F0CFC'G       8       8       5   PAGED_RAM   
-     Err_BatSysErrCode                        F0D04'G      10      16      18   PAGED_RAM   
+     Err_BatSysErrCode                        F0D04'G      10      16      21   PAGED_RAM   
      Err_BatSysErrCodeBak                     F0D14'G      10      16       6   PAGED_RAM   
      Err_HwErrCodeBmu                         F0D24'G       8       8      38   PAGED_RAM   
      Err_HwErrDetailBmu                       F0D2C'G      40      64       6   PAGED_RAM   
@@ -8419,7 +8419,7 @@ Name of initialized Object : SOF_PulseFeedbackPowCurves
  C11EC12DCB 1D
 ------- ROM-ADDRESS: 0x403B ---- RAM-ADDRESS: 0x2036 ---- SIZE       9 ---
 Name of initialized Object : Can_NmCtrl
- AF2AF7AF2B F7AF2CF7
+ AF2BF7AF2C F7AF2DF7
 ------- ROM-ADDRESS: 0x4044 ---- SIZE       7 ---
 Filling bytes inserted
  0000000000 0000
@@ -10504,6 +10504,7 @@ Err_JudgeBatErrLevel      USES Err_Thrhd Err_HystrsThrhd Err_BatErrCode
                                 Bat_GetPackMaterialType Bat_GetSoh 
 Err_JudgeBatSysErrLevel   USES Err_Thrhd Err_HystrsThrhd Err_BatSysErrCode 
                                 BmsSys_GetK30Volt Err_HystrsCnt Err_JudgeHighThrhd 
+                                Err_JudgeLowThrhd 
 Err_DealHwErrLevel        USES Err_HwErrCode IntCan_GetBmuMaxOutLineCnt 
                                 gby_AssertErrorCnt Err_HwErrCodeBmu _BSHRU 
 Err_DealHwErrDetail       USES Err_HwErrDetail Err_HwErrDetailBmu 
@@ -11959,6 +11960,8 @@ DEPENDENCY TREE
  |           |  |  +- BmsSys_GetK30Volt   
  |           |  |  |    
  |           |  |  +- Err_JudgeHighThrhd   (see above)
+ |           |  |  |  
+ |           |  |  +- Err_JudgeLowThrhd    (see above)
  |           |  |     
  |           |  +- Err_DealHwErrLevel  
  |           |  |  | 
@@ -15317,5 +15320,5 @@ STATISTIC SECTION
 ExeFile:
 --------
 Number of blocks to be downloaded: 52
-Total size of all blocks to be downloaded: 140250
+Total size of all blocks to be downloaded: 140379
 

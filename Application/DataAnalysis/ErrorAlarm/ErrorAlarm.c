@@ -2277,7 +2277,7 @@ GeneralReturnType Err_JudgeBatSysErrLevel(void)
     Err_BatSysErrCode.sBit.SupplyVHigh = err_level;
 
     /* supply voltage low */
-    /*
+    
     max_cnt_value[0] = ERR_CNT_SET_POWVOLT_LOW_L1;
     max_cnt_value[1] = ERR_CNT_CLR_POWVOLT_LOW_L1;
     max_cnt_value[2] = ERR_CNT_SET_POWVOLT_LOW_L2;
@@ -2296,7 +2296,7 @@ GeneralReturnType Err_JudgeBatSysErrLevel(void)
     Err_JudgeLowThrhd(BmsSys_GetK30Volt(), Err_HystrsThrhd, Err_HystrsCnt.SupplyVLow,
                       max_cnt_value, &err_level);
     Err_BatSysErrCode.sBit.SupplyVLow = err_level;
-    */
+
     /* fuse temper high */
 
     return err_code;

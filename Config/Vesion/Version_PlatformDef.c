@@ -7,7 +7,7 @@
 #define PLATFORM_NAME               "BLN01A-BMSXXB"    //  platform name                                       
 #define PLATFORM_SW_MAJOR_VERSION       1     //  size is uByte,max number is 255                                            
 #define PLATFORM_SW_MINOR_VERSION       2    //  size is uWord,max number is 65535                                           
-#define PLATFORM_SW_REVISION_VERSION     0   //  size is uWord,max number is 65535                                               
+#define PLATFORM_SW_REVISION_VERSION     1   //  size is uWord,max number is 65535                                               
 #define PLATFORM_DEVELOP_STATUS          "" /* status include "beta" "rc" ""                                 
                                                *  "beta" ---- beta
                                                *  "rc"   ---- Release Candidate
