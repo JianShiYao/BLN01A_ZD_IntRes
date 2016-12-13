@@ -310,7 +310,7 @@ typedef struct
 {
     uWord ChgTime;
     uWord ChgEng;
-    uByte ChgNo;
+    uLWord ChgNo;
 } sGbChg_Csd;
 
 typedef struct

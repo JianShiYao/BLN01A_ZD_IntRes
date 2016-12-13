@@ -389,6 +389,7 @@ void ChgM_RelayCtrl(void)
             ChgM_Ctrl.Cnt.ChgRlyOff = CHGM_CNT_RLY_OFF;
             ChgM_Ctrl.Flag.ChgRlyCtrl = RELAY_OFF;
         }
+
         else
         {
             ChgM_Ctrl.Cnt.ChgRlyOff++;

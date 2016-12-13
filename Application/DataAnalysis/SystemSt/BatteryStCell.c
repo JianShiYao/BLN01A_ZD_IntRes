@@ -421,10 +421,69 @@ eBat_ReturnType Bat_UpdateCellV(uByte bmu_no, uWord local_cell_no, uWord voltage
 
 
 #ifdef BMS_ENABLE_CALC_INTRES
-uByte Bat_GetCellR(uByte bmu_no, uWord local_cell_no)
+uWord Bat_GetCellR(uByte bmu_no, uWord local_cell_no)
+{
+    sBat_PackInfoType * RAMPTR  PackInfoPtr;
+/*    
+//////////////////////////////////////////////////    
+#ifdef BMS_ENABLE_CALC_INTRES
+uWord Bat_GetCellR(uByte bmu_no, uWord local_cell_no)         //uByte
 {
     sBat_PackInfoType * RAMPTR  PackInfoPtr;
 
+    __ASSERT( bmu_no > 0 && bmu_no < MAX_BMU_NUM + 1 );
+
+    __ASSERT(local_cell_no > 0);
+
+    if(local_cell_no > 0)
+    {
+        local_cell_no -= 1;
+    }
+
+    PackInfoPtr = Bat_AllInfo.PackInfoPtrRef[bmu_no];
+
+    if(PackInfoPtr != NULL)
+    {
+        return ((PackInfoPtr->CellBasicPtr) + local_cell_no)->Int_Res;
+    }
+    else
+    {
+        __ASSERT(PackInfoPtr != NULL);
+        return 0xff;
+    }
+
+}
+eBat_ReturnType Bat_UpdateCellR(uByte bmu_no, uWord local_cell_no, uWord intres)     //uByte intres
+{
+    sBat_PackInfoType * RAMPTR  PackInfoPtr;
+
+
+    __ASSERT( bmu_no > 0 && bmu_no < MAX_BMU_NUM + 1 );
+
+
+    __ASSERT(local_cell_no > 0);
+
+    if(local_cell_no > 0)
+    {
+        local_cell_no -= 1;
+    }
+
+    PackInfoPtr = Bat_AllInfo.PackInfoPtrRef[bmu_no];
+    if(PackInfoPtr != NULL)
+    {
+        ((PackInfoPtr->CellBasicPtr) + local_cell_no)->Int_Res = intres;
+    }
+    else
+    {
+        __ASSERT(PackInfoPtr != NULL);
+        return (eBat_ReturnType)0xFF;
+    }
+    return (eBat_ReturnType)ERR_OK;
+}
+
+#endif    
+    
+////////////////////////////////////////////////// */
 #if(ECU_CATEGORY == M_BCU_C)
     __ASSERT(bmu_no < MAX_BMU_NUM + 1);
 #endif
@@ -459,7 +518,7 @@ uByte Bat_GetCellR(uByte bmu_no, uWord local_cell_no)
 #endif
 }
 
-eBat_ReturnType Bat_UpdateCellR(uByte bmu_no, uWord local_cell_no, uByte intres)
+eBat_ReturnType Bat_UpdateCellR(uByte bmu_no, uWord local_cell_no, uWord intres)
 {
     sBat_PackInfoType * RAMPTR  PackInfoPtr;
 

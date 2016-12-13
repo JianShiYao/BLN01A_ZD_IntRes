@@ -155,7 +155,7 @@ void ChgIfDet_Init(void)
    uByte i;
    uByte *pByte;
    
-   pByte = &ChgIf_TmCnt;
+   pByte = (uByte*)&ChgIf_TmCnt;
    for(i = 0; i < sizeof(ChgIf_TmCnt); i++) 
    {
        *(pByte++) = 0;

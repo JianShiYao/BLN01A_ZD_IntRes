@@ -298,10 +298,11 @@ ModuleID_Type EcuConf_GetVesionModuleVer(sVersion_CodeType * VerPtr);
 /* 
  * System Function switch 
  */
-//#define BMS_ENABLE_CALC_INTRES     /* enable calculate internal resistance */
+#define BMS_ENABLE_CALC_INTRES     /* enable calculate internal resistance */
 //#define BMS_ENABLE_CALC_CELL_SOC   /* enable calculate soc per cell */
 //#define BMS_ENABLE_SINGLE_BAL_TIME /* enable single balance time calculation */
 
+//#define INTRES_AB_DEBUG
 
 extern uByte Ecu_GetEcuSA(void);
 

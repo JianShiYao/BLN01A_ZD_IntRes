@@ -134,7 +134,7 @@ typedef struct
 {
     uWord Voltage;
 #ifdef BMS_ENABLE_CALC_INTRES
-    uByte Int_Res;
+    uWord Int_Res;
 #endif
 
 #ifdef   BMS_ENABLE_CALC_CELL_SOC
@@ -503,8 +503,8 @@ extern uWord Bat_GetCellV(uByte bmu_no, uWord local_cell_no);
 extern eBat_ReturnType Bat_UpdateCellV(uByte bmu_no, uWord local_cell_no, uWord voltage) ;
 
 #ifdef BMS_ENABLE_CALC_INTRES
-extern uByte Bat_GetCellR(uByte bmu_no, uWord local_cell_no);
-extern eBat_ReturnType Bat_UpdateCellR(uByte bmu_no, uWord local_cell_no, uByte intres) ;
+  extern uWord Bat_GetCellR(uByte bmu_no, uWord local_cell_no);
+  extern eBat_ReturnType Bat_UpdateCellR(uByte bmu_no, uWord local_cell_no, uWord intres) ;
 #endif
 
 extern uByte Bat_GetTemper(uByte bmu_no, uWord local_temper_no) ;

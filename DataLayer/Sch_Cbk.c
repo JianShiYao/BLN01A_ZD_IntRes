@@ -38,7 +38,7 @@ void Sch_CounterCallback(void)
     SOF_MainCountCbk();
     HvM_MainCountCbk();
     SOH_MainCountCbk();
-//    IntRes_MainCountCbk();
+    IntRes_MainCountCbk();
     Prj_MainCounterCbk();
 #endif  
 
@@ -104,7 +104,7 @@ void Sch_MainInit(void)
     DataStore_Init();
     SOF_Init();
     SOH_Init();
-//    IntRes_Init();
+    IntRes_Init();
     IocIf_Init();
 #endif 
 
@@ -179,7 +179,7 @@ void Sch_MainCallback(void)
     SOF_MainCbk();
     HvM_MainCbk();
     SOH_MainCbk();
- //   IntRes_MainCbk();
+    IntRes_MainCbk();
     
     Prj_MainProCbk();
     #endif

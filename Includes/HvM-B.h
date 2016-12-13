@@ -73,6 +73,7 @@ extern void HvM_ModuleCbk(void);
 extern void HvM_ModuleCountCbk(void);
 extern void HvM_UpdateVcuInfo(sHvM_VcuInfoType *p_vcu);
 extern ModuleID_Type HvM_B_GetVesionModuleVer(sVersion_CodeType * VerPtr);
+extern uByte HvM_GetStep(void);
          
 
 #endif /* HVM_H */

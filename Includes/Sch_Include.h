@@ -53,7 +53,7 @@
 #include "Hvm.h"                /* Manage --- Hvm Module */
 #include "SOH.h"                /* SOH --- SOH Module */
 #include "SOF.h"                /* SOF --- SOF Module */
-//#include "IntRes.h"             /* IntRes --- IntRes Module */
+#include "IntRes.h"             /* IntRes --- IntRes Module */
 #include "IocIf.h"
 #include "Project.h"
 #endif

@@ -1327,12 +1327,11 @@ void GbChg_RxDataFromCharger(sCanIf_MsgType msg)
     {
        
         pGbRxData->Crm.RxBms = msg.data[0];
-        pGbRxData->Crm.No = msg.data[1] + (msg.data[2] << 8)
-                          +( msg.data[3] << 16) + (msg.data[4] << 24);
+         pGbRxData->Crm.No = msg.data[1] + ((uLWord)msg.data[2] << 8) + ((uLWord)msg.data[3] << 16) + ((uLWord)msg.data[4] << 24);
           
-        pGbRxData->Crm.Region[0] = msg.data[4];
-        pGbRxData->Crm.Region[1] = msg.data[3];
-        pGbRxData->Crm.Region[2] = msg.data[2];
+        pGbRxData->Crm.Region[0] = msg.data[7];
+        pGbRxData->Crm.Region[1] = msg.data[6];
+        pGbRxData->Crm.Region[2] = msg.data[5];
        
 
         pGbRxData->RxFlg |= CRM_RX;
@@ -1436,8 +1435,9 @@ void GbChg_RxDataFromCharger(sCanIf_MsgType msg)
         wtmp = (wtmp << 8) + msg.data[2];
         pGbRxData->Csd.ChgEng = wtmp;
 
-        pGbRxData->Csd.ChgNo = msg.data[4] + (msg.data[5] << 8)
-                               + (msg.data[6] << 16) + (msg.data[7] << 24);
+        pGbRxData->Csd.ChgNo = msg.data[4] + ((uLWord)msg.data[5] << 8)
+                               + ((uLWord)msg.data[6] << 16) + ((uLWord)msg.data[7] << 24);
+
 
         pGbRxData->RxFlg |= CSD_RX;
         break;

@@ -452,7 +452,7 @@ void Chg_UpdateFdSignalType(uByte Type)
 
 
 
-uByte Chg_GetNtcType(uByte St)
+uByte Chg_GetNtcType(void)
 {
     return Chg_Info.ElockInfo.SetNtcType;
 }

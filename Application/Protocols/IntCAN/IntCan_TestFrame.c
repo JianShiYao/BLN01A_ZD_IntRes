@@ -2,6 +2,7 @@
 #include "BatterySt.h"
 #include "CarCan.h"
 #include "CellvIf.h"
+#include "HvM.h"
 #define FLAG_ENABLE 1
 #define FLAG_DISABLE 0
 //extern uWord app_request_boot;
@@ -11,10 +12,10 @@ void IntCan_AddTestData(void)
     uByte msg_data1[8],msg1_send_en;
     uByte msg_data2[8],msg2_send_en;
     
-    msg1_send_en = FLAG_DISABLE;
+    msg1_send_en = FLAG_ENABLE;
     msg2_send_en = FLAG_DISABLE;
     
-    msg_data1[0] = 0;//(uByte)(app_request_boot >> 8);
+    msg_data1[0] = HvM_GetStep();//(uByte)(app_request_boot >> 8);
     msg_data1[1] = 0;//(uByte)(app_request_boot);
     msg_data1[2] = 0;//(uByte)(glwd_Cnt1 >> 8);
     msg_data1[3] = 0;//(uByte)(glwd_Cnt1);

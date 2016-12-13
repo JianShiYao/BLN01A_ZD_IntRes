@@ -10,7 +10,7 @@
 /*
  * Module Version Define 
  */
-#define MODULE_CARCAN_ID               17 
+#define MODULE_CARCAN_ID               20 
 #define MODULE_CARCAN_NAME             "CARCAN"    //  platform name include "EV02" "EV03" "EV04" "EV05"                                      
 #define CARCAN_SW_MAJOR_VERSION         1     //  size is uByte,max number is 255                                            
 #define CARCAN_SW_MINOR_VERSION         1    //  size is uWord,max number is 65535                                           
@@ -23,7 +23,19 @@
 /* Version Module Get Interface */
 ModuleID_Type CarCan_GetVesionModuleVer(sVersion_CodeType * VerPtr); 
 
-#define MAX_CAR_CAN_SEND_BUF 10
+#define MAX_CAR_CAN_SEND_BUF 20
+
+typedef enum
+{
+    BMSRUNMODE_BMS_INIT,      // 0
+    BMSRUNMODE_SYS_WAIT,      // 1
+    BMSRUNMODE_SYS_PRE_DCH,   // 2
+    BMSRUNMODE_SYS_DCH,       // 3
+    BMSRUNMODE_SYS_PRE_CHG,   // 4
+    BMSRUNMODE_SLOW_CHG,      // 5
+    BMSRUNMODE_FAST_CHG,      // 6          
+    BMSRUNMODE_FAULT,         // 7
+}eBmsRunMode_ModeType;
 
 typedef struct
 {
@@ -48,7 +60,7 @@ extern void CarCan_MainReceiveMsg(void);
 extern void CarCan_MainSendMsg(void);
 extern void CarCan_CountCbk(void);
 extern void CarCan_ProMain(void);
-#endif
+#endif                            
 
 
 #endif /* CARCAN_H */
