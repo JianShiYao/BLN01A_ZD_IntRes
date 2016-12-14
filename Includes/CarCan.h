@@ -10,7 +10,7 @@
 /*
  * Module Version Define 
  */
-#define MODULE_CARCAN_ID               20 
+#define MODULE_CARCAN_ID               21 
 #define MODULE_CARCAN_NAME             "CARCAN"    //  platform name include "EV02" "EV03" "EV04" "EV05"                                      
 #define CARCAN_SW_MAJOR_VERSION         1     //  size is uByte,max number is 255                                            
 #define CARCAN_SW_MINOR_VERSION         1    //  size is uWord,max number is 65535                                           
@@ -23,7 +23,7 @@
 /* Version Module Get Interface */
 ModuleID_Type CarCan_GetVesionModuleVer(sVersion_CodeType * VerPtr); 
 
-#define MAX_CAR_CAN_SEND_BUF 20
+#define MAX_CAR_CAN_SEND_BUF 21
 
 typedef enum
 {

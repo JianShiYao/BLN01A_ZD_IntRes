@@ -161,8 +161,8 @@ Entry point: 0xC01D (_EntryPoint)
 _startupData is allocated at 0xC04B and uses 6 Bytes
 extern struct _tagStartup {
   unsigned nofZeroOut     2
-  _Range   pZeroOut       0x2000     3267
-                          0xF0000'G     10381
+  _Range   pZeroOut       0x2000     3286
+                          0xF0000'G     10317
   _Copy    *toCopyDownBeg 0x4000
 } _startupData;
 
@@ -178,7 +178,7 @@ NON_BANKED                      1151     R     0xDAF5     0xDF73   ROM_C000
 .text                          16226     R   0xFE8000   0xFEBF61   PAGE_FE
 .data                            123   R/W     0x2000     0x207A   RAM
 BOOT_RAM                           2   N/I     0x3FEF     0x3FF0   BOOTRAM
-PAGED_RAM                      10381   R/W  0xF0000'G    0xF288C   RAM_FABCD
+PAGED_RAM                      10317   R/W  0xF0000'G    0xF284C   RAM_FABCD
 .abs_section_8                     1   N/I        0x8        0x8   .absSeg0
 .abs_section_9                     1   N/I        0x9        0x9   .absSeg1
 .abs_section_a                     1   N/I        0xA        0xA   .absSeg2
@@ -920,52 +920,52 @@ PAGED_RAM                      10381   R/W  0xF0000'G    0xF288C   RAM_FABCD
 .abs_section_ff10                234     R     0xFF10     0xFFF9   .absSeg738
 .abs_section_fffa                  6     R     0xFFFA     0xFFFF   .absSeg739
 .bss                             108   R/W     0x207B     0x20E6   RAM
-.common                         2984   R/W     0x20E7     0x2C8E   RAM
-Timer_CODE                        28     R   0xF5A18A   0xF5A1A5   PAGE_F5
-CPUCSCK_CODE                      13     R   0xF5A1A6   0xF5A1B2   PAGE_F5
-CPUCSI_CODE                       13     R   0xF5A1B3   0xF5A1BF   PAGE_F5
-CPUCCS_CODE                       13     R   0xF5A1C0   0xF5A1CC   PAGE_F5
-EN_CELL_CODE                      13     R   0xF5A1CD   0xF5A1D9   PAGE_F5
-SPI2IF_CODE                       49     R   0xF5A1DA   0xF5A20A   PAGE_F5
-CPU_CHG_S_CODE                    13     R   0xF5A20B   0xF5A217   PAGE_F5
-DO_CON_CODE                       11     R   0xF5A218   0xF5A222   PAGE_F5
-AI1_CODE                         258     R   0xF5A223   0xF5A324   PAGE_F5
+.common                         3003   R/W     0x20E7     0x2CA1   RAM
+Timer_CODE                        28     R   0xF5A155   0xF5A170   PAGE_F5
+CPUCSCK_CODE                      13     R   0xF5A171   0xF5A17D   PAGE_F5
+CPUCSI_CODE                       13     R   0xF5A17E   0xF5A18A   PAGE_F5
+CPUCCS_CODE                       13     R   0xF5A18B   0xF5A197   PAGE_F5
+EN_CELL_CODE                      13     R   0xF5A198   0xF5A1A4   PAGE_F5
+SPI2IF_CODE                       49     R   0xF5A1A5   0xF5A1D5   PAGE_F5
+CPU_CHG_S_CODE                    13     R   0xF5A1D6   0xF5A1E2   PAGE_F5
+DO_CON_CODE                       11     R   0xF5A1E3   0xF5A1ED   PAGE_F5
+AI1_CODE                         258     R   0xF5A1EE   0xF5A2EF   PAGE_F5
 AI1_CONST                         45     R     0xDF74     0xDFA0   ROM_C000
-AI1_DATA                          36   R/W     0x2C8F     0x2CB2   RAM
-CAN0_CODE                        851     R   0xF5A325   0xF5A677   PAGE_F5
-wdi_CODE                          11     R   0xF5A678   0xF5A682   PAGE_F5
-CAN1_DATA                          4   R/W     0x2CB3     0x2CB6   RAM
-CAN1_CODE                        851     R   0xF5A683   0xF5A9D5   PAGE_F5
-CAN4_DATA                          4   R/W     0x2CB7     0x2CBA   RAM
-CAN4_CODE                        851     R   0xF5A9D6   0xF5AD28   PAGE_F5
-RELAY_HEAT_CODE                   11     R   0xF5AD29   0xF5AD33   PAGE_F5
-ISO_CTRL_POS_CODE                 11     R   0xF5AD34   0xF5AD3E   PAGE_F5
-ISO_CTRL_NEG_CODE                 11     R   0xF5AD3F   0xF5AD49   PAGE_F5
-CPU_SUMV_SDA_CODE                 44     R   0xF5AD4A   0xF5AD75   PAGE_F5
-CPU_SUMV_SCL_CODE                 11     R   0xF5AD76   0xF5AD80   PAGE_F5
-SUMV_POW_CODE                     13     R   0xF5AD81   0xF5AD8D   PAGE_F5
-ExternFlash_Rst_CODE              26     R   0xF5AD8E   0xF5ADA7   PAGE_F5
-ExternFlash_Cs_CODE               26     R   0xF5ADA8   0xF5ADC1   PAGE_F5
-ExternFlash_Sck_CODE              26     R   0xF5ADC2   0xF5ADDB   PAGE_F5
-ExternFlash_Si_CODE               26     R   0xF5ADDC   0xF5ADF5   PAGE_F5
-ExternFlash_So_CODE               21     R   0xF5ADF6   0xF5AE0A   PAGE_F5
-ExternTimer_Sda_CODE              18     R   0xF5AE0B   0xF5AE1C   PAGE_F5
-RELAY_POS_CODE                    13     R   0xF5AE1D   0xF5AE29   PAGE_F5
-RELAY_NEG_CODE                    13     R   0xF5AE2A   0xF5AE36   PAGE_F5
-RELAY_PRE_CODE                    13     R   0xF5AE37   0xF5AE43   PAGE_F5
-RELAY_FAN_CODE                    13     R   0xF5AE44   0xF5AE50   PAGE_F5
-CHG_CAN_POW_CODE                  13     R   0xF5AE51   0xF5AE5D   PAGE_F5
-CPUCAN_CAR_EN_CODE                13     R   0xF5AE5E   0xF5AE6A   PAGE_F5
-CPUCAN_INT_EN_CODE                11     R   0xF5AE6B   0xF5AE75   PAGE_F5
-CURPOWER_CODE                     11     R   0xF5AE76   0xF5AE80   PAGE_F5
-ExtEE_Sda_CODE                    21     R   0xF5AE81   0xF5AE95   PAGE_F5
-ExtEE_Wp_CODE                     18     R   0xF5AE96   0xF5AEA7   PAGE_F5
-CPUEE_CODE                       263     R   0xF5AEA8   0xF5AFAE   PAGE_F5
-IntWatchDog_CODE                   9     R   0xF5AFAF   0xF5AFB7   PAGE_F5
-AC_CP_IOC_DATA                     4   R/W     0x2CBB     0x2CBE   RAM
-AC_CP_IOC_CODE                    52     R   0xF5AFB8   0xF5AFEB   PAGE_F5
-CAN0_DATA                          4   R/W     0x2CBF     0x2CC2   RAM
-.stack                          1024   R/W     0x2CC3     0x30C2   RAM
+AI1_DATA                          36   R/W     0x2CA2     0x2CC5   RAM
+CAN0_CODE                        851     R   0xF5A2F0   0xF5A642   PAGE_F5
+wdi_CODE                          11     R   0xF5A643   0xF5A64D   PAGE_F5
+CAN1_DATA                          4   R/W     0x2CC6     0x2CC9   RAM
+CAN1_CODE                        851     R   0xF5A64E   0xF5A9A0   PAGE_F5
+CAN4_DATA                          4   R/W     0x2CCA     0x2CCD   RAM
+CAN4_CODE                        851     R   0xF5A9A1   0xF5ACF3   PAGE_F5
+RELAY_HEAT_CODE                   11     R   0xF5ACF4   0xF5ACFE   PAGE_F5
+ISO_CTRL_POS_CODE                 11     R   0xF5ACFF   0xF5AD09   PAGE_F5
+ISO_CTRL_NEG_CODE                 11     R   0xF5AD0A   0xF5AD14   PAGE_F5
+CPU_SUMV_SDA_CODE                 44     R   0xF5AD15   0xF5AD40   PAGE_F5
+CPU_SUMV_SCL_CODE                 11     R   0xF5AD41   0xF5AD4B   PAGE_F5
+SUMV_POW_CODE                     13     R   0xF5AD4C   0xF5AD58   PAGE_F5
+ExternFlash_Rst_CODE              26     R   0xF5AD59   0xF5AD72   PAGE_F5
+ExternFlash_Cs_CODE               26     R   0xF5AD73   0xF5AD8C   PAGE_F5
+ExternFlash_Sck_CODE              26     R   0xF5AD8D   0xF5ADA6   PAGE_F5
+ExternFlash_Si_CODE               26     R   0xF5ADA7   0xF5ADC0   PAGE_F5
+ExternFlash_So_CODE               21     R   0xF5ADC1   0xF5ADD5   PAGE_F5
+ExternTimer_Sda_CODE              18     R   0xF5ADD6   0xF5ADE7   PAGE_F5
+RELAY_POS_CODE                    13     R   0xF5ADE8   0xF5ADF4   PAGE_F5
+RELAY_NEG_CODE                    13     R   0xF5ADF5   0xF5AE01   PAGE_F5
+RELAY_PRE_CODE                    13     R   0xF5AE02   0xF5AE0E   PAGE_F5
+RELAY_FAN_CODE                    13     R   0xF5AE0F   0xF5AE1B   PAGE_F5
+CHG_CAN_POW_CODE                  13     R   0xF5AE1C   0xF5AE28   PAGE_F5
+CPUCAN_CAR_EN_CODE                13     R   0xF5AE29   0xF5AE35   PAGE_F5
+CPUCAN_INT_EN_CODE                11     R   0xF5AE36   0xF5AE40   PAGE_F5
+CURPOWER_CODE                     11     R   0xF5AE41   0xF5AE4B   PAGE_F5
+ExtEE_Sda_CODE                    21     R   0xF5AE4C   0xF5AE60   PAGE_F5
+ExtEE_Wp_CODE                     18     R   0xF5AE61   0xF5AE72   PAGE_F5
+CPUEE_CODE                       263     R   0xF5AE73   0xF5AF79   PAGE_F5
+IntWatchDog_CODE                   9     R   0xF5AF7A   0xF5AF82   PAGE_F5
+AC_CP_IOC_DATA                     4   R/W     0x2CCE     0x2CD1   RAM
+AC_CP_IOC_CODE                    52     R   0xF5AF83   0xF5AFB6   PAGE_F5
+CAN0_DATA                          4   R/W     0x2CD2     0x2CD5   RAM
+.stack                          1024   R/W     0x2CD6     0x30D5   RAM
 PAGE_FC_740                    16100     R   0xFC8000   0xFCBEE3   PAGE_FC
 PAGE_FB_741                    14691     R   0xFB8000   0xFBB962   PAGE_FB
 PAGE_FA_742                    15724     R   0xFA8000   0xFABD6B   PAGE_FA
@@ -973,11 +973,11 @@ PAGE_F9_743                    16255     R   0xF98000   0xF9BF7E   PAGE_F9
 PAGE_F8_744                    13946     R   0xF88000   0xF8B679   PAGE_F8
 PAGE_F7_745                    15926     R   0xF78000   0xF7BE35   PAGE_F7
 PAGE_F6_746                    16010     R   0xF68000   0xF6BE89   PAGE_F6
-PAGE_F5_747                     8586     R   0xF58000   0xF5A189   PAGE_F5
+PAGE_F5_747                     8533     R   0xF58000   0xF5A154   PAGE_F5
 
 Summary of section sizes per section type:
-READ_ONLY (R):       2442D (dec:   148525)
-READ_WRITE (R/W):     3950 (dec:    14672)
+READ_ONLY (R):       243F8 (dec:   148472)
+READ_WRITE (R/W):     3923 (dec:    14627)
 NO_INIT (N/I):         385 (dec:      901)
 
 *********************************************************************************************
@@ -1000,7 +1000,7 @@ MODULE:                 -- Start12.c.o --
 - VARIABLES:
      _startupData                              C04B       6       6       3   .startData  
 - LABELS:
-     __SEG_END_SSTACK                          30C3       0       0       1               
+     __SEG_END_SSTACK                          30D6       0       0       1               
 MODULE:                 -- rtshc12.c.o (ansibi.lib) --
 - PROCEDURES:
      _BSHL                                     DB62       8       8      10   NON_BANKED  
@@ -1018,7 +1018,7 @@ MODULE:                 -- rtshc12.c.o (ansibi.lib) --
      _LINC                                     DBFF       5       5      18   NON_BANKED  
      _LDEC                                     DC04       8       8       3   NON_BANKED  
      _LMUL                                     DC0C      27      39       4   NON_BANKED  
-     _LMULU16x32                               DC33       F      15      56   NON_BANKED  
+     _LMULU16x32                               DC33       F      15      55   NON_BANKED  
      _LMULS16x32                               DC42      1F      31       2   NON_BANKED  
      _lDivMod                                  DC61      BE     190       4   NON_BANKED  
      _LDIVU                                    DD1F       E      14     146   NON_BANKED  
@@ -1105,8 +1105,8 @@ MODULE:                 -- CarCan.c.o --
      CarCan_GetVesionModuleVer               FE9192       E      14       2   .text       
 - VARIABLES:
      CarCan_VerDef                             CCB2      1C      28       1   .rodata     
-     sCarCan_Msg                               20E7     17C     380     218   .common     
-     CarCan_ProCnt                             2263       3       3       6   .common     
+     sCarCan_Msg                               20E7     18F     399     218   .common     
+     CarCan_ProCnt                             2276       3       3       6   .common     
 MODULE:                 -- ChgCan.c.o --
 - PROCEDURES:
      ChgCan_GetLife                          FE91A0       4       4       4   .text       
@@ -1120,8 +1120,8 @@ MODULE:                 -- ChgCan.c.o --
      ChgCan_GetVesionModuleVer               FE92D6       E      14       2   .text       
 - VARIABLES:
      ChgCan_VerDef                             CCCE      1C      28       1   .rodata     
-     ChgCan_Com                                2266       2       2       8   .common     
-     ChgCan_Msg                                2268      14      20       1   .common     
+     ChgCan_Com                                2279       2       2       8   .common     
+     ChgCan_Msg                                227B      14      20       1   .common     
 MODULE:                 -- EcuConf.c.o --
 - PROCEDURES:
      EcuConf_GetVesionModuleVer              FE92E4      14      20       2   .text       
@@ -1609,7 +1609,7 @@ MODULE:                 -- BatteryStPack.c.o --
      Bat_UpdatePackBatNum                    FCB96B      58      88       2   PAGE_FC_740 
      Bat_GetPackBalSt                        FCB9C3      51      81       8   PAGE_FC_740 
      Bat_UpdatePackBalSt                     FCBA14      58      88       6   PAGE_FC_740 
-     Bat_GetPackSerialNum                    FCBA6C      57      87      28   PAGE_FC_740 
+     Bat_GetPackSerialNum                    FCBA6C      57      87      30   PAGE_FC_740 
      Bat_UpdatePackSerialNum                 FCBAC3      58      88       4   PAGE_FC_740 
      Bat_GetPackManufacturer                 FCBB1B      57      87       2   PAGE_FC_740 
      Bat_GetPackMaterialType                 FCBB72      57      87       2   PAGE_FC_740 
@@ -1632,14 +1632,14 @@ MODULE:                 -- GbChgCan.c.o --
      GbChgCan_TxData                         FB8B61      C2     194       2   PAGE_FB_741 
      GbChg_RxDataFromCharger                 FB8C23     42F    1071       5   PAGE_FB_741 
 - VARIABLES:
-     gwd_Volt                                  227C       E      14      15   .common     
-     gby_Temper                                228A       7       7       8   .common     
-     gby_MsgNumBmv                             2291       1       1       3   .common     
-     gby_MsgNumBmt                             2292       1       1       3   .common     
-     GbChgCan_Msg                              2293      8C     140      90   .common     
-     GbChgCan_TmCnt                            231F      1D      29      61   .common     
-     GbChgCan_Ctrl                             233C      10      16       8   .common     
-     GbChgCan_RxData                           234C      34      52       5   .common     
+     gwd_Volt                                  228F       E      14      15   .common     
+     gby_Temper                                229D       7       7       8   .common     
+     gby_MsgNumBmv                             22A4       1       1       3   .common     
+     gby_MsgNumBmt                             22A5       1       1       3   .common     
+     GbChgCan_Msg                              22A6      8C     140      90   .common     
+     GbChgCan_TmCnt                            2332      1D      29      61   .common     
+     GbChgCan_Ctrl                             234F      10      16       8   .common     
+     GbChgCan_RxData                           235F      34      52       5   .common     
 MODULE:                 -- BmsSysSt.c.o --
 - PROCEDURES:
      Bms_SysStInit                           FB9052      5D      93       2   PAGE_FB_741 
@@ -1704,8 +1704,8 @@ MODULE:                 -- GbChg_IfDet.c.o --
      ChgIfDet_MainCbk                        FB9616      9E     158       2   PAGE_FB_741 
 - VARIABLES:
      GbChgDet_VerDef                           CDEB      1C      28       1   .rodata     
-     ChgIf_TmCnt                               2380       2       2       6   .common     
-     GbChgDet_Cp                               2382       4       4      11   .common     
+     ChgIf_TmCnt                               2393       2       2       6   .common     
+     GbChgDet_Cp                               2395       4       4      11   .common     
 MODULE:                 -- Bsw.c.o --
 - PROCEDURES:
      Bsw_GetVesionModuleVer                  FB96B4       E      14       2   PAGE_FB_741 
@@ -1752,15 +1752,15 @@ MODULE:                 -- HvM-B.c.o --
      HvM_VerDef                                CF1F      1C      28       1   .rodata     
      Bms_St                                    207C       1       1       2   .bss        
      Bms_Mode                                  207D       1       1       1   .bss        
-     HvM_Flag                                  2386       D      13       4   .common     
-     HvM_Cnt                                   2393      16      22      39   .common     
-     HvM_CtrlHv                                23A9       6       6       5   .common     
-     HvM_Err                                   23AF       2       2       2   .common     
-     HvM_CtrlRelayCmd                          23B1       C      12      22   .common     
-     HvM_TmCnt                                 23BD       1       1       6   .common     
-     HvM_VcuInfo                               23BE       8       8       7   .common     
-     gby_chg_relay_off_flag                    23C6       1       1       2   .common     
-     gby_test                                  23C7       1       1       4   .common     
+     HvM_Flag                                  2399       D      13       4   .common     
+     HvM_Cnt                                   23A6      16      22      39   .common     
+     HvM_CtrlHv                                23BC       6       6       5   .common     
+     HvM_Err                                   23C2       2       2       2   .common     
+     HvM_CtrlRelayCmd                          23C4       C      12      22   .common     
+     HvM_TmCnt                                 23D0       1       1       6   .common     
+     HvM_VcuInfo                               23D1       8       8       7   .common     
+     gby_chg_relay_off_flag                    23D9       1       1       2   .common     
+     gby_test                                  23DA       1       1       4   .common     
 MODULE:                 -- ThM-AB.c.o --
 - PROCEDURES:
      ThM_AB_GetVesionModuleVer               FB9CE6       E      14       2   PAGE_FB_741 
@@ -1768,9 +1768,9 @@ MODULE:                 -- ThM-AB.c.o --
 - VARIABLES:
      Thm_VerDef                                CF3B      1C      28       1   .rodata     
      ThM_Thrhd                                F142C'G       7       7       2   PAGED_RAM   
-     ThM_TmCnt                                 23C8       1       1       1   .common     
-     gby_LoadVar_Flag                          23C9       1       1       1   .common     
-     gby_HeatStatus                            23CA       1       1       1   .common     
+     ThM_TmCnt                                 23DB       1       1       1   .common     
+     gby_LoadVar_Flag                          23DC       1       1       1   .common     
+     gby_HeatStatus                            23DD       1       1       1   .common     
 MODULE:                 -- ChgM-B.c.o --
 - PROCEDURES:
      ChgM_B_GetVesionModuleVer               FB9D1C       E      14       2   PAGE_FB_741 
@@ -1791,8 +1791,8 @@ MODULE:                 -- ChgM-B.c.o --
      ChgM_UpdateChgInfo                      FBA230      8C     140       2   PAGE_FB_741 
 - VARIABLES:
      ChgM_VerDef                               CF57      1C      28       1   .rodata     
-     ChgM_TmCnt                                23CB       2       2      11   .common     
-     ChgM_Ctrl                                 23CD      42      66     213   .common     
+     ChgM_TmCnt                                23DE       2       2      11   .common     
+     ChgM_Ctrl                                 23E0      42      66     213   .common     
 MODULE:                 -- GbChgM-B.c.o --
 - PROCEDURES:
      GbChgM_UpdateAcPmtChgCur                FBA2BC       4       4       4   PAGE_FB_741 
@@ -1829,13 +1829,13 @@ MODULE:                 -- GbChgM-B.c.o --
      GbChgM_FlowProc                         FBA84C     2EF     751      22   PAGE_FB_741 
      GbChgM_AcChg                            FBAB3B      5C      92       2   PAGE_FB_741 
 - VARIABLES:
-     GbChgM_Ctrl                               240F       C      12      32   .common     
-     GbChgM_TmCnt                              241B       2       2      22   .common     
-     gwd_CntChgLinkFail                        241D       2       2       1   .common     
-     gwd_CntAcLinkFail                         241F       2       2       4   .common     
-     gwd_AcPmtChgCur                           2421       2       2       2   .common     
-     gby_byte_num_brm                          2423       1       1       3   .common     
-     gby_msg_num_brm                           2424       1       1       3   .common     
+     GbChgM_Ctrl                               2422       C      12      32   .common     
+     GbChgM_TmCnt                              242E       2       2      22   .common     
+     gwd_CntChgLinkFail                        2430       2       2       1   .common     
+     gwd_CntAcLinkFail                         2432       2       2       4   .common     
+     gwd_AcPmtChgCur                           2434       2       2       2   .common     
+     gby_byte_num_brm                          2436       1       1       3   .common     
+     gby_msg_num_brm                           2437       1       1       3   .common     
 MODULE:                 -- ChgMLib.c.o --
 - PROCEDURES:
      ChgM_WaitBmsReady                       FBAB97      13      19       2   PAGE_FB_741 
@@ -1874,25 +1874,25 @@ MODULE:                 -- Project.c.o --
      Prj_MainCounterCbk                      FBB0CC      11      17       2   PAGE_FB_741 
      Prj_MainProCbk                          FBB0DD      33      51       2   PAGE_FB_741 
 - VARIABLES:
-     Prj_Pro                                   2425       1       1       5   .common     
-     gby_ReadyFlag                             2426       1       1       8   .common     
-     gwd_RecvBmuMsgFlag                        2427       2       2       1   .common     
-     gwd_RecvBmuMsgFlagMask                    2429       2       2       2   .common     
+     Prj_Pro                                   2438       1       1       5   .common     
+     gby_ReadyFlag                             2439       1       1       8   .common     
+     gwd_RecvBmuMsgFlag                        243A       2       2       1   .common     
+     gwd_RecvBmuMsgFlagMask                    243C       2       2       2   .common     
 MODULE:                 -- AI1.c.o --
 - PROCEDURES:
-     HWEnDi                                  F5A223      67     103       6   AI1_CODE    
-     AI1_Enable                              F5A28A      10      16       2   AI1_CODE    
-     AI1_Disable                             F5A29A       E      14       2   AI1_CODE    
-     AI1_MeasureChanWait                     F5A2A8      2C      44       2   AI1_CODE    
-     AI1_GetChanValue                        F5A2D4      2A      42       2   AI1_CODE    
-     AI1_Init                                F5A2FE      27      39       2   AI1_CODE    
+     HWEnDi                                  F5A1EE      67     103       6   AI1_CODE    
+     AI1_Enable                              F5A255      10      16       2   AI1_CODE    
+     AI1_Disable                             F5A265       E      14       2   AI1_CODE    
+     AI1_MeasureChanWait                     F5A273      2C      44       2   AI1_CODE    
+     AI1_GetChanValue                        F5A29F      2A      42       2   AI1_CODE    
+     AI1_Init                                F5A2C9      27      39       2   AI1_CODE    
 - VARIABLES:
-     EnUser                                    2C8F       1       1       7   AI1_DATA    
-     OutFlg                                    2C90       2       2       6   AI1_DATA    
-     SumChan                                   2C92       1       1       4   AI1_DATA    
-     ModeFlg                                   2C93       1       1       5   AI1_DATA    
-     SumCnt                                    2C94       1       1       3   AI1_DATA    
-     AI1_OutV                                  2C95      1E      30       4   AI1_DATA    
+     EnUser                                    2CA2       1       1       7   AI1_DATA    
+     OutFlg                                    2CA3       2       2       6   AI1_DATA    
+     SumChan                                   2CA5       1       1       4   AI1_DATA    
+     ModeFlg                                   2CA6       1       1       5   AI1_DATA    
+     SumCnt                                    2CA7       1       1       3   AI1_DATA    
+     AI1_OutV                                  2CA8      1E      30       4   AI1_DATA    
      Table                                     DF74      1E      30       3   AI1_CONST   
      Channels                                  DF92       F      15       1   AI1_CONST   
 MODULE:                 -- CAN0.c.o --
@@ -1900,18 +1900,18 @@ MODULE:                 -- CAN0.c.o --
      CAN0_InterruptTx                          DDDE      22      34       1   NON_BANKED  
      CAN0_InterruptRx                          DE00      2F      47       1   NON_BANKED  
      CAN0_InterruptError                       DE2F      2F      47       1   NON_BANKED  
-     CAN0_SetAcceptanceCode                  F5A325      60      96       2   CAN0_CODE   
-     CAN0_SendFrame                          F5A385     12A     298       3   CAN0_CODE   
-     CAN0_ReadFrame                          F5A4AF      D6     214       3   CAN0_CODE   
-     CAN0_Init                               F5A585      5F      95       2   CAN0_CODE   
-     CAN0_Enable                             F5A5E4      1E      30       2   CAN0_CODE   
-     CAN0_Disable                            F5A602      16      22       2   CAN0_CODE   
-     CAN0_SetAcceptanceMask                  F5A618      60      96       2   CAN0_CODE   
+     CAN0_SetAcceptanceCode                  F5A2F0      60      96       2   CAN0_CODE   
+     CAN0_SendFrame                          F5A350     12A     298       3   CAN0_CODE   
+     CAN0_ReadFrame                          F5A47A      D6     214       3   CAN0_CODE   
+     CAN0_Init                               F5A550      5F      95       2   CAN0_CODE   
+     CAN0_Enable                             F5A5AF      1E      30       2   CAN0_CODE   
+     CAN0_Disable                            F5A5CD      16      22       2   CAN0_CODE   
+     CAN0_SetAcceptanceMask                  F5A5E3      60      96       2   CAN0_CODE   
 - VARIABLES:
-     EnUser                                    2CBF       1       1       9   CAN0_DATA   
-     CAN0_EnEvent                              2CC0       1       1       6   CAN0_DATA   
-     ErrFlag                                   2CC1       1       1       5   CAN0_DATA   
-     SerFlag                                   2CC2       1       1       8   CAN0_DATA   
+     EnUser                                    2CD2       1       1       9   CAN0_DATA   
+     CAN0_EnEvent                              2CD3       1       1       6   CAN0_DATA   
+     ErrFlag                                   2CD4       1       1       5   CAN0_DATA   
+     SerFlag                                   2CD5       1       1       8   CAN0_DATA   
 MODULE:                 -- CAN0Events.c.o --
 - PROCEDURES:
      CAN0_OnFreeTxBuffer                     FBB110      15      21       2   PAGE_FB_741 
@@ -1923,18 +1923,18 @@ MODULE:                 -- CAN1.c.o --
      CAN1_InterruptTx                          DE5E      22      34       1   NON_BANKED  
      CAN1_InterruptRx                          DE80      2F      47       1   NON_BANKED  
      CAN1_InterruptError                       DEAF      2F      47       1   NON_BANKED  
-     CAN1_SetAcceptanceCode                  F5A683      60      96       2   CAN1_CODE   
-     CAN1_SendFrame                          F5A6E3     12A     298       3   CAN1_CODE   
-     CAN1_ReadFrame                          F5A80D      D6     214       3   CAN1_CODE   
-     CAN1_Init                               F5A8E3      5F      95       2   CAN1_CODE   
-     CAN1_Enable                             F5A942      1E      30       2   CAN1_CODE   
-     CAN1_Disable                            F5A960      16      22       2   CAN1_CODE   
-     CAN1_SetAcceptanceMask                  F5A976      60      96       2   CAN1_CODE   
+     CAN1_SetAcceptanceCode                  F5A64E      60      96       2   CAN1_CODE   
+     CAN1_SendFrame                          F5A6AE     12A     298       3   CAN1_CODE   
+     CAN1_ReadFrame                          F5A7D8      D6     214       3   CAN1_CODE   
+     CAN1_Init                               F5A8AE      5F      95       2   CAN1_CODE   
+     CAN1_Enable                             F5A90D      1E      30       2   CAN1_CODE   
+     CAN1_Disable                            F5A92B      16      22       2   CAN1_CODE   
+     CAN1_SetAcceptanceMask                  F5A941      60      96       2   CAN1_CODE   
 - VARIABLES:
-     EnUser                                    2CB3       1       1       9   CAN1_DATA   
-     CAN1_EnEvent                              2CB4       1       1       6   CAN1_DATA   
-     ErrFlag                                   2CB5       1       1       5   CAN1_DATA   
-     SerFlag                                   2CB6       1       1       8   CAN1_DATA   
+     EnUser                                    2CC6       1       1       9   CAN1_DATA   
+     CAN1_EnEvent                              2CC7       1       1       6   CAN1_DATA   
+     ErrFlag                                   2CC8       1       1       5   CAN1_DATA   
+     SerFlag                                   2CC9       1       1       8   CAN1_DATA   
 MODULE:                 -- CAN1Events.c.o --
 - PROCEDURES:
      CAN1_OnFreeTxBuffer                     FBB12E      15      21       2   PAGE_FB_741 
@@ -1946,18 +1946,18 @@ MODULE:                 -- CAN4.c.o --
      CAN4_InterruptTx                          DEDE      22      34       1   NON_BANKED  
      CAN4_InterruptRx                          DF00      2F      47       1   NON_BANKED  
      CAN4_InterruptError                       DF2F      2F      47       1   NON_BANKED  
-     CAN4_SetAcceptanceCode                  F5A9D6      60      96       2   CAN4_CODE   
-     CAN4_SendFrame                          F5AA36     12A     298       3   CAN4_CODE   
-     CAN4_ReadFrame                          F5AB60      D6     214       3   CAN4_CODE   
-     CAN4_Init                               F5AC36      5F      95       2   CAN4_CODE   
-     CAN4_Enable                             F5AC95      1E      30       2   CAN4_CODE   
-     CAN4_Disable                            F5ACB3      16      22       2   CAN4_CODE   
-     CAN4_SetAcceptanceMask                  F5ACC9      60      96       2   CAN4_CODE   
+     CAN4_SetAcceptanceCode                  F5A9A1      60      96       2   CAN4_CODE   
+     CAN4_SendFrame                          F5AA01     12A     298       3   CAN4_CODE   
+     CAN4_ReadFrame                          F5AB2B      D6     214       3   CAN4_CODE   
+     CAN4_Init                               F5AC01      5F      95       2   CAN4_CODE   
+     CAN4_Enable                             F5AC60      1E      30       2   CAN4_CODE   
+     CAN4_Disable                            F5AC7E      16      22       2   CAN4_CODE   
+     CAN4_SetAcceptanceMask                  F5AC94      60      96       2   CAN4_CODE   
 - VARIABLES:
-     EnUser                                    2CB7       1       1       9   CAN4_DATA   
-     CAN4_EnEvent                              2CB8       1       1       6   CAN4_DATA   
-     ErrFlag                                   2CB9       1       1       5   CAN4_DATA   
-     SerFlag                                   2CBA       1       1       8   CAN4_DATA   
+     EnUser                                    2CCA       1       1       9   CAN4_DATA   
+     CAN4_EnEvent                              2CCB       1       1       6   CAN4_DATA   
+     ErrFlag                                   2CCC       1       1       5   CAN4_DATA   
+     SerFlag                                   2CCD       1       1       8   CAN4_DATA   
 MODULE:                 -- CAN4Events.c.o --
 - PROCEDURES:
      CAN4_OnFreeTxBuffer                     FBB14C      13      19       2   PAGE_FB_741 
@@ -1966,7 +1966,7 @@ MODULE:                 -- CAN4Events.c.o --
 - VARIABLES:
 MODULE:                 -- CHG_CAN_POW.c.o --
 - PROCEDURES:
-     CHG_CAN_POW_PutVal                      F5AE51       D      13       4   CHG_CAN_POW_CODE
+     CHG_CAN_POW_PutVal                      F5AE1C       D      13       4   CHG_CAN_POW_CODE
 - VARIABLES:
 MODULE:                 -- Cpu.c.o --
 - PROCEDURES:
@@ -1975,89 +1975,89 @@ MODULE:                 -- Cpu.c.o --
      Cpu_Delay100US                            C002      1B      27      65   .init       
      _EntryPoint                               C01D      2E      46       3   .init       
 - VARIABLES:
-     CCR_reg                                   242B       1       1      39   .common     
-     Shadow_K                                  242C       1       1       8   .common     
-     Shadow_C                                  242D       1       1       1   .common     
-     Shadow_M                                  242E       1       1       7   .common     
-     Shadow_S                                  242F       1       1       7   .common     
-     Shadow_H                                  2430       1       1       4   .common     
-     Shadow_D                                  2431       1       1       6   .common     
-     Shadow_J                                  2432       1       1       4   .common     
+     CCR_reg                                   243E       1       1      39   .common     
+     Shadow_K                                  243F       1       1       8   .common     
+     Shadow_C                                  2440       1       1       1   .common     
+     Shadow_M                                  2441       1       1       7   .common     
+     Shadow_S                                  2442       1       1       7   .common     
+     Shadow_H                                  2443       1       1       4   .common     
+     Shadow_D                                  2444       1       1       6   .common     
+     Shadow_J                                  2445       1       1       4   .common     
 MODULE:                 -- CPU_SUMV_SCL.c.o --
 - PROCEDURES:
-     CPU_SUMV_SCL_PutVal                     F5AD76       B      11       4   CPU_SUMV_SCL_CODE
+     CPU_SUMV_SCL_PutVal                     F5AD41       B      11       4   CPU_SUMV_SCL_CODE
 - VARIABLES:
 MODULE:                 -- CPU_SUMV_SDA.c.o --
 - PROCEDURES:
-     CPU_SUMV_SDA_PutVal                     F5AD4A      13      19       4   CPU_SUMV_SDA_CODE
-     CPU_SUMV_SDA_SetDir                     F5AD5D      19      25       4   CPU_SUMV_SDA_CODE
+     CPU_SUMV_SDA_PutVal                     F5AD15      13      19       4   CPU_SUMV_SDA_CODE
+     CPU_SUMV_SDA_SetDir                     F5AD28      19      25       4   CPU_SUMV_SDA_CODE
 - VARIABLES:
 MODULE:                 -- CPUCAN_CAR_EN.c.o --
 - PROCEDURES:
-     CPUCAN_CAR_EN_PutVal                    F5AE5E       D      13       4   CPUCAN_CAR_EN_CODE
+     CPUCAN_CAR_EN_PutVal                    F5AE29       D      13       4   CPUCAN_CAR_EN_CODE
 - VARIABLES:
 MODULE:                 -- CPUCAN_INT_EN.c.o --
 - PROCEDURES:
-     CPUCAN_INT_EN_PutVal                    F5AE6B       B      11       4   CPUCAN_INT_EN_CODE
+     CPUCAN_INT_EN_PutVal                    F5AE36       B      11       4   CPUCAN_INT_EN_CODE
 - VARIABLES:
 MODULE:                 -- CPUCCS.c.o --
 - PROCEDURES:
-     CPUCCS_PutVal                           F5A1C0       D      13       2   CPUCCS_CODE 
+     CPUCCS_PutVal                           F5A18B       D      13       2   CPUCCS_CODE 
 - VARIABLES:
 MODULE:                 -- CPUCSCK.c.o --
 - PROCEDURES:
-     CPUCSCK_PutVal                          F5A1A6       D      13       2   CPUCSCK_CODE
+     CPUCSCK_PutVal                          F5A171       D      13       2   CPUCSCK_CODE
 - VARIABLES:
 MODULE:                 -- CPUCSI.c.o --
 - PROCEDURES:
-     CPUCSI_PutVal                           F5A1B3       D      13       2   CPUCSI_CODE 
+     CPUCSI_PutVal                           F5A17E       D      13       2   CPUCSI_CODE 
 - VARIABLES:
 MODULE:                 -- CPUEE.c.o --
 - PROCEDURES:
-     CPUEE_SetByte                           F5AEA8      31      49       2   CPUEE_CODE  
-     CPUEE_GetByte                           F5AED9      36      54       2   CPUEE_CODE  
-     CPUEE_Partition                         F5AF0F      91     145       2   CPUEE_CODE  
-     CPUEE_Init                              F5AFA0       F      15       4   CPUEE_CODE  
+     CPUEE_SetByte                           F5AE73      31      49       2   CPUEE_CODE  
+     CPUEE_GetByte                           F5AEA4      36      54       2   CPUEE_CODE  
+     CPUEE_Partition                         F5AEDA      91     145       2   CPUEE_CODE  
+     CPUEE_Init                              F5AF6B       F      15       4   CPUEE_CODE  
 - VARIABLES:
 MODULE:                 -- CURPOWER.c.o --
 - PROCEDURES:
-     CURPOWER_PutVal                         F5AE76       B      11       2   CURPOWER_CODE
+     CURPOWER_PutVal                         F5AE41       B      11       2   CURPOWER_CODE
 - VARIABLES:
 MODULE:                 -- ExtEE_Sda.c.o --
 - PROCEDURES:
-     ExtEE_Sda_SetOutput                     F5AE81      15      21       2   ExtEE_Sda_CODE
+     ExtEE_Sda_SetOutput                     F5AE4C      15      21       2   ExtEE_Sda_CODE
 - VARIABLES:
 MODULE:                 -- ExtEE_Wp.c.o --
 - PROCEDURES:
-     ExtEE_Wp_SetOutput                      F5AE96      12      18       2   ExtEE_Wp_CODE
+     ExtEE_Wp_SetOutput                      F5AE61      12      18       2   ExtEE_Wp_CODE
 - VARIABLES:
 MODULE:                 -- ExternFlash_Cs.c.o --
 - PROCEDURES:
-     ExternFlash_Cs_SetInput                 F5ADA8       5       5       2   ExternFlash_Cs_CODE
-     ExternFlash_Cs_SetOutput                F5ADAD      15      21       2   ExternFlash_Cs_CODE
+     ExternFlash_Cs_SetInput                 F5AD73       5       5       2   ExternFlash_Cs_CODE
+     ExternFlash_Cs_SetOutput                F5AD78      15      21       2   ExternFlash_Cs_CODE
 - VARIABLES:
 MODULE:                 -- ExternFlash_Rst.c.o --
 - PROCEDURES:
-     ExternFlash_Rst_SetInput                F5AD8E       5       5       2   ExternFlash_Rst_CODE
-     ExternFlash_Rst_SetOutput               F5AD93      15      21       2   ExternFlash_Rst_CODE
+     ExternFlash_Rst_SetInput                F5AD59       5       5       2   ExternFlash_Rst_CODE
+     ExternFlash_Rst_SetOutput               F5AD5E      15      21       2   ExternFlash_Rst_CODE
 - VARIABLES:
 MODULE:                 -- ExternFlash_Sck.c.o --
 - PROCEDURES:
-     ExternFlash_Sck_SetInput                F5ADC2       5       5       2   ExternFlash_Sck_CODE
-     ExternFlash_Sck_SetOutput               F5ADC7      15      21       2   ExternFlash_Sck_CODE
+     ExternFlash_Sck_SetInput                F5AD8D       5       5       2   ExternFlash_Sck_CODE
+     ExternFlash_Sck_SetOutput               F5AD92      15      21       2   ExternFlash_Sck_CODE
 - VARIABLES:
 MODULE:                 -- ExternFlash_Si.c.o --
 - PROCEDURES:
-     ExternFlash_Si_SetInput                 F5ADDC       5       5       2   ExternFlash_Si_CODE
-     ExternFlash_Si_SetOutput                F5ADE1      15      21       2   ExternFlash_Si_CODE
+     ExternFlash_Si_SetInput                 F5ADA7       5       5       2   ExternFlash_Si_CODE
+     ExternFlash_Si_SetOutput                F5ADAC      15      21       2   ExternFlash_Si_CODE
 - VARIABLES:
 MODULE:                 -- ExternFlash_So.c.o --
 - PROCEDURES:
-     ExternFlash_So_SetOutput                F5ADF6      15      21       2   ExternFlash_So_CODE
+     ExternFlash_So_SetOutput                F5ADC1      15      21       2   ExternFlash_So_CODE
 - VARIABLES:
 MODULE:                 -- ExternTimer_Sda.c.o --
 - PROCEDURES:
-     ExternTimer_Sda_SetOutput               F5AE0B      12      18       2   ExternTimer_Sda_CODE
+     ExternTimer_Sda_SetOutput               F5ADD6      12      18       2   ExternTimer_Sda_CODE
 - VARIABLES:
 MODULE:                 -- IO_Map.c.o --
 - PROCEDURES:
@@ -2806,11 +2806,11 @@ MODULE:                 -- IOCEvents.c.o --
 - VARIABLES:
 MODULE:                 -- ISO_CTRL_NEG.c.o --
 - PROCEDURES:
-     ISO_CTRL_NEG_PutVal                     F5AD3F       B      11       2   ISO_CTRL_NEG_CODE
+     ISO_CTRL_NEG_PutVal                     F5AD0A       B      11       2   ISO_CTRL_NEG_CODE
 - VARIABLES:
 MODULE:                 -- ISO_CTRL_POS.c.o --
 - PROCEDURES:
-     ISO_CTRL_POS_PutVal                     F5AD34       B      11       2   ISO_CTRL_POS_CODE
+     ISO_CTRL_POS_PutVal                     F5ACFF       B      11       2   ISO_CTRL_POS_CODE
 - VARIABLES:
 MODULE:                 -- mcal.c.o --
 - PROCEDURES:
@@ -2818,33 +2818,33 @@ MODULE:                 -- mcal.c.o --
 - VARIABLES:
 MODULE:                 -- RELAY_FAN.c.o --
 - PROCEDURES:
-     RELAY_FAN_PutVal                        F5AE44       D      13       2   RELAY_FAN_CODE
+     RELAY_FAN_PutVal                        F5AE0F       D      13       2   RELAY_FAN_CODE
 - VARIABLES:
 MODULE:                 -- RELAY_HEAT.c.o --
 - PROCEDURES:
-     RELAY_HEAT_PutVal                       F5AD29       B      11       2   RELAY_HEAT_CODE
+     RELAY_HEAT_PutVal                       F5ACF4       B      11       2   RELAY_HEAT_CODE
 - VARIABLES:
 MODULE:                 -- RELAY_NEG.c.o --
 - PROCEDURES:
-     RELAY_NEG_PutVal                        F5AE2A       D      13       2   RELAY_NEG_CODE
+     RELAY_NEG_PutVal                        F5ADF5       D      13       2   RELAY_NEG_CODE
 - VARIABLES:
 MODULE:                 -- RELAY_POS.c.o --
 - PROCEDURES:
-     RELAY_POS_PutVal                        F5AE1D       D      13       2   RELAY_POS_CODE
+     RELAY_POS_PutVal                        F5ADE8       D      13       2   RELAY_POS_CODE
 - VARIABLES:
 MODULE:                 -- RELAY_PRE.c.o --
 - PROCEDURES:
-     RELAY_PRE_PutVal                        F5AE37       D      13       2   RELAY_PRE_CODE
+     RELAY_PRE_PutVal                        F5AE02       D      13       2   RELAY_PRE_CODE
 - VARIABLES:
 MODULE:                 -- SUMV_POW.c.o --
 - PROCEDURES:
-     SUMV_POW_PutVal                         F5AD81       D      13       4   SUMV_POW_CODE
+     SUMV_POW_PutVal                         F5AD4C       D      13       4   SUMV_POW_CODE
 - VARIABLES:
 MODULE:                 -- Timer.c.o --
 - PROCEDURES:
      Timer_Interrupt                           DF5E       8       8       1   NON_BANKED  
-     Timer_Enable                            F5A18A      10      16       2   Timer_CODE  
-     Timer_EnableEvent                       F5A19A       C      12       2   Timer_CODE  
+     Timer_Enable                            F5A155      10      16       2   Timer_CODE  
+     Timer_EnableEvent                       F5A165       C      12       2   Timer_CODE  
 - VARIABLES:
 MODULE:                 -- TimerEvents.c.o --
 - PROCEDURES:
@@ -2857,7 +2857,7 @@ MODULE:                 -- Vectors.c.o --
      _ResetVectorTable                         FFFA       6       6       0   .abs_section_fffa
 MODULE:                 -- wdi.c.o --
 - PROCEDURES:
-     wdi_PutVal                              F5A678       B      11       2   wdi_CODE    
+     wdi_PutVal                              F5A643       B      11       2   wdi_CODE    
 - VARIABLES:
 MODULE:                 -- IntCan_TestFrame.c.o --
 - PROCEDURES:
@@ -2869,13 +2869,13 @@ MODULE:                 -- IntCan_PrjConf.c.o --
      IntCan_PrjConf                            CF73       1       1       1   .rodata     
 MODULE:                 -- SPI2IF.c.o --
 - PROCEDURES:
-     SPI2IF_RecvChar                         F5A1DA      12      18       2   SPI2IF_CODE 
-     SPI2IF_SendChar                         F5A1EC       B      11       2   SPI2IF_CODE 
-     SPI2IF_Init                             F5A1F7      14      20       2   SPI2IF_CODE 
+     SPI2IF_RecvChar                         F5A1A5      12      18       2   SPI2IF_CODE 
+     SPI2IF_SendChar                         F5A1B7       B      11       2   SPI2IF_CODE 
+     SPI2IF_Init                             F5A1C2      14      20       2   SPI2IF_CODE 
 - VARIABLES:
 MODULE:                 -- EN_CELL.c.o --
 - PROCEDURES:
-     EN_CELL_PutVal                          F5A1CD       D      13       6   EN_CELL_CODE
+     EN_CELL_PutVal                          F5A198       D      13       6   EN_CELL_CODE
 - VARIABLES:
 MODULE:                 -- SOH.c.o --
 - PROCEDURES:
@@ -2890,10 +2890,10 @@ MODULE:                 -- RunModem.c.o --
      RunModem_SwitchModeTo                   FBB48C      19      25      12   PAGE_FB_741 
 - VARIABLES:
      RunModem_VerDef                           CF74      1C      28       1   .rodata     
-     RumMode_LocalEcuMode                      2433       2       2       3   .common     
+     RumMode_LocalEcuMode                      2446       2       2       3   .common     
 MODULE:                 -- IntWatchDog.c.o --
 - PROCEDURES:
-     IntWatchDog_Clear                       F5AFAF       9       9       2   IntWatchDog_CODE
+     IntWatchDog_Clear                       F5AF7A       9       9       2   IntWatchDog_CODE
 - VARIABLES:
 MODULE:                 -- SOF-A.c.o --
 - PROCEDURES:
@@ -2915,31 +2915,31 @@ MODULE:                 -- SOF-A.c.o --
      SOF_CnstFeedbackPowCurves                 2024       6       6       2   .data       
      SOF_PulseDisPowCurves                     202A       6       6       2   .data       
      SOF_PulseFeedbackPowCurves                2030       6       6       2   .data       
-     SOF_TmCnt                                 2435       1       1       6   .common     
-     SOF_CalcValue                             2436      2C      44      29   .common     
-     gby_PulseDisCurCnt                        2462       1       1       6   .common     
-     gby_PulseFeedCurCnt                       2463       1       1       5   .common     
-     gby_FirstCalCurFlag                       2464       1       1       3   .common     
-     gby_FirstCalPowFlag                       2465       1       1       3   .common     
-     gby_SofModifyRatio                        2466       8       8      25   .common     
-     gwd_SofTargetValue                        246E      10      16      17   .common     
+     SOF_TmCnt                                 2448       1       1       6   .common     
+     SOF_CalcValue                             2449      2C      44      29   .common     
+     gby_PulseDisCurCnt                        2475       1       1       6   .common     
+     gby_PulseFeedCurCnt                       2476       1       1       5   .common     
+     gby_FirstCalCurFlag                       2477       1       1       3   .common     
+     gby_FirstCalPowFlag                       2478       1       1       3   .common     
+     gby_SofModifyRatio                        2479       8       8      25   .common     
+     gwd_SofTargetValue                        2481      10      16      17   .common     
 MODULE:                 -- AC_CP_IOC.c.o --
 - PROCEDURES:
      AC_CP_IOC_Interrupt                       DF66       E      14       1   NON_BANKED  
-     AC_CP_IOC_Enable                        F5AFB8      15      21       2   AC_CP_IOC_CODE
-     AC_CP_IOC_Disable                       F5AFCD      10      16       2   AC_CP_IOC_CODE
-     AC_CP_IOC_Init                          F5AFDD       F      15       2   AC_CP_IOC_CODE
+     AC_CP_IOC_Enable                        F5AF83      15      21       2   AC_CP_IOC_CODE
+     AC_CP_IOC_Disable                       F5AF98      10      16       2   AC_CP_IOC_CODE
+     AC_CP_IOC_Init                          F5AFA8       F      15       2   AC_CP_IOC_CODE
 - VARIABLES:
-     EnUser                                    2CBB       1       1       5   AC_CP_IOC_DATA
-     AC_CP_IOC_EnEvent                         2CBC       1       1       4   AC_CP_IOC_DATA
-     AC_CP_IOC_CntrState                       2CBD       2       2       3   AC_CP_IOC_DATA
+     EnUser                                    2CCE       1       1       5   AC_CP_IOC_DATA
+     AC_CP_IOC_EnEvent                         2CCF       1       1       4   AC_CP_IOC_DATA
+     AC_CP_IOC_CntrState                       2CD0       2       2       3   AC_CP_IOC_DATA
 MODULE:                 -- CPU_CHG_S.c.o --
 - PROCEDURES:
-     CPU_CHG_S_PutVal                        F5A20B       D      13       2   CPU_CHG_S_CODE
+     CPU_CHG_S_PutVal                        F5A1D6       D      13       2   CPU_CHG_S_CODE
 - VARIABLES:
 MODULE:                 -- DO_CON.c.o --
 - PROCEDURES:
-     DO_CON_PutVal                           F5A218       B      11       2   DO_CON_CODE 
+     DO_CON_PutVal                           F5A1E3       B      11       2   DO_CON_CODE 
 - VARIABLES:
 MODULE:                 -- DataStore.c.o (Lib.lib) --
 - PROCEDURES:
@@ -2995,12 +2995,12 @@ MODULE:                 -- EE.c.o (Lib.lib) --
      gwd_RecognizeData                        F1887'G       2       2       9   PAGED_RAM   
      glwd_CntSaveAh                           F1889'G       4       4      36   PAGED_RAM   
      gby_ReadData                             F188D'G      20      32      70   PAGED_RAM   
-     gwd_MaxDataAddr                           247E       4       4       6   .common     
-     gwd_AddrBuf                               2482      40      64       6   .common     
-     gwd_AddrBufCnt                            24C2       2       2       5   .common     
-     gby_BlockSaveAh                           24C4       1       1       4   .common     
-     gby_ExternEE_Status                       24C5       1       1      26   .common     
-     EE_TmCnt                                  24C6       1       1      12   .common     
+     gwd_MaxDataAddr                           2491       4       4       6   .common     
+     gwd_AddrBuf                               2495      40      64       6   .common     
+     gwd_AddrBufCnt                            24D5       2       2       5   .common     
+     gby_BlockSaveAh                           24D7       1       1       4   .common     
+     gby_ExternEE_Status                       24D8       1       1      26   .common     
+     EE_TmCnt                                  24D9       1       1      12   .common     
 MODULE:                 -- EE_CRC16.c.o (Lib.lib) --
 - PROCEDURES:
      EE_CalcCRC16AllByte                     F9861D      7F     127       8   PAGE_F9_743 
@@ -3048,13 +3048,13 @@ MODULE:                 -- LvM.c.o (Lib.lib) --
      LvM_CountCbk                            F9A63C      39      57       2   PAGE_F9_743 
      LvM_ProcMain                            F9A675      1F      31       2   PAGE_F9_743 
 - VARIABLES:
-     LvM_ActSgnlChk                            24C7       C      12      52   .common     
-     LvM_TmCnt                                 24D3       5       5      20   .common     
-     gby_KeyResetFlag                          24D8       1       1       5   .common     
-     LvM_RunModeM                              24D9       2       2       6   .common     
-     gby_BcuShutDownEn                         24DB       1       1       3   .common     
-     gby_VcuShutDownEn                         24DC       1       1       1   .common     
-     gby_SystemShutDownEn                      24DD       1       1       2   .common     
+     LvM_ActSgnlChk                            24DA       C      12      52   .common     
+     LvM_TmCnt                                 24E6       5       5      20   .common     
+     gby_KeyResetFlag                          24EB       1       1       5   .common     
+     LvM_RunModeM                              24EC       2       2       6   .common     
+     gby_BcuShutDownEn                         24EE       1       1       3   .common     
+     gby_VcuShutDownEn                         24EF       1       1       1   .common     
+     gby_SystemShutDownEn                      24F0       1       1       2   .common     
 MODULE:                 -- ExctCmd.c.o (Lib.lib) --
 - PROCEDURES:
      WR_BCUSysconfProductNo                  F9A694      7F     127       2   PAGE_F9_743 
@@ -3142,13 +3142,13 @@ MODULE:                 -- ExctCmd.c.o (Lib.lib) --
      RD_GetModuleVer                         F8AC43      B7     183       2   PAGE_F8_744 
      RD_GetHardwareVer                       F8ACFA      44      68       2   PAGE_F8_744 
 - VARIABLES:
-     gby_i                                     24DE       1       1     512   .common     
-     gby_length                                24DF       1       1     213   .common     
-     gby_rslt                                  24E0       8       8    1036   .common     
-     gby_wtmp                                  24E8       2       2      93   .common     
-     gby_data                                  24EA      1E      30     290   .common     
-     gby_data_bak                              2508      1E      30     358   .common     
-     gby_ptr_by                                2526       2       2     168   .common     
+     gby_i                                     24F1       1       1     512   .common     
+     gby_length                                24F2       1       1     213   .common     
+     gby_rslt                                  24F3       8       8    1036   .common     
+     gby_wtmp                                  24FB       2       2      93   .common     
+     gby_data                                  24FD      1E      30     290   .common     
+     gby_data_bak                              251B      1E      30     358   .common     
+     gby_ptr_by                                2539       2       2     168   .common     
 MODULE:                 -- IntCan.c.o (Lib.lib) --
 - PROCEDURES:
      IntCan_Init                             F8AD3E     4BB    1211       2   PAGE_F8_744 
@@ -3177,23 +3177,23 @@ MODULE:                 -- IntCan.c.o (Lib.lib) --
 - VARIABLES:
      IntCan_VerDef                             D1C8      1C      28       1   .rodata     
      app_request_boot                          3FEF       2       2       1   BOOT_RAM    
-     CanTpMsgTx                                2528      6A     106    1138   .common     
-     CanTpMsgRx                                2592      6A     106     203   .common     
-     IntCan_MainMsg                            25FC     17C     380     316   .common     
-     IntCan_EventMsg                           2778      A0     160     119   .common     
-     IntCan_BroadCastMsg                       2818      14      20      29   .common     
-     IntCan_LocalEcuInfo                       282C      24      36      56   .common     
-     IntCan_PauseSendMsgCtrl                   2850       3       3       6   .common     
-     IntCan_ModeCtrl                           2853       7       7      21   .common     
-     IntCan_VoltMsg                            285A      14      20      31   .common     
-     IntCan_ResMsg                             286E      14      20      14   .common     
-     IntCan_TemperMsg                          2882      14      20      32   .common     
-     IntCan_BalSocMsg                          2896      14      20      30   .common     
-     IntCan_VoltMsgPf                          28AA       3       3      16   .common     
-     IntCan_ResMsgPf                           28AD       3       3       5   .common     
-     IntCan_TemperMsgPf                        28B0       3       3      14   .common     
-     IntCan_BalSocMsgPf                        28B3       3       3      13   .common     
-     gwd_result                                28B6       2       2       1   .common     
+     CanTpMsgTx                                253B      6A     106    1138   .common     
+     CanTpMsgRx                                25A5      6A     106     203   .common     
+     IntCan_MainMsg                            260F     17C     380     316   .common     
+     IntCan_EventMsg                           278B      A0     160     119   .common     
+     IntCan_BroadCastMsg                       282B      14      20      29   .common     
+     IntCan_LocalEcuInfo                       283F      24      36      56   .common     
+     IntCan_PauseSendMsgCtrl                   2863       3       3       6   .common     
+     IntCan_ModeCtrl                           2866       7       7      21   .common     
+     IntCan_VoltMsg                            286D      14      20      31   .common     
+     IntCan_ResMsg                             2881      14      20      14   .common     
+     IntCan_TemperMsg                          2895      14      20      32   .common     
+     IntCan_BalSocMsg                          28A9      14      20      30   .common     
+     IntCan_VoltMsgPf                          28BD       3       3      16   .common     
+     IntCan_ResMsgPf                           28C0       3       3       5   .common     
+     IntCan_TemperMsgPf                        28C3       3       3      14   .common     
+     IntCan_BalSocMsgPf                        28C6       3       3      13   .common     
+     gwd_result                                28C9       2       2       1   .common     
 MODULE:                 -- CellvDet.c.o (Lib.lib) --
 - PROCEDURES:
      CellvDet_GetVesionModuleVer             F7A0E5       E      14       2   PAGE_F7_745 
@@ -3208,32 +3208,32 @@ MODULE:                 -- CellvDet.c.o (Lib.lib) --
      ji                                        2084       2       2       2   .bss        
      StartCnvt_Cont                            2086       1       1       4   .bss        
      Back_Con                                  2087       1       1       6   .bss        
-     CellvDet_TmCnt                            28B8       1       1       9   .common     
-     CellvErrCnt                               28B9      10      16       8   .common     
-     gby_DeviceNum                             28C9       1       1      15   .common     
-     gby_Volt_ReadCnt                          28CA       1       1       3   .common     
-     gby_Volt_Cnt                              28CB       4       4       2   .common     
-     gby_Volt_PackErrFlag                      28CF       3       3       8   .common     
-     gwd_Volt_Bak                              28D2      60      96      17   .common     
-     gwd_Volt_Bak_Two                          2932      60      96       8   .common     
-     glwd_Volt_Acc                             2992      C0     192       6   .common     
-     gwd_BalFaultPos                           2A52       8       8       1   .common     
-     gby_CalcLineLossCnt                       2A5A       1       1       1   .common     
-     gby_Flag_BalDeltaVolt                     2A5B       1       1       3   .common     
-     gby_Flag_BalStop                          2A5C       1       1       2   .common     
-     gby_ChannelBak                            2A5D       4       4       6   .common     
-     gwd_BalOff_VoltBak                        2A61       8       8       1   .common     
-     gwd_BalOff_VoltBak_Left                   2A69       8       8       1   .common     
-     gwd_BalOff_VoltBak_Right                  2A71       8       8       1   .common     
-     gwd_BalOn_DeltaVolt                       2A79       8       8       3   .common     
-     gwd_BalOn_DeltaVolt_Left                  2A81       8       8       2   .common     
-     gwd_BalOn_DeltaVolt_Right                 2A89       8       8       2   .common     
-     BalOn_Volt_Acc_Buf                        2A91      10      16      10   .common     
-     BalOn_Volt_Cnt                            2AA1       4       4       3   .common     
-     BalOn_Volt_Left_Acc_Buf                   2AA5      10      16      10   .common     
-     BalOn_Volt_Left_Cnt                       2AB5       4       4       3   .common     
-     BalOn_Volt_Right_Acc_Buf                  2AB9      10      16      10   .common     
-     BalOn_Volt_Right_Cnt                      2AC9       4       4       3   .common     
+     CellvDet_TmCnt                            28CB       1       1       9   .common     
+     CellvErrCnt                               28CC      10      16       8   .common     
+     gby_DeviceNum                             28DC       1       1      15   .common     
+     gby_Volt_ReadCnt                          28DD       1       1       3   .common     
+     gby_Volt_Cnt                              28DE       4       4       2   .common     
+     gby_Volt_PackErrFlag                      28E2       3       3       8   .common     
+     gwd_Volt_Bak                              28E5      60      96      17   .common     
+     gwd_Volt_Bak_Two                          2945      60      96       8   .common     
+     glwd_Volt_Acc                             29A5      C0     192       6   .common     
+     gwd_BalFaultPos                           2A65       8       8       1   .common     
+     gby_CalcLineLossCnt                       2A6D       1       1       1   .common     
+     gby_Flag_BalDeltaVolt                     2A6E       1       1       3   .common     
+     gby_Flag_BalStop                          2A6F       1       1       2   .common     
+     gby_ChannelBak                            2A70       4       4       6   .common     
+     gwd_BalOff_VoltBak                        2A74       8       8       1   .common     
+     gwd_BalOff_VoltBak_Left                   2A7C       8       8       1   .common     
+     gwd_BalOff_VoltBak_Right                  2A84       8       8       1   .common     
+     gwd_BalOn_DeltaVolt                       2A8C       8       8       3   .common     
+     gwd_BalOn_DeltaVolt_Left                  2A94       8       8       2   .common     
+     gwd_BalOn_DeltaVolt_Right                 2A9C       8       8       2   .common     
+     BalOn_Volt_Acc_Buf                        2AA4      10      16      10   .common     
+     BalOn_Volt_Cnt                            2AB4       4       4       3   .common     
+     BalOn_Volt_Left_Acc_Buf                   2AB8      10      16      10   .common     
+     BalOn_Volt_Left_Cnt                       2AC8       4       4       3   .common     
+     BalOn_Volt_Right_Acc_Buf                  2ACC      10      16      10   .common     
+     BalOn_Volt_Right_Cnt                      2ADC       4       4       3   .common     
 MODULE:                 -- CurDet.c.o (Lib.lib) --
 - PROCEDURES:
      CurDet_GetVesionModuleVer               F7A8D1       E      14       2   PAGE_F7_745 
@@ -3261,10 +3261,10 @@ MODULE:                 -- CurDet.c.o (Lib.lib) --
      gby_FlagCLbrSlect                         2092       1       1       5   .bss        
      glwd_ClbrValue                            2093       4       4       4   .bss        
      CurDetConf                               F19E1'G      1E      30      88   PAGED_RAM   
-     CurDet_Eng                                2ACD      16      22      57   .common     
-     LemOffset                                 2AE3       4       4       4   .common     
-     gby_curdeterrcnt                          2AE7       1       1       4   .common     
-     CurDet_TmCnt                              2AE8       2       2      11   .common     
+     CurDet_Eng                                2AE0      16      22      57   .common     
+     LemOffset                                 2AF6       4       4       4   .common     
+     gby_curdeterrcnt                          2AFA       1       1       4   .common     
+     CurDet_TmCnt                              2AFB       2       2      11   .common     
 MODULE:                 -- SensorDi.c.o (Lib.lib) --
 - PROCEDURES:
      SensorDi_GetVesionModuleVer             F7B056       E      14       2   PAGE_F7_745 
@@ -3281,16 +3281,16 @@ MODULE:                 -- IsoDet.c.o (Lib.lib) --
 - VARIABLES:
      IsoDet_VerDef                             D238      1C      28       1   .rodata     
      SumVToAdArray                             D254     150     336     108   .rodata     
-     IsoErrFlg                                 2AEA       2       2      20   .common     
-     FilterNegCnt100                           2AEC       2       2       8   .common     
-     FilterNegCnt500                           2AEE       2       2       8   .common     
-     FilterPosCnt100                           2AF0       2       2       8   .common     
-     FilterPosCnt500                           2AF2       2       2       8   .common     
-     IsoDet_TmCnt                              2AF4       2       2       6   .common     
-     Ios_Operate                               2AF6       5       5       8   .common     
-     PO                                        2AFB       4       4       2   .common     
-     PO2                                       2AFF       4       4       2   .common     
-     AlarmTimeCnt                              2B03       2       2       2   .common     
+     IsoErrFlg                                 2AFD       2       2      20   .common     
+     FilterNegCnt100                           2AFF       2       2       8   .common     
+     FilterNegCnt500                           2B01       2       2       8   .common     
+     FilterPosCnt100                           2B03       2       2       8   .common     
+     FilterPosCnt500                           2B05       2       2       8   .common     
+     IsoDet_TmCnt                              2B07       2       2       6   .common     
+     Ios_Operate                               2B09       5       5       8   .common     
+     PO                                        2B0E       4       4       2   .common     
+     PO2                                       2B12       4       4       2   .common     
+     AlarmTimeCnt                              2B16       2       2       2   .common     
 MODULE:                 -- SumvDet.c.o (Lib.lib) --
 - PROCEDURES:
      SumvDet_GetVesionModuleVer              F7B76F       E      14       2   PAGE_F7_745 
@@ -3306,13 +3306,13 @@ MODULE:                 -- SumvDet.c.o (Lib.lib) --
      gby_Sumv_ErrCnt                           2098       1       1       4   .bss        
      gwd_Sumv_Backup                           2099       2       2       2   .bss        
      SumvDet_Config                           F19FF'G      12      18      18   PAGED_RAM   
-     gwd_Sumv_Backup_cal                       2B05       4       4       3   .common     
-     gwd_Sumv_Backup_Iso1                      2B09       4       4       8   .common     
-     gwd_Sumv_Backup_Iso2                      2B0D       4       4      12   .common     
-     gwd_Sumv_Backup_cal_L                     2B11      40      64       4   .common     
-     gwd_Sumv_Backup_cal2_L                    2B51      40      64       4   .common     
-     SumvDet_TmCnt                             2B91       1       1       6   .common     
-     gwd_SumvAdValue                           2B92       2       2       5   .common     
+     gwd_Sumv_Backup_cal                       2B18       4       4       3   .common     
+     gwd_Sumv_Backup_Iso1                      2B1C       4       4       8   .common     
+     gwd_Sumv_Backup_Iso2                      2B20       4       4      12   .common     
+     gwd_Sumv_Backup_cal_L                     2B24      40      64       4   .common     
+     gwd_Sumv_Backup_cal2_L                    2B64      40      64       4   .common     
+     SumvDet_TmCnt                             2BA4       1       1       6   .common     
+     gwd_SumvAdValue                           2BA5       2       2       5   .common     
 MODULE:                 -- TemperDet.c.o (Lib.lib) --
 - PROCEDURES:
      TemperDet_GetVesionModuleVer            F7BC04       E      14       2   PAGE_F7_745 
@@ -3324,11 +3324,11 @@ MODULE:                 -- TemperDet.c.o (Lib.lib) --
 - VARIABLES:
      TemperDet_VerDef                          D3C0      1C      28       1   .rodata     
      AD_T_10K                                  D3DC     14C     332       1   .rodata     
-     TemperNum                                 2B94       6       6       7   .common     
-     gby_NtcTemperBak                          2B9A       7       7       2   .common     
-     gby_Ds18b20Msd                            2BA1       1       1       1   .common     
-     gby_TemperDetTmCnt                        2BA2       1       1       6   .common     
-     gwd_temper_ad_test                        2BA3      10      16       1   .common     
+     TemperNum                                 2BA7       6       6       7   .common     
+     gby_NtcTemperBak                          2BAD       7       7       2   .common     
+     gby_Ds18b20Msd                            2BB4       1       1       1   .common     
+     gby_TemperDetTmCnt                        2BB5       1       1       6   .common     
+     gwd_temper_ad_test                        2BB6      10      16       1   .common     
 MODULE:                 -- SOC-A.c.o (Lib.lib) --
 - PROCEDURES:
      SOC_AhIntglProcess                      F68000     2C8     712       4   PAGE_F6_746 
@@ -3344,18 +3344,18 @@ MODULE:                 -- SOC-A.c.o (Lib.lib) --
      SOC_ModuleCountCbk                      F69700      22      34       2   PAGE_F6_746 
      SOC_ModuleCbk                           F69722      D5     213       2   PAGE_F6_746 
 - VARIABLES:
-     SOC_TmCnt                                 2BB3       2       2      11   .common     
-     SOC_EstmatDataIn                          2BB5      49      73      70   .common     
-     SOC_EstmatDataCalc                        2BFE      11      17      44   .common     
-     SOC_EstmatDataOut                         2C0F       E      14     111   .common     
-     SOC_Smooth                                2C1D       E      14      75   .common     
-     SOC_AhIntgl                               2C2B      1D      29     255   .common     
+     SOC_TmCnt                                 2BC6       2       2      11   .common     
+     SOC_EstmatDataIn                          2BC8      49      73      70   .common     
+     SOC_EstmatDataCalc                        2C11      11      17      44   .common     
+     SOC_EstmatDataOut                         2C22       E      14     111   .common     
+     SOC_Smooth                                2C30       E      14      75   .common     
+     SOC_AhIntgl                               2C3E      1D      29     255   .common     
 MODULE:                 -- SOH-A.c.o (Lib.lib) --
 - PROCEDURES:
      SOH_ModuleInit                          F697F7     10E     270       2   PAGE_F6_746 
 - VARIABLES:
      SOH_CtrlPara                             F1A11'G      11      17      12   PAGED_RAM   
-     SOH_TmCnt                                 2C48       1       1       1   .common     
+     SOH_TmCnt                                 2C5B       1       1       1   .common     
 MODULE:                 -- Can_Lcfg.c.o (Lib.lib) --
 - PROCEDURES:
      CAN0_SetBaudrate                        F69905      2A      42       2   PAGE_F6_746 
@@ -3485,7 +3485,7 @@ MODULE:                 -- CpuEEIf.c.o (Lib.lib) --
      CpuEEIf_ReadArray                       F6B4F2      3A      58       2   PAGE_F6_746 
      CpuEEIf_WriteArray                      F6B52C      38      56       2   PAGE_F6_746 
 - VARIABLES:
-     CpuEEIf_CCRreg                            2C49       1       1       4   .common     
+     CpuEEIf_CCRreg                            2C5C       1       1       4   .common     
 MODULE:                 -- ExternEEIf.c.o (Lib.lib) --
 - PROCEDURES:
      ExternEEIf_Init                         F6B564      15      21       2   PAGE_F6_746 
@@ -3596,19 +3596,19 @@ MODULE:                 -- CellvIf.c.o (Lib.lib) --
 - VARIABLES:
      Cnt1                                      20AB       2       2       6   .bss        
      InitStep.1                                20AD       1       1       3   .bss        
-     BalPos                                    2C4A      14      20       8   .common     
-     FF                                        2C5E       1       1       9   .common     
-     BIT                                       2C5F       1       1       8   .common     
-     COM                                       2C60       4       4      29   .common     
-     COM2                                      2C64       4       4      56   .common     
-     h                                         2C68       1       1       2   .common     
-     CellvIf                                   2C69       5       5      15   .common     
-     glwd_Cnt                                  2C6E       4       4       4   .common     
-     glwd_Cnt1                                 2C72       4       4       4   .common     
-     glwd_Cnt2                                 2C76       4       4       4   .common     
-     glwd_Cnt6                                 2C7A       4       4       4   .common     
-     glwd_Cnt7                                 2C7E       4       4       6   .common     
-     glwd_Cnt8                                 2C82       4       4       6   .common     
+     BalPos                                    2C5D      14      20       8   .common     
+     FF                                        2C71       1       1       9   .common     
+     BIT                                       2C72       1       1       8   .common     
+     COM                                       2C73       4       4      29   .common     
+     COM2                                      2C77       4       4      56   .common     
+     h                                         2C7B       1       1       2   .common     
+     CellvIf                                   2C7C       5       5      15   .common     
+     glwd_Cnt                                  2C81       4       4       4   .common     
+     glwd_Cnt1                                 2C85       4       4       4   .common     
+     glwd_Cnt2                                 2C89       4       4       4   .common     
+     glwd_Cnt6                                 2C8D       4       4       4   .common     
+     glwd_Cnt7                                 2C91       4       4       6   .common     
+     glwd_Cnt8                                 2C95       4       4       6   .common     
 MODULE:                 -- Clock_Lcfg.c.o (Lib.lib) --
 - PROCEDURES:
      SysTime_Scl_SetInput                    F5867B       1       1       2   PAGE_F5_747 
@@ -3638,7 +3638,7 @@ MODULE:                 -- ClockIf.c.o (Lib.lib) --
      ClockIf_WriteTime                       F58818     1B4     436       2   PAGE_F5_747 
      ClockIf_ReadTime                        F589CC     10F     271      10   PAGE_F5_747 
 - VARIABLES:
-     gby_RtcTime                               2C86       6       6      18   .common     
+     gby_RtcTime                               2C99       6       6      18   .common     
 MODULE:                 -- Current_Lcfg.c.o (Lib.lib) --
 - PROCEDURES:
      Current_Cs_PutVal                       F58ADB       5       5       2   PAGE_F5_747 
@@ -3676,8 +3676,8 @@ MODULE:                 -- IsoIf.c.o (Lib.lib) --
      IsoIf_CtrlNegMos                        F59321      36      54       2   PAGE_F5_747 
      IsoIf_CloseMos                          F59357      4B      75       4   PAGE_F5_747 
 - VARIABLES:
-     gby_flag_mos_pos                          2C8C       1       1       1   .common     
-     gby_flag_mos_neg                          2C8D       1       1       1   .common     
+     gby_flag_mos_pos                          2C9F       1       1       1   .common     
+     gby_flag_mos_neg                          2CA0       1       1       1   .common     
 MODULE:                 -- Sumv_Lcfg.c.o (Lib.lib) --
 - PROCEDURES:
      Sumv_Scl_SetVal                         F593A2       7       7       2   PAGE_F5_747 
@@ -3774,11 +3774,11 @@ MODULE:                 -- IntRes-AB.c.o --
      IntRes_ModuleInit                       F59C82      2A      42       2   PAGE_F5_747 
      IntRes_ModuleCountCbk                   F59CAC      11      17       2   PAGE_F5_747 
      IntRes_ModuleCbk                        F59CBD       F      15       2   PAGE_F5_747 
-     IntRes_CalcProc                         F59CCC     4BE    1214       9   PAGE_F5_747 
+     IntRes_CalcProc                         F59CCC     489    1161       9   PAGE_F5_747 
 - VARIABLES:
-     IntRes_Calc                              F27D7'G      9C     156      74   PAGED_RAM   
-     IntRes_Infor                             F2873'G      1A      26       4   PAGED_RAM   
-     IntRes_TmCnt                              2C8E       1       1       6   .common     
+     IntRes_Calc                              F27D7'G      5C      92      74   PAGED_RAM   
+     IntRes_Infor                             F2833'G      1A      26       4   PAGED_RAM   
+     IntRes_TmCnt                              2CA1       1       1       6   .common     
 
 *********************************************************************************************
 MODULE STATISTIC
@@ -3794,7 +3794,7 @@ MODULE STATISTIC
   SOF.c.o                                      0     24   3003
   HvM.c.o                                      0     19      0
   ThM.c.o                                      0     16      0
-  CarCan.c.o                                 383   3870     28
+  CarCan.c.o                                 402   3870     28
   ChgCan.c.o                                  22    324     28
   EcuConf.c.o                                  1     20     28
   SysConf.c.o                               2921   1411     28
@@ -3924,7 +3924,7 @@ MODULE STATISTIC
   SOC.c.o                                      0     15    677
   ChgM.c.o                                     0     24     48
   IntRes.c.o                                   0     15      0
-  IntRes-AB.c.o                              183   1288      0
+  IntRes-AB.c.o                              119   1235      0
   other                                     1024     16   3042
 
 *********************************************************************************************
@@ -6722,197 +6722,197 @@ OBJECT LIST SORTED BY ADDRESS
      InitStep.1                                20AD       1       1       3   .bss        
      Actor_CtrlRelayPara                       20AE      38      56      24   .bss        
      relay_err_cnt.3                           20E6       1       1       4   .bss        
-     sCarCan_Msg                               20E7     17C     380     218   .common     
-     CarCan_ProCnt                             2263       3       3       6   .common     
-     ChgCan_Com                                2266       2       2       8   .common     
-     ChgCan_Msg                                2268      14      20       1   .common     
-     gwd_Volt                                  227C       E      14      15   .common     
-     gby_Temper                                228A       7       7       8   .common     
-     gby_MsgNumBmv                             2291       1       1       3   .common     
-     gby_MsgNumBmt                             2292       1       1       3   .common     
-     GbChgCan_Msg                              2293      8C     140      90   .common     
-     GbChgCan_TmCnt                            231F      1D      29      61   .common     
-     GbChgCan_Ctrl                             233C      10      16       8   .common     
-     GbChgCan_RxData                           234C      34      52       5   .common     
-     ChgIf_TmCnt                               2380       2       2       6   .common     
-     GbChgDet_Cp                               2382       4       4      11   .common     
-     HvM_Flag                                  2386       D      13       4   .common     
-     HvM_Cnt                                   2393      16      22      39   .common     
-     HvM_CtrlHv                                23A9       6       6       5   .common     
-     HvM_Err                                   23AF       2       2       2   .common     
-     HvM_CtrlRelayCmd                          23B1       C      12      22   .common     
-     HvM_TmCnt                                 23BD       1       1       6   .common     
-     HvM_VcuInfo                               23BE       8       8       7   .common     
-     gby_chg_relay_off_flag                    23C6       1       1       2   .common     
-     gby_test                                  23C7       1       1       4   .common     
-     ThM_TmCnt                                 23C8       1       1       1   .common     
-     gby_LoadVar_Flag                          23C9       1       1       1   .common     
-     gby_HeatStatus                            23CA       1       1       1   .common     
-     ChgM_TmCnt                                23CB       2       2      11   .common     
-     ChgM_Ctrl                                 23CD      42      66     213   .common     
-     GbChgM_Ctrl                               240F       C      12      32   .common     
-     GbChgM_TmCnt                              241B       2       2      22   .common     
-     gwd_CntChgLinkFail                        241D       2       2       1   .common     
-     gwd_CntAcLinkFail                         241F       2       2       4   .common     
-     gwd_AcPmtChgCur                           2421       2       2       2   .common     
-     gby_byte_num_brm                          2423       1       1       3   .common     
-     gby_msg_num_brm                           2424       1       1       3   .common     
-     Prj_Pro                                   2425       1       1       5   .common     
-     gby_ReadyFlag                             2426       1       1       8   .common     
-     gwd_RecvBmuMsgFlag                        2427       2       2       1   .common     
-     gwd_RecvBmuMsgFlagMask                    2429       2       2       2   .common     
-     CCR_reg                                   242B       1       1      39   .common     
-     Shadow_K                                  242C       1       1       8   .common     
-     Shadow_C                                  242D       1       1       1   .common     
-     Shadow_M                                  242E       1       1       7   .common     
-     Shadow_S                                  242F       1       1       7   .common     
-     Shadow_H                                  2430       1       1       4   .common     
-     Shadow_D                                  2431       1       1       6   .common     
-     Shadow_J                                  2432       1       1       4   .common     
-     RumMode_LocalEcuMode                      2433       2       2       3   .common     
-     SOF_TmCnt                                 2435       1       1       6   .common     
-     SOF_CalcValue                             2436      2C      44      29   .common     
-     gby_PulseDisCurCnt                        2462       1       1       6   .common     
-     gby_PulseFeedCurCnt                       2463       1       1       5   .common     
-     gby_FirstCalCurFlag                       2464       1       1       3   .common     
-     gby_FirstCalPowFlag                       2465       1       1       3   .common     
-     gby_SofModifyRatio                        2466       8       8      25   .common     
-     gwd_SofTargetValue                        246E      10      16      17   .common     
-     gwd_MaxDataAddr                           247E       4       4       6   .common     
-     gwd_AddrBuf                               2482      40      64       6   .common     
-     gwd_AddrBufCnt                            24C2       2       2       5   .common     
-     gby_BlockSaveAh                           24C4       1       1       4   .common     
-     gby_ExternEE_Status                       24C5       1       1      26   .common     
-     EE_TmCnt                                  24C6       1       1      12   .common     
-     LvM_ActSgnlChk                            24C7       C      12      52   .common     
-     LvM_TmCnt                                 24D3       5       5      20   .common     
-     gby_KeyResetFlag                          24D8       1       1       5   .common     
-     LvM_RunModeM                              24D9       2       2       6   .common     
-     gby_BcuShutDownEn                         24DB       1       1       3   .common     
-     gby_VcuShutDownEn                         24DC       1       1       1   .common     
-     gby_SystemShutDownEn                      24DD       1       1       2   .common     
-     gby_i                                     24DE       1       1     512   .common     
-     gby_length                                24DF       1       1     213   .common     
-     gby_rslt                                  24E0       8       8    1036   .common     
-     gby_wtmp                                  24E8       2       2      93   .common     
-     gby_data                                  24EA      1E      30     290   .common     
-     gby_data_bak                              2508      1E      30     358   .common     
-     gby_ptr_by                                2526       2       2     168   .common     
-     CanTpMsgTx                                2528      6A     106    1138   .common     
-     CanTpMsgRx                                2592      6A     106     203   .common     
-     IntCan_MainMsg                            25FC     17C     380     316   .common     
-     IntCan_EventMsg                           2778      A0     160     119   .common     
-     IntCan_BroadCastMsg                       2818      14      20      29   .common     
-     IntCan_LocalEcuInfo                       282C      24      36      56   .common     
-     IntCan_PauseSendMsgCtrl                   2850       3       3       6   .common     
-     IntCan_ModeCtrl                           2853       7       7      21   .common     
-     IntCan_VoltMsg                            285A      14      20      31   .common     
-     IntCan_ResMsg                             286E      14      20      14   .common     
-     IntCan_TemperMsg                          2882      14      20      32   .common     
-     IntCan_BalSocMsg                          2896      14      20      30   .common     
-     IntCan_VoltMsgPf                          28AA       3       3      16   .common     
-     IntCan_ResMsgPf                           28AD       3       3       5   .common     
-     IntCan_TemperMsgPf                        28B0       3       3      14   .common     
-     IntCan_BalSocMsgPf                        28B3       3       3      13   .common     
-     gwd_result                                28B6       2       2       1   .common     
-     CellvDet_TmCnt                            28B8       1       1       9   .common     
-     CellvErrCnt                               28B9      10      16       8   .common     
-     gby_DeviceNum                             28C9       1       1      15   .common     
-     gby_Volt_ReadCnt                          28CA       1       1       3   .common     
-     gby_Volt_Cnt                              28CB       4       4       2   .common     
-     gby_Volt_PackErrFlag                      28CF       3       3       8   .common     
-     gwd_Volt_Bak                              28D2      60      96      17   .common     
-     gwd_Volt_Bak_Two                          2932      60      96       8   .common     
-     glwd_Volt_Acc                             2992      C0     192       6   .common     
-     gwd_BalFaultPos                           2A52       8       8       1   .common     
-     gby_CalcLineLossCnt                       2A5A       1       1       1   .common     
-     gby_Flag_BalDeltaVolt                     2A5B       1       1       3   .common     
-     gby_Flag_BalStop                          2A5C       1       1       2   .common     
-     gby_ChannelBak                            2A5D       4       4       6   .common     
-     gwd_BalOff_VoltBak                        2A61       8       8       1   .common     
-     gwd_BalOff_VoltBak_Left                   2A69       8       8       1   .common     
-     gwd_BalOff_VoltBak_Right                  2A71       8       8       1   .common     
-     gwd_BalOn_DeltaVolt                       2A79       8       8       3   .common     
-     gwd_BalOn_DeltaVolt_Left                  2A81       8       8       2   .common     
-     gwd_BalOn_DeltaVolt_Right                 2A89       8       8       2   .common     
-     BalOn_Volt_Acc_Buf                        2A91      10      16      10   .common     
-     BalOn_Volt_Cnt                            2AA1       4       4       3   .common     
-     BalOn_Volt_Left_Acc_Buf                   2AA5      10      16      10   .common     
-     BalOn_Volt_Left_Cnt                       2AB5       4       4       3   .common     
-     BalOn_Volt_Right_Acc_Buf                  2AB9      10      16      10   .common     
-     BalOn_Volt_Right_Cnt                      2AC9       4       4       3   .common     
-     CurDet_Eng                                2ACD      16      22      57   .common     
-     LemOffset                                 2AE3       4       4       4   .common     
-     gby_curdeterrcnt                          2AE7       1       1       4   .common     
-     CurDet_TmCnt                              2AE8       2       2      11   .common     
-     IsoErrFlg                                 2AEA       2       2      20   .common     
-     FilterNegCnt100                           2AEC       2       2       8   .common     
-     FilterNegCnt500                           2AEE       2       2       8   .common     
-     FilterPosCnt100                           2AF0       2       2       8   .common     
-     FilterPosCnt500                           2AF2       2       2       8   .common     
-     IsoDet_TmCnt                              2AF4       2       2       6   .common     
-     Ios_Operate                               2AF6       5       5       8   .common     
-     PO                                        2AFB       4       4       2   .common     
-     PO2                                       2AFF       4       4       2   .common     
-     AlarmTimeCnt                              2B03       2       2       2   .common     
-     gwd_Sumv_Backup_cal                       2B05       4       4       3   .common     
-     gwd_Sumv_Backup_Iso1                      2B09       4       4       8   .common     
-     gwd_Sumv_Backup_Iso2                      2B0D       4       4      12   .common     
-     gwd_Sumv_Backup_cal_L                     2B11      40      64       4   .common     
-     gwd_Sumv_Backup_cal2_L                    2B51      40      64       4   .common     
-     SumvDet_TmCnt                             2B91       1       1       6   .common     
-     gwd_SumvAdValue                           2B92       2       2       5   .common     
-     TemperNum                                 2B94       6       6       7   .common     
-     gby_NtcTemperBak                          2B9A       7       7       2   .common     
-     gby_Ds18b20Msd                            2BA1       1       1       1   .common     
-     gby_TemperDetTmCnt                        2BA2       1       1       6   .common     
-     gwd_temper_ad_test                        2BA3      10      16       1   .common     
-     SOC_TmCnt                                 2BB3       2       2      11   .common     
-     SOC_EstmatDataIn                          2BB5      49      73      70   .common     
-     SOC_EstmatDataCalc                        2BFE      11      17      44   .common     
-     SOC_EstmatDataOut                         2C0F       E      14     111   .common     
-     SOC_Smooth                                2C1D       E      14      75   .common     
-     SOC_AhIntgl                               2C2B      1D      29     255   .common     
-     SOH_TmCnt                                 2C48       1       1       1   .common     
-     CpuEEIf_CCRreg                            2C49       1       1       4   .common     
-     BalPos                                    2C4A      14      20       8   .common     
-     FF                                        2C5E       1       1       9   .common     
-     BIT                                       2C5F       1       1       8   .common     
-     COM                                       2C60       4       4      29   .common     
-     COM2                                      2C64       4       4      56   .common     
-     h                                         2C68       1       1       2   .common     
-     CellvIf                                   2C69       5       5      15   .common     
-     glwd_Cnt                                  2C6E       4       4       4   .common     
-     glwd_Cnt1                                 2C72       4       4       4   .common     
-     glwd_Cnt2                                 2C76       4       4       4   .common     
-     glwd_Cnt6                                 2C7A       4       4       4   .common     
-     glwd_Cnt7                                 2C7E       4       4       6   .common     
-     glwd_Cnt8                                 2C82       4       4       6   .common     
-     gby_RtcTime                               2C86       6       6      18   .common     
-     gby_flag_mos_pos                          2C8C       1       1       1   .common     
-     gby_flag_mos_neg                          2C8D       1       1       1   .common     
-     IntRes_TmCnt                              2C8E       1       1       6   .common     
-     EnUser                                    2C8F       1       1       7   AI1_DATA    
-     OutFlg                                    2C90       2       2       6   AI1_DATA    
-     SumChan                                   2C92       1       1       4   AI1_DATA    
-     ModeFlg                                   2C93       1       1       5   AI1_DATA    
-     SumCnt                                    2C94       1       1       3   AI1_DATA    
-     AI1_OutV                                  2C95      1E      30       4   AI1_DATA    
-     EnUser                                    2CB3       1       1       9   CAN1_DATA   
-     CAN1_EnEvent                              2CB4       1       1       6   CAN1_DATA   
-     ErrFlag                                   2CB5       1       1       5   CAN1_DATA   
-     SerFlag                                   2CB6       1       1       8   CAN1_DATA   
-     EnUser                                    2CB7       1       1       9   CAN4_DATA   
-     CAN4_EnEvent                              2CB8       1       1       6   CAN4_DATA   
-     ErrFlag                                   2CB9       1       1       5   CAN4_DATA   
-     SerFlag                                   2CBA       1       1       8   CAN4_DATA   
-     EnUser                                    2CBB       1       1       5   AC_CP_IOC_DATA
-     AC_CP_IOC_EnEvent                         2CBC       1       1       4   AC_CP_IOC_DATA
-     AC_CP_IOC_CntrState                       2CBD       2       2       3   AC_CP_IOC_DATA
-     EnUser                                    2CBF       1       1       9   CAN0_DATA   
-     CAN0_EnEvent                              2CC0       1       1       6   CAN0_DATA   
-     ErrFlag                                   2CC1       1       1       5   CAN0_DATA   
-     SerFlag                                   2CC2       1       1       8   CAN0_DATA   
+     sCarCan_Msg                               20E7     18F     399     218   .common     
+     CarCan_ProCnt                             2276       3       3       6   .common     
+     ChgCan_Com                                2279       2       2       8   .common     
+     ChgCan_Msg                                227B      14      20       1   .common     
+     gwd_Volt                                  228F       E      14      15   .common     
+     gby_Temper                                229D       7       7       8   .common     
+     gby_MsgNumBmv                             22A4       1       1       3   .common     
+     gby_MsgNumBmt                             22A5       1       1       3   .common     
+     GbChgCan_Msg                              22A6      8C     140      90   .common     
+     GbChgCan_TmCnt                            2332      1D      29      61   .common     
+     GbChgCan_Ctrl                             234F      10      16       8   .common     
+     GbChgCan_RxData                           235F      34      52       5   .common     
+     ChgIf_TmCnt                               2393       2       2       6   .common     
+     GbChgDet_Cp                               2395       4       4      11   .common     
+     HvM_Flag                                  2399       D      13       4   .common     
+     HvM_Cnt                                   23A6      16      22      39   .common     
+     HvM_CtrlHv                                23BC       6       6       5   .common     
+     HvM_Err                                   23C2       2       2       2   .common     
+     HvM_CtrlRelayCmd                          23C4       C      12      22   .common     
+     HvM_TmCnt                                 23D0       1       1       6   .common     
+     HvM_VcuInfo                               23D1       8       8       7   .common     
+     gby_chg_relay_off_flag                    23D9       1       1       2   .common     
+     gby_test                                  23DA       1       1       4   .common     
+     ThM_TmCnt                                 23DB       1       1       1   .common     
+     gby_LoadVar_Flag                          23DC       1       1       1   .common     
+     gby_HeatStatus                            23DD       1       1       1   .common     
+     ChgM_TmCnt                                23DE       2       2      11   .common     
+     ChgM_Ctrl                                 23E0      42      66     213   .common     
+     GbChgM_Ctrl                               2422       C      12      32   .common     
+     GbChgM_TmCnt                              242E       2       2      22   .common     
+     gwd_CntChgLinkFail                        2430       2       2       1   .common     
+     gwd_CntAcLinkFail                         2432       2       2       4   .common     
+     gwd_AcPmtChgCur                           2434       2       2       2   .common     
+     gby_byte_num_brm                          2436       1       1       3   .common     
+     gby_msg_num_brm                           2437       1       1       3   .common     
+     Prj_Pro                                   2438       1       1       5   .common     
+     gby_ReadyFlag                             2439       1       1       8   .common     
+     gwd_RecvBmuMsgFlag                        243A       2       2       1   .common     
+     gwd_RecvBmuMsgFlagMask                    243C       2       2       2   .common     
+     CCR_reg                                   243E       1       1      39   .common     
+     Shadow_K                                  243F       1       1       8   .common     
+     Shadow_C                                  2440       1       1       1   .common     
+     Shadow_M                                  2441       1       1       7   .common     
+     Shadow_S                                  2442       1       1       7   .common     
+     Shadow_H                                  2443       1       1       4   .common     
+     Shadow_D                                  2444       1       1       6   .common     
+     Shadow_J                                  2445       1       1       4   .common     
+     RumMode_LocalEcuMode                      2446       2       2       3   .common     
+     SOF_TmCnt                                 2448       1       1       6   .common     
+     SOF_CalcValue                             2449      2C      44      29   .common     
+     gby_PulseDisCurCnt                        2475       1       1       6   .common     
+     gby_PulseFeedCurCnt                       2476       1       1       5   .common     
+     gby_FirstCalCurFlag                       2477       1       1       3   .common     
+     gby_FirstCalPowFlag                       2478       1       1       3   .common     
+     gby_SofModifyRatio                        2479       8       8      25   .common     
+     gwd_SofTargetValue                        2481      10      16      17   .common     
+     gwd_MaxDataAddr                           2491       4       4       6   .common     
+     gwd_AddrBuf                               2495      40      64       6   .common     
+     gwd_AddrBufCnt                            24D5       2       2       5   .common     
+     gby_BlockSaveAh                           24D7       1       1       4   .common     
+     gby_ExternEE_Status                       24D8       1       1      26   .common     
+     EE_TmCnt                                  24D9       1       1      12   .common     
+     LvM_ActSgnlChk                            24DA       C      12      52   .common     
+     LvM_TmCnt                                 24E6       5       5      20   .common     
+     gby_KeyResetFlag                          24EB       1       1       5   .common     
+     LvM_RunModeM                              24EC       2       2       6   .common     
+     gby_BcuShutDownEn                         24EE       1       1       3   .common     
+     gby_VcuShutDownEn                         24EF       1       1       1   .common     
+     gby_SystemShutDownEn                      24F0       1       1       2   .common     
+     gby_i                                     24F1       1       1     512   .common     
+     gby_length                                24F2       1       1     213   .common     
+     gby_rslt                                  24F3       8       8    1036   .common     
+     gby_wtmp                                  24FB       2       2      93   .common     
+     gby_data                                  24FD      1E      30     290   .common     
+     gby_data_bak                              251B      1E      30     358   .common     
+     gby_ptr_by                                2539       2       2     168   .common     
+     CanTpMsgTx                                253B      6A     106    1138   .common     
+     CanTpMsgRx                                25A5      6A     106     203   .common     
+     IntCan_MainMsg                            260F     17C     380     316   .common     
+     IntCan_EventMsg                           278B      A0     160     119   .common     
+     IntCan_BroadCastMsg                       282B      14      20      29   .common     
+     IntCan_LocalEcuInfo                       283F      24      36      56   .common     
+     IntCan_PauseSendMsgCtrl                   2863       3       3       6   .common     
+     IntCan_ModeCtrl                           2866       7       7      21   .common     
+     IntCan_VoltMsg                            286D      14      20      31   .common     
+     IntCan_ResMsg                             2881      14      20      14   .common     
+     IntCan_TemperMsg                          2895      14      20      32   .common     
+     IntCan_BalSocMsg                          28A9      14      20      30   .common     
+     IntCan_VoltMsgPf                          28BD       3       3      16   .common     
+     IntCan_ResMsgPf                           28C0       3       3       5   .common     
+     IntCan_TemperMsgPf                        28C3       3       3      14   .common     
+     IntCan_BalSocMsgPf                        28C6       3       3      13   .common     
+     gwd_result                                28C9       2       2       1   .common     
+     CellvDet_TmCnt                            28CB       1       1       9   .common     
+     CellvErrCnt                               28CC      10      16       8   .common     
+     gby_DeviceNum                             28DC       1       1      15   .common     
+     gby_Volt_ReadCnt                          28DD       1       1       3   .common     
+     gby_Volt_Cnt                              28DE       4       4       2   .common     
+     gby_Volt_PackErrFlag                      28E2       3       3       8   .common     
+     gwd_Volt_Bak                              28E5      60      96      17   .common     
+     gwd_Volt_Bak_Two                          2945      60      96       8   .common     
+     glwd_Volt_Acc                             29A5      C0     192       6   .common     
+     gwd_BalFaultPos                           2A65       8       8       1   .common     
+     gby_CalcLineLossCnt                       2A6D       1       1       1   .common     
+     gby_Flag_BalDeltaVolt                     2A6E       1       1       3   .common     
+     gby_Flag_BalStop                          2A6F       1       1       2   .common     
+     gby_ChannelBak                            2A70       4       4       6   .common     
+     gwd_BalOff_VoltBak                        2A74       8       8       1   .common     
+     gwd_BalOff_VoltBak_Left                   2A7C       8       8       1   .common     
+     gwd_BalOff_VoltBak_Right                  2A84       8       8       1   .common     
+     gwd_BalOn_DeltaVolt                       2A8C       8       8       3   .common     
+     gwd_BalOn_DeltaVolt_Left                  2A94       8       8       2   .common     
+     gwd_BalOn_DeltaVolt_Right                 2A9C       8       8       2   .common     
+     BalOn_Volt_Acc_Buf                        2AA4      10      16      10   .common     
+     BalOn_Volt_Cnt                            2AB4       4       4       3   .common     
+     BalOn_Volt_Left_Acc_Buf                   2AB8      10      16      10   .common     
+     BalOn_Volt_Left_Cnt                       2AC8       4       4       3   .common     
+     BalOn_Volt_Right_Acc_Buf                  2ACC      10      16      10   .common     
+     BalOn_Volt_Right_Cnt                      2ADC       4       4       3   .common     
+     CurDet_Eng                                2AE0      16      22      57   .common     
+     LemOffset                                 2AF6       4       4       4   .common     
+     gby_curdeterrcnt                          2AFA       1       1       4   .common     
+     CurDet_TmCnt                              2AFB       2       2      11   .common     
+     IsoErrFlg                                 2AFD       2       2      20   .common     
+     FilterNegCnt100                           2AFF       2       2       8   .common     
+     FilterNegCnt500                           2B01       2       2       8   .common     
+     FilterPosCnt100                           2B03       2       2       8   .common     
+     FilterPosCnt500                           2B05       2       2       8   .common     
+     IsoDet_TmCnt                              2B07       2       2       6   .common     
+     Ios_Operate                               2B09       5       5       8   .common     
+     PO                                        2B0E       4       4       2   .common     
+     PO2                                       2B12       4       4       2   .common     
+     AlarmTimeCnt                              2B16       2       2       2   .common     
+     gwd_Sumv_Backup_cal                       2B18       4       4       3   .common     
+     gwd_Sumv_Backup_Iso1                      2B1C       4       4       8   .common     
+     gwd_Sumv_Backup_Iso2                      2B20       4       4      12   .common     
+     gwd_Sumv_Backup_cal_L                     2B24      40      64       4   .common     
+     gwd_Sumv_Backup_cal2_L                    2B64      40      64       4   .common     
+     SumvDet_TmCnt                             2BA4       1       1       6   .common     
+     gwd_SumvAdValue                           2BA5       2       2       5   .common     
+     TemperNum                                 2BA7       6       6       7   .common     
+     gby_NtcTemperBak                          2BAD       7       7       2   .common     
+     gby_Ds18b20Msd                            2BB4       1       1       1   .common     
+     gby_TemperDetTmCnt                        2BB5       1       1       6   .common     
+     gwd_temper_ad_test                        2BB6      10      16       1   .common     
+     SOC_TmCnt                                 2BC6       2       2      11   .common     
+     SOC_EstmatDataIn                          2BC8      49      73      70   .common     
+     SOC_EstmatDataCalc                        2C11      11      17      44   .common     
+     SOC_EstmatDataOut                         2C22       E      14     111   .common     
+     SOC_Smooth                                2C30       E      14      75   .common     
+     SOC_AhIntgl                               2C3E      1D      29     255   .common     
+     SOH_TmCnt                                 2C5B       1       1       1   .common     
+     CpuEEIf_CCRreg                            2C5C       1       1       4   .common     
+     BalPos                                    2C5D      14      20       8   .common     
+     FF                                        2C71       1       1       9   .common     
+     BIT                                       2C72       1       1       8   .common     
+     COM                                       2C73       4       4      29   .common     
+     COM2                                      2C77       4       4      56   .common     
+     h                                         2C7B       1       1       2   .common     
+     CellvIf                                   2C7C       5       5      15   .common     
+     glwd_Cnt                                  2C81       4       4       4   .common     
+     glwd_Cnt1                                 2C85       4       4       4   .common     
+     glwd_Cnt2                                 2C89       4       4       4   .common     
+     glwd_Cnt6                                 2C8D       4       4       4   .common     
+     glwd_Cnt7                                 2C91       4       4       6   .common     
+     glwd_Cnt8                                 2C95       4       4       6   .common     
+     gby_RtcTime                               2C99       6       6      18   .common     
+     gby_flag_mos_pos                          2C9F       1       1       1   .common     
+     gby_flag_mos_neg                          2CA0       1       1       1   .common     
+     IntRes_TmCnt                              2CA1       1       1       6   .common     
+     EnUser                                    2CA2       1       1       7   AI1_DATA    
+     OutFlg                                    2CA3       2       2       6   AI1_DATA    
+     SumChan                                   2CA5       1       1       4   AI1_DATA    
+     ModeFlg                                   2CA6       1       1       5   AI1_DATA    
+     SumCnt                                    2CA7       1       1       3   AI1_DATA    
+     AI1_OutV                                  2CA8      1E      30       4   AI1_DATA    
+     EnUser                                    2CC6       1       1       9   CAN1_DATA   
+     CAN1_EnEvent                              2CC7       1       1       6   CAN1_DATA   
+     ErrFlag                                   2CC8       1       1       5   CAN1_DATA   
+     SerFlag                                   2CC9       1       1       8   CAN1_DATA   
+     EnUser                                    2CCA       1       1       9   CAN4_DATA   
+     CAN4_EnEvent                              2CCB       1       1       6   CAN4_DATA   
+     ErrFlag                                   2CCC       1       1       5   CAN4_DATA   
+     SerFlag                                   2CCD       1       1       8   CAN4_DATA   
+     EnUser                                    2CCE       1       1       5   AC_CP_IOC_DATA
+     AC_CP_IOC_EnEvent                         2CCF       1       1       4   AC_CP_IOC_DATA
+     AC_CP_IOC_CntrState                       2CD0       2       2       3   AC_CP_IOC_DATA
+     EnUser                                    2CD2       1       1       9   CAN0_DATA   
+     CAN0_EnEvent                              2CD3       1       1       6   CAN0_DATA   
+     ErrFlag                                   2CD4       1       1       5   CAN0_DATA   
+     SerFlag                                   2CD5       1       1       8   CAN0_DATA   
      app_request_boot                          3FEF       2       2       1   BOOT_RAM    
      Cpu_Interrupt                             C000       2       2     106   .init       
      Cpu_Delay100US                            C002      1B      27      65   .init       
@@ -7026,7 +7026,7 @@ OBJECT LIST SORTED BY ADDRESS
      _LINC                                     DBFF       5       5      18   NON_BANKED  
      _LDEC                                     DC04       8       8       3   NON_BANKED  
      _LMUL                                     DC0C      27      39       4   NON_BANKED  
-     _LMULU16x32                               DC33       F      15      56   NON_BANKED  
+     _LMULU16x32                               DC33       F      15      55   NON_BANKED  
      _LMULS16x32                               DC42      1F      31       2   NON_BANKED  
      _lDivMod                                  DC61      BE     190       4   NON_BANKED  
      _LDIVU                                    DD1F       E      14     146   NON_BANKED  
@@ -7153,81 +7153,81 @@ OBJECT LIST SORTED BY ADDRESS
      IntRes_ModuleInit                       F59C82      2A      42       2   PAGE_F5_747 
      IntRes_ModuleCountCbk                   F59CAC      11      17       2   PAGE_F5_747 
      IntRes_ModuleCbk                        F59CBD       F      15       2   PAGE_F5_747 
-     IntRes_CalcProc                         F59CCC     4BE    1214       9   PAGE_F5_747 
-     Timer_Enable                            F5A18A      10      16       2   Timer_CODE  
-     Timer_EnableEvent                       F5A19A       C      12       2   Timer_CODE  
-     CPUCSCK_PutVal                          F5A1A6       D      13       2   CPUCSCK_CODE
-     CPUCSI_PutVal                           F5A1B3       D      13       2   CPUCSI_CODE 
-     CPUCCS_PutVal                           F5A1C0       D      13       2   CPUCCS_CODE 
-     EN_CELL_PutVal                          F5A1CD       D      13       6   EN_CELL_CODE
-     SPI2IF_RecvChar                         F5A1DA      12      18       2   SPI2IF_CODE 
-     SPI2IF_SendChar                         F5A1EC       B      11       2   SPI2IF_CODE 
-     SPI2IF_Init                             F5A1F7      14      20       2   SPI2IF_CODE 
-     CPU_CHG_S_PutVal                        F5A20B       D      13       2   CPU_CHG_S_CODE
-     DO_CON_PutVal                           F5A218       B      11       2   DO_CON_CODE 
-     HWEnDi                                  F5A223      67     103       6   AI1_CODE    
-     AI1_Enable                              F5A28A      10      16       2   AI1_CODE    
-     AI1_Disable                             F5A29A       E      14       2   AI1_CODE    
-     AI1_MeasureChanWait                     F5A2A8      2C      44       2   AI1_CODE    
-     AI1_GetChanValue                        F5A2D4      2A      42       2   AI1_CODE    
-     AI1_Init                                F5A2FE      27      39       2   AI1_CODE    
-     CAN0_SetAcceptanceCode                  F5A325      60      96       2   CAN0_CODE   
-     CAN0_SendFrame                          F5A385     12A     298       3   CAN0_CODE   
-     CAN0_ReadFrame                          F5A4AF      D6     214       3   CAN0_CODE   
-     CAN0_Init                               F5A585      5F      95       2   CAN0_CODE   
-     CAN0_Enable                             F5A5E4      1E      30       2   CAN0_CODE   
-     CAN0_Disable                            F5A602      16      22       2   CAN0_CODE   
-     CAN0_SetAcceptanceMask                  F5A618      60      96       2   CAN0_CODE   
-     wdi_PutVal                              F5A678       B      11       2   wdi_CODE    
-     CAN1_SetAcceptanceCode                  F5A683      60      96       2   CAN1_CODE   
-     CAN1_SendFrame                          F5A6E3     12A     298       3   CAN1_CODE   
-     CAN1_ReadFrame                          F5A80D      D6     214       3   CAN1_CODE   
-     CAN1_Init                               F5A8E3      5F      95       2   CAN1_CODE   
-     CAN1_Enable                             F5A942      1E      30       2   CAN1_CODE   
-     CAN1_Disable                            F5A960      16      22       2   CAN1_CODE   
-     CAN1_SetAcceptanceMask                  F5A976      60      96       2   CAN1_CODE   
-     CAN4_SetAcceptanceCode                  F5A9D6      60      96       2   CAN4_CODE   
-     CAN4_SendFrame                          F5AA36     12A     298       3   CAN4_CODE   
-     CAN4_ReadFrame                          F5AB60      D6     214       3   CAN4_CODE   
-     CAN4_Init                               F5AC36      5F      95       2   CAN4_CODE   
-     CAN4_Enable                             F5AC95      1E      30       2   CAN4_CODE   
-     CAN4_Disable                            F5ACB3      16      22       2   CAN4_CODE   
-     CAN4_SetAcceptanceMask                  F5ACC9      60      96       2   CAN4_CODE   
-     RELAY_HEAT_PutVal                       F5AD29       B      11       2   RELAY_HEAT_CODE
-     ISO_CTRL_POS_PutVal                     F5AD34       B      11       2   ISO_CTRL_POS_CODE
-     ISO_CTRL_NEG_PutVal                     F5AD3F       B      11       2   ISO_CTRL_NEG_CODE
-     CPU_SUMV_SDA_PutVal                     F5AD4A      13      19       4   CPU_SUMV_SDA_CODE
-     CPU_SUMV_SDA_SetDir                     F5AD5D      19      25       4   CPU_SUMV_SDA_CODE
-     CPU_SUMV_SCL_PutVal                     F5AD76       B      11       4   CPU_SUMV_SCL_CODE
-     SUMV_POW_PutVal                         F5AD81       D      13       4   SUMV_POW_CODE
-     ExternFlash_Rst_SetInput                F5AD8E       5       5       2   ExternFlash_Rst_CODE
-     ExternFlash_Rst_SetOutput               F5AD93      15      21       2   ExternFlash_Rst_CODE
-     ExternFlash_Cs_SetInput                 F5ADA8       5       5       2   ExternFlash_Cs_CODE
-     ExternFlash_Cs_SetOutput                F5ADAD      15      21       2   ExternFlash_Cs_CODE
-     ExternFlash_Sck_SetInput                F5ADC2       5       5       2   ExternFlash_Sck_CODE
-     ExternFlash_Sck_SetOutput               F5ADC7      15      21       2   ExternFlash_Sck_CODE
-     ExternFlash_Si_SetInput                 F5ADDC       5       5       2   ExternFlash_Si_CODE
-     ExternFlash_Si_SetOutput                F5ADE1      15      21       2   ExternFlash_Si_CODE
-     ExternFlash_So_SetOutput                F5ADF6      15      21       2   ExternFlash_So_CODE
-     ExternTimer_Sda_SetOutput               F5AE0B      12      18       2   ExternTimer_Sda_CODE
-     RELAY_POS_PutVal                        F5AE1D       D      13       2   RELAY_POS_CODE
-     RELAY_NEG_PutVal                        F5AE2A       D      13       2   RELAY_NEG_CODE
-     RELAY_PRE_PutVal                        F5AE37       D      13       2   RELAY_PRE_CODE
-     RELAY_FAN_PutVal                        F5AE44       D      13       2   RELAY_FAN_CODE
-     CHG_CAN_POW_PutVal                      F5AE51       D      13       4   CHG_CAN_POW_CODE
-     CPUCAN_CAR_EN_PutVal                    F5AE5E       D      13       4   CPUCAN_CAR_EN_CODE
-     CPUCAN_INT_EN_PutVal                    F5AE6B       B      11       4   CPUCAN_INT_EN_CODE
-     CURPOWER_PutVal                         F5AE76       B      11       2   CURPOWER_CODE
-     ExtEE_Sda_SetOutput                     F5AE81      15      21       2   ExtEE_Sda_CODE
-     ExtEE_Wp_SetOutput                      F5AE96      12      18       2   ExtEE_Wp_CODE
-     CPUEE_SetByte                           F5AEA8      31      49       2   CPUEE_CODE  
-     CPUEE_GetByte                           F5AED9      36      54       2   CPUEE_CODE  
-     CPUEE_Partition                         F5AF0F      91     145       2   CPUEE_CODE  
-     CPUEE_Init                              F5AFA0       F      15       4   CPUEE_CODE  
-     IntWatchDog_Clear                       F5AFAF       9       9       2   IntWatchDog_CODE
-     AC_CP_IOC_Enable                        F5AFB8      15      21       2   AC_CP_IOC_CODE
-     AC_CP_IOC_Disable                       F5AFCD      10      16       2   AC_CP_IOC_CODE
-     AC_CP_IOC_Init                          F5AFDD       F      15       2   AC_CP_IOC_CODE
+     IntRes_CalcProc                         F59CCC     489    1161       9   PAGE_F5_747 
+     Timer_Enable                            F5A155      10      16       2   Timer_CODE  
+     Timer_EnableEvent                       F5A165       C      12       2   Timer_CODE  
+     CPUCSCK_PutVal                          F5A171       D      13       2   CPUCSCK_CODE
+     CPUCSI_PutVal                           F5A17E       D      13       2   CPUCSI_CODE 
+     CPUCCS_PutVal                           F5A18B       D      13       2   CPUCCS_CODE 
+     EN_CELL_PutVal                          F5A198       D      13       6   EN_CELL_CODE
+     SPI2IF_RecvChar                         F5A1A5      12      18       2   SPI2IF_CODE 
+     SPI2IF_SendChar                         F5A1B7       B      11       2   SPI2IF_CODE 
+     SPI2IF_Init                             F5A1C2      14      20       2   SPI2IF_CODE 
+     CPU_CHG_S_PutVal                        F5A1D6       D      13       2   CPU_CHG_S_CODE
+     DO_CON_PutVal                           F5A1E3       B      11       2   DO_CON_CODE 
+     HWEnDi                                  F5A1EE      67     103       6   AI1_CODE    
+     AI1_Enable                              F5A255      10      16       2   AI1_CODE    
+     AI1_Disable                             F5A265       E      14       2   AI1_CODE    
+     AI1_MeasureChanWait                     F5A273      2C      44       2   AI1_CODE    
+     AI1_GetChanValue                        F5A29F      2A      42       2   AI1_CODE    
+     AI1_Init                                F5A2C9      27      39       2   AI1_CODE    
+     CAN0_SetAcceptanceCode                  F5A2F0      60      96       2   CAN0_CODE   
+     CAN0_SendFrame                          F5A350     12A     298       3   CAN0_CODE   
+     CAN0_ReadFrame                          F5A47A      D6     214       3   CAN0_CODE   
+     CAN0_Init                               F5A550      5F      95       2   CAN0_CODE   
+     CAN0_Enable                             F5A5AF      1E      30       2   CAN0_CODE   
+     CAN0_Disable                            F5A5CD      16      22       2   CAN0_CODE   
+     CAN0_SetAcceptanceMask                  F5A5E3      60      96       2   CAN0_CODE   
+     wdi_PutVal                              F5A643       B      11       2   wdi_CODE    
+     CAN1_SetAcceptanceCode                  F5A64E      60      96       2   CAN1_CODE   
+     CAN1_SendFrame                          F5A6AE     12A     298       3   CAN1_CODE   
+     CAN1_ReadFrame                          F5A7D8      D6     214       3   CAN1_CODE   
+     CAN1_Init                               F5A8AE      5F      95       2   CAN1_CODE   
+     CAN1_Enable                             F5A90D      1E      30       2   CAN1_CODE   
+     CAN1_Disable                            F5A92B      16      22       2   CAN1_CODE   
+     CAN1_SetAcceptanceMask                  F5A941      60      96       2   CAN1_CODE   
+     CAN4_SetAcceptanceCode                  F5A9A1      60      96       2   CAN4_CODE   
+     CAN4_SendFrame                          F5AA01     12A     298       3   CAN4_CODE   
+     CAN4_ReadFrame                          F5AB2B      D6     214       3   CAN4_CODE   
+     CAN4_Init                               F5AC01      5F      95       2   CAN4_CODE   
+     CAN4_Enable                             F5AC60      1E      30       2   CAN4_CODE   
+     CAN4_Disable                            F5AC7E      16      22       2   CAN4_CODE   
+     CAN4_SetAcceptanceMask                  F5AC94      60      96       2   CAN4_CODE   
+     RELAY_HEAT_PutVal                       F5ACF4       B      11       2   RELAY_HEAT_CODE
+     ISO_CTRL_POS_PutVal                     F5ACFF       B      11       2   ISO_CTRL_POS_CODE
+     ISO_CTRL_NEG_PutVal                     F5AD0A       B      11       2   ISO_CTRL_NEG_CODE
+     CPU_SUMV_SDA_PutVal                     F5AD15      13      19       4   CPU_SUMV_SDA_CODE
+     CPU_SUMV_SDA_SetDir                     F5AD28      19      25       4   CPU_SUMV_SDA_CODE
+     CPU_SUMV_SCL_PutVal                     F5AD41       B      11       4   CPU_SUMV_SCL_CODE
+     SUMV_POW_PutVal                         F5AD4C       D      13       4   SUMV_POW_CODE
+     ExternFlash_Rst_SetInput                F5AD59       5       5       2   ExternFlash_Rst_CODE
+     ExternFlash_Rst_SetOutput               F5AD5E      15      21       2   ExternFlash_Rst_CODE
+     ExternFlash_Cs_SetInput                 F5AD73       5       5       2   ExternFlash_Cs_CODE
+     ExternFlash_Cs_SetOutput                F5AD78      15      21       2   ExternFlash_Cs_CODE
+     ExternFlash_Sck_SetInput                F5AD8D       5       5       2   ExternFlash_Sck_CODE
+     ExternFlash_Sck_SetOutput               F5AD92      15      21       2   ExternFlash_Sck_CODE
+     ExternFlash_Si_SetInput                 F5ADA7       5       5       2   ExternFlash_Si_CODE
+     ExternFlash_Si_SetOutput                F5ADAC      15      21       2   ExternFlash_Si_CODE
+     ExternFlash_So_SetOutput                F5ADC1      15      21       2   ExternFlash_So_CODE
+     ExternTimer_Sda_SetOutput               F5ADD6      12      18       2   ExternTimer_Sda_CODE
+     RELAY_POS_PutVal                        F5ADE8       D      13       2   RELAY_POS_CODE
+     RELAY_NEG_PutVal                        F5ADF5       D      13       2   RELAY_NEG_CODE
+     RELAY_PRE_PutVal                        F5AE02       D      13       2   RELAY_PRE_CODE
+     RELAY_FAN_PutVal                        F5AE0F       D      13       2   RELAY_FAN_CODE
+     CHG_CAN_POW_PutVal                      F5AE1C       D      13       4   CHG_CAN_POW_CODE
+     CPUCAN_CAR_EN_PutVal                    F5AE29       D      13       4   CPUCAN_CAR_EN_CODE
+     CPUCAN_INT_EN_PutVal                    F5AE36       B      11       4   CPUCAN_INT_EN_CODE
+     CURPOWER_PutVal                         F5AE41       B      11       2   CURPOWER_CODE
+     ExtEE_Sda_SetOutput                     F5AE4C      15      21       2   ExtEE_Sda_CODE
+     ExtEE_Wp_SetOutput                      F5AE61      12      18       2   ExtEE_Wp_CODE
+     CPUEE_SetByte                           F5AE73      31      49       2   CPUEE_CODE  
+     CPUEE_GetByte                           F5AEA4      36      54       2   CPUEE_CODE  
+     CPUEE_Partition                         F5AEDA      91     145       2   CPUEE_CODE  
+     CPUEE_Init                              F5AF6B       F      15       4   CPUEE_CODE  
+     IntWatchDog_Clear                       F5AF7A       9       9       2   IntWatchDog_CODE
+     AC_CP_IOC_Enable                        F5AF83      15      21       2   AC_CP_IOC_CODE
+     AC_CP_IOC_Disable                       F5AF98      10      16       2   AC_CP_IOC_CODE
+     AC_CP_IOC_Init                          F5AFA8       F      15       2   AC_CP_IOC_CODE
      SOC_AhIntglProcess                      F68000     2C8     712       4   PAGE_F6_746 
      SOC_GetBatSt                            F682C8      E0     224       2   PAGE_F6_746 
      SOC_EstmatOCV                           F683A8     5C5    1477       6   PAGE_F6_746 
@@ -8000,7 +8000,7 @@ OBJECT LIST SORTED BY ADDRESS
      Bat_UpdatePackBatNum                    FCB96B      58      88       2   PAGE_FC_740 
      Bat_GetPackBalSt                        FCB9C3      51      81       8   PAGE_FC_740 
      Bat_UpdatePackBalSt                     FCBA14      58      88       6   PAGE_FC_740 
-     Bat_GetPackSerialNum                    FCBA6C      57      87      28   PAGE_FC_740 
+     Bat_GetPackSerialNum                    FCBA6C      57      87      30   PAGE_FC_740 
      Bat_UpdatePackSerialNum                 FCBAC3      58      88       4   PAGE_FC_740 
      Bat_GetPackManufacturer                 FCBB1B      57      87       2   PAGE_FC_740 
      Bat_GetPackMaterialType                 FCBB72      57      87       2   PAGE_FC_740 
@@ -8302,8 +8302,8 @@ OBJECT LIST SORTED BY ADDRESS
      CanTp_IntCanRxBuffer                     F2644'G      C8     200      12   PAGED_RAM   
      CanTp_IntCanTxBuffer                     F270C'G      C8     200       7   PAGED_RAM   
      ExternFlashIf_WriteCmd                   F27D4'G       3       3      32   PAGED_RAM   
-     IntRes_Calc                              F27D7'G      9C     156      74   PAGED_RAM   
-     IntRes_Infor                             F2873'G      1A      26       4   PAGED_RAM   
+     IntRes_Calc                              F27D7'G      5C      92      74   PAGED_RAM   
+     IntRes_Infor                             F2833'G      1A      26       4   PAGED_RAM   
 
 *********************************************************************************************
 UNUSED-OBJECTS SECTION
@@ -9148,7 +9148,7 @@ IntRes_ModuleCountCbk     USES IntRes_TmCnt
 IntRes_ModuleCbk          USES IntRes_TmCnt IntRes_CalcProc 
 IntRes_CalcProc           USES Bat_GetCurrent Bat_GetSumV IntRes_Calc 
                                 Bat_GetPackSerialNum Bat_GetCellV IntRes_CalcProc Bat_GetSOC _LDIVU 
-                                Bat_GetAvgT IntRes_Infor Bat_UpdateTotalIntRes _LMULU16x32 
+                                Bat_GetAvgT IntRes_Infor Bat_UpdateTotalIntRes 
                                 Bat_UpdateCellR 
 Timer_Enable              USES _ECT_MCFLG _ECT_MCCTL _ECT_MCCNT 
 Timer_EnableEvent         USES _ECT_MCCTL _ECT_MCFLG 
@@ -15462,8 +15462,6 @@ DEPENDENCY TREE
  |           |        |  
  |           |        +- Bat_UpdateTotalIntRes
  |           |        |    
- |           |        +- _LMULU16x32          (see above)
- |           |        |  
  |           |        +- Bat_UpdateCellR     
  |           |           | 
  |           |           +- _FPCMP               (see above)
@@ -15789,5 +15787,5 @@ STATISTIC SECTION
 ExeFile:
 --------
 Number of blocks to be downloaded: 52
-Total size of all blocks to be downloaded: 148525
+Total size of all blocks to be downloaded: 148472
 
