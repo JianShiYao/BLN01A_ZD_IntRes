@@ -175,7 +175,7 @@ Section Name                    Size  Type     From       To       Segment
 .rodata                         6810     R     0xC05B     0xDAF4   ROM_C000
 NON_BANKED                      1151     R     0xDAF5     0xDF73   ROM_C000
 .copy                           3042     R     0x4000     0x4BE1   ROM_4000
-.text                          16226     R   0xFE8000   0xFEBF61   PAGE_FE
+.text                          16234     R   0xFE8000   0xFEBF69   PAGE_FE
 .data                            123   R/W     0x2000     0x207A   RAM
 BOOT_RAM                           2   N/I     0x3FEF     0x3FF0   BOOTRAM
 PAGED_RAM                      10317   R/W  0xF0000'G    0xF284C   RAM_FABCD
@@ -976,7 +976,7 @@ PAGE_F6_746                    16010     R   0xF68000   0xF6BE89   PAGE_F6
 PAGE_F5_747                     8533     R   0xF58000   0xF5A154   PAGE_F5
 
 Summary of section sizes per section type:
-READ_ONLY (R):       243F8 (dec:   148472)
+READ_ONLY (R):       24400 (dec:   148480)
 READ_WRITE (R/W):     3923 (dec:    14627)
 NO_INIT (N/I):         385 (dec:      901)
 
@@ -1096,47 +1096,47 @@ MODULE:                 -- ThM.c.o --
 MODULE:                 -- CarCan.c.o --
 - PROCEDURES:
      CarCan_Init                             FE8282     1F2     498       2   .text       
-     CarCan_MainLoadData                     FE8474     BDE    3038       2   .text       
-     CarCan_ProcMsg                          FE9052      56      86       2   .text       
-     CarCan_MainSendMsg                      FE90A8      81     129       2   .text       
-     CarCan_MainReceiveMsg                   FE9129      3B      59       2   .text       
-     CarCan_CountCbk                         FE9164      11      17       2   .text       
-     CarCan_ProMain                          FE9175      1D      29       2   .text       
-     CarCan_GetVesionModuleVer               FE9192       E      14       2   .text       
+     CarCan_MainLoadData                     FE8474     BE6    3046       2   .text       
+     CarCan_ProcMsg                          FE905A      56      86       2   .text       
+     CarCan_MainSendMsg                      FE90B0      81     129       2   .text       
+     CarCan_MainReceiveMsg                   FE9131      3B      59       2   .text       
+     CarCan_CountCbk                         FE916C      11      17       2   .text       
+     CarCan_ProMain                          FE917D      1D      29       2   .text       
+     CarCan_GetVesionModuleVer               FE919A       E      14       2   .text       
 - VARIABLES:
      CarCan_VerDef                             CCB2      1C      28       1   .rodata     
      sCarCan_Msg                               20E7     18F     399     218   .common     
      CarCan_ProCnt                             2276       3       3       6   .common     
 MODULE:                 -- ChgCan.c.o --
 - PROCEDURES:
-     ChgCan_GetLife                          FE91A0       4       4       4   .text       
-     ChgCan_UpdateLife                       FE91A4       4       4       2   .text       
-     ChgCan_Init                             FE91A8      57      87       2   .text       
-     ChgCan_MainLoadData                     FE91FF      1D      29       2   .text       
-     ChgCan_ProcMsg                          FE921C      67     103       2   .text       
-     ChgCan_MainSendMsg                      FE9283       9       9       2   .text       
-     ChgCan_MainReceiveMsg                   FE928C      35      53       2   .text       
-     ChgCan_CountCbk                         FE92C1      15      21       2   .text       
-     ChgCan_GetVesionModuleVer               FE92D6       E      14       2   .text       
+     ChgCan_GetLife                          FE91A8       4       4       4   .text       
+     ChgCan_UpdateLife                       FE91AC       4       4       2   .text       
+     ChgCan_Init                             FE91B0      57      87       2   .text       
+     ChgCan_MainLoadData                     FE9207      1D      29       2   .text       
+     ChgCan_ProcMsg                          FE9224      67     103       2   .text       
+     ChgCan_MainSendMsg                      FE928B       9       9       2   .text       
+     ChgCan_MainReceiveMsg                   FE9294      35      53       2   .text       
+     ChgCan_CountCbk                         FE92C9      15      21       2   .text       
+     ChgCan_GetVesionModuleVer               FE92DE       E      14       2   .text       
 - VARIABLES:
      ChgCan_VerDef                             CCCE      1C      28       1   .rodata     
      ChgCan_Com                                2279       2       2       8   .common     
      ChgCan_Msg                                227B      14      20       1   .common     
 MODULE:                 -- EcuConf.c.o --
 - PROCEDURES:
-     EcuConf_GetVesionModuleVer              FE92E4      14      20       2   .text       
+     EcuConf_GetVesionModuleVer              FE92EC      14      20       2   .text       
 - VARIABLES:
      EcuConf_VerDef                            CCEA      1C      28       1   .rodata     
      gby_AssertErrorCnt                        207B       1       1     167   .bss        
 MODULE:                 -- SysConf.c.o --
 - PROCEDURES:
-     SysConf_Init                            FE92F8     3C6     966       2   .text       
-     SysConf_InitParaTable                   FE96BE      5E      94     124   .text       
-     SysConf_GetParaHandle                   FE971C      6D     109      24   .text       
-     SysConf_GetParaAddrInEE                 FE9789      52      82      20   .text       
-     SysConf_UpdataParaToRam                 FE97DB      46      70     102   .text       
-     SysConf_GetParaValueFromRam             FE9821      46      70     234   .text       
-     SysConf_GetVesionModuleVer              FE9867      14      20       2   .text       
+     SysConf_Init                            FE9300     3C6     966       2   .text       
+     SysConf_InitParaTable                   FE96C6      5E      94     124   .text       
+     SysConf_GetParaHandle                   FE9724      6D     109      24   .text       
+     SysConf_GetParaAddrInEE                 FE9791      52      82      20   .text       
+     SysConf_UpdataParaToRam                 FE97E3      46      70     102   .text       
+     SysConf_GetParaValueFromRam             FE9829      46      70     234   .text       
+     SysConf_GetVesionModuleVer              FE986F      14      20       2   .text       
 - VARIABLES:
      SysConf_VerDef                            CD06      1C      28       1   .rodata     
      gby_para_CfgVer                          F0000'G       8       8       4   PAGED_RAM   
@@ -1167,12 +1167,12 @@ MODULE:                 -- SysConf.c.o --
      gby_no_use_para_CellNumPerChip           F0B55'G      14      20       4   PAGED_RAM   
 MODULE:                 -- Version.c.o --
 - PROCEDURES:
-     Version_GetProjectVer                   FE987B      60      96       4   .text       
-     Version_GetPlatformVer                  FE98DB      60      96       2   .text       
-     Version_SearchModule                    FE993B      4C      76       2   .text       
-     Version_GetModuleVer                    FE9987      4B      75       2   .text       
-     Version_GetPlatformHwVer                FE99D2      13      19       2   .text       
-     Version_GetVesionModuleVer              FE99E5      13      19       2   .text       
+     Version_GetProjectVer                   FE9883      60      96       4   .text       
+     Version_GetPlatformVer                  FE98E3      60      96       2   .text       
+     Version_SearchModule                    FE9943      4C      76       2   .text       
+     Version_GetModuleVer                    FE998F      4B      75       2   .text       
+     Version_GetPlatformHwVer                FE99DA      13      19       2   .text       
+     Version_GetVesionModuleVer              FE99ED      13      19       2   .text       
 - VARIABLES:
      Vesion_VerDef                             CD22      1C      28       1   .rodata     
 MODULE:                 -- Version_PlatformDef.c.o --
@@ -1191,78 +1191,78 @@ MODULE:                 -- Version_ModuleLcfg.c.o --
      GetModuleVerOperation                     CD76      75     117       5   .rodata     
 MODULE:                 -- BatterySysSt.c.o --
 - PROCEDURES:
-     BatSys_StInit                           FE99F8      7E     126       2   .text       
-     BatSys_GetRunMode                       FE9A76       9       9       8   .text       
-     BatSys_UpdateRunMode                    FE9A7F       9       9       2   .text       
-     BatSys_GetIsoSt                         FE9A88       9       9       2   .text       
-     BatSys_GetIsoPosResistor                FE9A91       9       9       6   .text       
-     BatSys_UpdateIsoPosResistor             FE9A9A       A      10       2   .text       
-     BatSys_GetIsoNegResistor                FE9AA4       9       9       6   .text       
-     BatSys_UpdateIsoNegResistor             FE9AAD       A      10       2   .text       
-     BatSys_GetPosRlySt                      FE9AB7       9       9       8   .text       
-     BatSys_UpdatePosRlySt                   FE9AC0       9       9       4   .text       
-     BatSys_GetNegRlySt                      FE9AC9       9       9       6   .text       
-     BatSys_UpdateNegRlySt                   FE9AD2       9       9       4   .text       
-     BatSys_GetPreRlySt                      FE9ADB       9       9       8   .text       
-     BatSys_UpdatePreRlySt                   FE9AE4       9       9       8   .text       
-     BatSys_GetChgRlySt                      FE9AED       9       9       4   .text       
-     BatSys_UpdateChgRlySt                   FE9AF6       9       9       8   .text       
-     BatSys_GetAuxBSt                        FE9AFF       9       9       4   .text       
-     BatSys_UpdateAuxBSt                     FE9B08       9       9       2   .text       
-     BatSys_GetAuxASt                        FE9B11       9       9       4   .text       
-     BatSys_UpdateAuxASt                     FE9B1A       9       9       2   .text       
-     BatSys_GetPosRlyLifeTime                FE9B23      40      64       2   .text       
-     BatSys_UpdatePosRlyLifeTime             FE9B63      1B      27       2   .text       
-     BatSys_GetNegRlyLifeTime                FE9B7E      40      64       2   .text       
-     BatSys_UpdateNegRlyLifeTime             FE9BBE      1B      27       2   .text       
-     BatSys_GetPreRlyLifeTime                FE9BD9      40      64       2   .text       
-     BatSys_UpdatePreRlyLifeTime             FE9C19      1B      27       2   .text       
-     BatSys_GetChgRlyLifeTime                FE9C34      40      64       2   .text       
-     BatSys_UpdateChgRlyLifeTime             FE9C74      1B      27       2   .text       
-     BatSys_GetFanSpeed                      FE9C8F       9       9       2   .text       
-     BatSys_GetFanSt                         FE9C98       9       9       6   .text       
-     BatSys_UpdateFanSt                      FE9CA1       9       9       2   .text       
-     BatSys_GetHeaterSt                      FE9CAA       9       9       6   .text       
-     BatSys_GetHvilSt                        FE9CB3       9       9       2   .text       
-     BatSys_GetMaintainSwitchSt              FE9CBC       9       9       2   .text       
-     BatSys_GetSmokeDetectorSt               FE9CC5       9       9       2   .text       
-     BatSys_GetLatchingMechanismSt           FE9CCE       9       9       2   .text       
-     BatSys_GetCollisionSwitchSt             FE9CD7       9       9       2   .text       
-     BatSys_GetManualMaintenanceSwitchSt     FE9CE0       9       9       2   .text       
-     BatSys_GetHumiditySensorSt              FE9CE9       9       9       2   .text       
-     BatSys_GetPressureSensorSt              FE9CF2       9       9       2   .text       
-     BatSys_GetLiquidLevelSensorSt           FE9CFB       9       9       2   .text       
-     BatSys_GetFaultDryContactSt             FE9D04       9       9       2   .text       
-     BatSys_GetPreChgTime                    FE9D0D       9       9       2   .text       
-     BatSys_GetCarVinNum                     FE9D16      1C      28       6   .text       
-     BatSys_CalcRlyAgeCnt                    FE9D32     11B     283       8   .text       
-     BatSys_RlyLifeCalc                      FE9E4D      A2     162       2   .text       
+     BatSys_StInit                           FE9A00      7E     126       2   .text       
+     BatSys_GetRunMode                       FE9A7E       9       9       8   .text       
+     BatSys_UpdateRunMode                    FE9A87       9       9       2   .text       
+     BatSys_GetIsoSt                         FE9A90       9       9       2   .text       
+     BatSys_GetIsoPosResistor                FE9A99       9       9       6   .text       
+     BatSys_UpdateIsoPosResistor             FE9AA2       A      10       2   .text       
+     BatSys_GetIsoNegResistor                FE9AAC       9       9       6   .text       
+     BatSys_UpdateIsoNegResistor             FE9AB5       A      10       2   .text       
+     BatSys_GetPosRlySt                      FE9ABF       9       9       8   .text       
+     BatSys_UpdatePosRlySt                   FE9AC8       9       9       4   .text       
+     BatSys_GetNegRlySt                      FE9AD1       9       9       6   .text       
+     BatSys_UpdateNegRlySt                   FE9ADA       9       9       4   .text       
+     BatSys_GetPreRlySt                      FE9AE3       9       9       8   .text       
+     BatSys_UpdatePreRlySt                   FE9AEC       9       9       8   .text       
+     BatSys_GetChgRlySt                      FE9AF5       9       9       4   .text       
+     BatSys_UpdateChgRlySt                   FE9AFE       9       9       8   .text       
+     BatSys_GetAuxBSt                        FE9B07       9       9       4   .text       
+     BatSys_UpdateAuxBSt                     FE9B10       9       9       2   .text       
+     BatSys_GetAuxASt                        FE9B19       9       9       4   .text       
+     BatSys_UpdateAuxASt                     FE9B22       9       9       2   .text       
+     BatSys_GetPosRlyLifeTime                FE9B2B      40      64       2   .text       
+     BatSys_UpdatePosRlyLifeTime             FE9B6B      1B      27       2   .text       
+     BatSys_GetNegRlyLifeTime                FE9B86      40      64       2   .text       
+     BatSys_UpdateNegRlyLifeTime             FE9BC6      1B      27       2   .text       
+     BatSys_GetPreRlyLifeTime                FE9BE1      40      64       2   .text       
+     BatSys_UpdatePreRlyLifeTime             FE9C21      1B      27       2   .text       
+     BatSys_GetChgRlyLifeTime                FE9C3C      40      64       2   .text       
+     BatSys_UpdateChgRlyLifeTime             FE9C7C      1B      27       2   .text       
+     BatSys_GetFanSpeed                      FE9C97       9       9       2   .text       
+     BatSys_GetFanSt                         FE9CA0       9       9       6   .text       
+     BatSys_UpdateFanSt                      FE9CA9       9       9       2   .text       
+     BatSys_GetHeaterSt                      FE9CB2       9       9       6   .text       
+     BatSys_GetHvilSt                        FE9CBB       9       9       2   .text       
+     BatSys_GetMaintainSwitchSt              FE9CC4       9       9       2   .text       
+     BatSys_GetSmokeDetectorSt               FE9CCD       9       9       2   .text       
+     BatSys_GetLatchingMechanismSt           FE9CD6       9       9       2   .text       
+     BatSys_GetCollisionSwitchSt             FE9CDF       9       9       2   .text       
+     BatSys_GetManualMaintenanceSwitchSt     FE9CE8       9       9       2   .text       
+     BatSys_GetHumiditySensorSt              FE9CF1       9       9       2   .text       
+     BatSys_GetPressureSensorSt              FE9CFA       9       9       2   .text       
+     BatSys_GetLiquidLevelSensorSt           FE9D03       9       9       2   .text       
+     BatSys_GetFaultDryContactSt             FE9D0C       9       9       2   .text       
+     BatSys_GetPreChgTime                    FE9D15       9       9       2   .text       
+     BatSys_GetCarVinNum                     FE9D1E      1C      28       6   .text       
+     BatSys_CalcRlyAgeCnt                    FE9D3A     11B     283       8   .text       
+     BatSys_RlyLifeCalc                      FE9E55      A2     162       2   .text       
 - VARIABLES:
      BatSys_RlyAge                            F0B69'G      48      72      11   PAGED_RAM   
      BatSys_StInfo                            F0BB1'G      44      68     110   PAGED_RAM   
 MODULE:                 -- ErrorAlarm.c.o --
 - PROCEDURES:
-     Err_UpdateBatSysErrLevel                FE9EEF      7F     127       4   .text       
-     Err_UpdateHwErrLevel                    FE9F6E      5D      93      76   .text       
-     Err_UpdateHwErrDetail                   FE9FCB      21      33      86   .text       
-     Err_GetBatErrLevel                      FE9FEC      36      54     130   .text       
-     Err_GetBatAllErrLevel                   FEA022      33      51       6   .text       
-     Err_GetBatSysErrLevel                   FEA055      50      80      14   .text       
-     Err_GetBatSysAllErrLevel                FEA0A5      52      82      10   .text       
-     Err_GetHwErrLevel                       FEA0F7      36      54      44   .text       
-     Err_GetHwAllErrLevel                    FEA12D      33      51       6   .text       
-     Err_GetHwErrDetail                      FEA160      17      23      88   .text       
-     Err_GetErrLevel                         FEA177      CA     202      17   .text       
-     Err_Init                                FEA241     20F     527       2   .text       
-     Err_Count                               FEA450      25      37       2   .text       
-     Err_Main                                FEA475      AA     170       2   .text       
-     Err_CheckErrChanged                     FEA51F      88     136       2   .text       
-     Err_JudgeHighThrhd                      FEA5A7     20F     527      26   .text       
-     Err_JudgeLowThrhd                       FEA7B6     20F     527      12   .text       
-     Err_JudgeBatErrLevel                    FEA9C5     9A3    2467       2   .text       
-     Err_JudgeBatSysErrLevel                 FEB368     166     358       2   .text       
-     Err_DealHwErrLevel                      FEB4CE     67E    1662       2   .text       
-     Err_DealHwErrDetail                     FEBB4C      52      82       2   .text       
+     Err_UpdateBatSysErrLevel                FE9EF7      7F     127       4   .text       
+     Err_UpdateHwErrLevel                    FE9F76      5D      93      76   .text       
+     Err_UpdateHwErrDetail                   FE9FD3      21      33      86   .text       
+     Err_GetBatErrLevel                      FE9FF4      36      54     130   .text       
+     Err_GetBatAllErrLevel                   FEA02A      33      51       6   .text       
+     Err_GetBatSysErrLevel                   FEA05D      50      80      14   .text       
+     Err_GetBatSysAllErrLevel                FEA0AD      52      82      10   .text       
+     Err_GetHwErrLevel                       FEA0FF      36      54      44   .text       
+     Err_GetHwAllErrLevel                    FEA135      33      51       6   .text       
+     Err_GetHwErrDetail                      FEA168      17      23      88   .text       
+     Err_GetErrLevel                         FEA17F      CA     202      17   .text       
+     Err_Init                                FEA249     20F     527       2   .text       
+     Err_Count                               FEA458      25      37       2   .text       
+     Err_Main                                FEA47D      AA     170       2   .text       
+     Err_CheckErrChanged                     FEA527      88     136       2   .text       
+     Err_JudgeHighThrhd                      FEA5AF     20F     527      26   .text       
+     Err_JudgeLowThrhd                       FEA7BE     20F     527      12   .text       
+     Err_JudgeBatErrLevel                    FEA9CD     9A3    2467       2   .text       
+     Err_JudgeBatSysErrLevel                 FEB370     166     358       2   .text       
+     Err_DealHwErrLevel                      FEB4D6     67E    1662       2   .text       
+     Err_DealHwErrDetail                     FEBB54      52      82       2   .text       
 - VARIABLES:
      gby_ReadErrThrhd                         F0BF5'G       1       1       4   PAGED_RAM   
      Err_TmCnt                                F0BF6'G       2       2      12   PAGED_RAM   
@@ -1281,79 +1281,79 @@ MODULE:                 -- ErrorAlarm.c.o --
      Err_HwErrDetailBak                       F0E04'G      40      64       2   PAGED_RAM   
 MODULE:                 -- ChargeSt.c.o --
 - PROCEDURES:
-     ChgInfo_Init                            FEBB9E      39      57       2   .text       
-     Chg_GetAcLinkSt                         FEBBD7       9       9      42   .text       
-     Chg_UpdateAcLinkSt                      FEBBE0       9       9       2   .text       
-     Chg_GetCableCap                         FEBBE9       9       9       2   .text       
-     Chg_UpdateCableCap                      FEBBF2       A      10       4   .text       
-     Chg_GetCcVolt                           FEBBFC       9       9       6   .text       
-     Chg_UpdateCCVolt                        FEBC05       A      10       2   .text       
-     Chg_UpdateCpPeriod                      FEBC0F       A      10       2   .text       
-     Chg_GetCpDutyCycle                      FEBC19       9       9       8   .text       
-     Chg_UpdateCpDutyCycle                   FEBC22       9       9       2   .text       
-     Chg_GetDcLinkSt                         FEBC2B       9       9      18   .text       
-     Chg_UpdateDcLinkSt                      FEBC34       9       9       2   .text       
-     Chg_GetCc2Volt                          FEBC3D       9       9       4   .text       
-     Chg_UpdateCc2Volt                       FEBC46       A      10       2   .text       
-     Chg_GetPermitMaxT                       FEBC50       9       9       6   .text       
-     Chg_UpdatePermitMaxT                    FEBC59       9       9       2   .text       
-     Chg_GetPermitMinT                       FEBC62       9       9       2   .text       
-     Chg_UpdatePermitMinT                    FEBC6B       9       9       2   .text       
-     Chg_GetPermitMaxSumV                    FEBC74       9       9      16   .text       
-     Chg_UpdatePermitMaxSumV                 FEBC7D       A      10       2   .text       
-     Chg_GetPermitMaxCellV                   FEBC87       9       9      14   .text       
-     Chg_UpdatePermitMaxCellV                FEBC90       A      10       2   .text       
-     Chg_GetPermitMinCellV                   FEBC9A       9       9       2   .text       
-     Chg_UpdatePermitMinCellV                FEBCA3       A      10       2   .text       
-     Chg_GetPermitMaxCurrent                 FEBCAD       9       9       8   .text       
-     Chg_UpdatePermitMaxCurrent              FEBCB6       A      10       2   .text       
-     Chg_GetPermitMinCurrent                 FEBCC0       9       9       4   .text       
-     Chg_UpdatePermitMinCurrent              FEBCC9       A      10       2   .text       
-     Chg_GetDownCurrentStep                  FEBCD3       9       9       4   .text       
-     Chg_UpdateDownCurrentStep               FEBCDC       A      10       2   .text       
-     Chg_GetPermitChgExtSt                   FEBCE6       9       9      10   .text       
-     Chg_UpdatePermitChgExtSt                FEBCEF       9       9       2   .text       
-     Chg_GetPermitChgOnSt                    FEBCF8       9       9       6   .text       
-     Chg_UpdatePermitChgOnSt                 FEBD01       9       9       4   .text       
-     Chg_GetPermitChgCurOn                   FEBD0A       9       9       4   .text       
-     Chg_UpdatePermitChgCurOn                FEBD13       A      10       2   .text       
-     Chg_GetPermitChgCurExt                  FEBD1D       9       9       6   .text       
-     Chg_UpdatePermitChgCurExt               FEBD26       A      10       2   .text       
-     Chg_GetChgSt                            FEBD30       9       9      40   .text       
-     Chg_UpdateChgSt                         FEBD39       9       9       2   .text       
-     Chg_GetChgStage                         FEBD42       9       9      10   .text       
-     Chg_UpdateChgStage                      FEBD4B       9       9       2   .text       
-     Chg_GetAccumulatedChgTime               FEBD54       9       9       2   .text       
-     Chg_GetRemainChgTime                    FEBD5D       9       9       4   .text       
-     Chg_UpdateRemainChgTime                 FEBD66       A      10       2   .text       
-     Chg_GetBmsStopReason                    FEBD70       D      13       2   .text       
-     Chg_UpdateBmsStopReason                 FEBD7D       E      14       2   .text       
-     Chg_GetChargerStopReason                FEBD8B       9       9       2   .text       
-     Chg_UpdateChargerStopReason             FEBD94      48      72       2   .text       
-     Chg_GetChargerFault                     FEBDDC       9       9       2   .text       
-     Chg_UpdateChargerFault                  FEBDE5      9B     155       2   .text       
-     Chg_GetChargerSt                        FEBE80       9       9       4   .text       
-     Chg_GetOutPutVoltage                    FEBE89       9       9       2   .text       
-     Chg_UpdateOutPutVoltage                 FEBE92       A      10       2   .text       
-     Chg_GetOutPutCurrent                    FEBE9C       9       9       2   .text       
-     Chg_UpdateOutPutCurrent                 FEBEA5       A      10       2   .text       
-     Chg_UpdateMaxOutPutVoltage              FEBEAF       A      10       2   .text       
-     Chg_UpdateMinOutPutVoltage              FEBEB9       A      10       2   .text       
-     Chg_GetOutPutMinCurrent                 FEBEC3       9       9       2   .text       
-     Chg_UpdateOutPutMinCurrent              FEBECC       A      10       2   .text       
-     Chg_GetOutPutMaxCurrent                 FEBED6       9       9       2   .text       
-     Chg_UpdateOutPutMaxCurrent              FEBEDF       A      10       2   .text       
-     Chg_GetOutPutEnergy                     FEBEE9       9       9       2   .text       
-     Chg_GetSeteLockCmd                      FEBEF2       9       9       2   .text       
-     Chg_UpdateSeteLockCmd                   FEBEFB       9       9       2   .text       
-     Chg_GetFdSignalType                     FEBF04       9       9       2   .text       
-     Chg_UpdateFdSignalType                  FEBF0D       9       9       2   .text       
-     Chg_GetNtcType                          FEBF16       9       9       2   .text       
-     Chg_GetElockRecSt                       FEBF1F       9       9       2   .text       
-     Chg_UpdateElockRecSt                    FEBF28       9       9       2   .text       
-     Chg_UpdateElockStErr                    FEBF31       9       9       2   .text       
-     Chg_UpdateElockTemper                   FEBF3A      1F      31       2   .text       
-     Chg_UpdateElockHdErr                    FEBF59       9       9       2   .text       
+     ChgInfo_Init                            FEBBA6      39      57       2   .text       
+     Chg_GetAcLinkSt                         FEBBDF       9       9      42   .text       
+     Chg_UpdateAcLinkSt                      FEBBE8       9       9       2   .text       
+     Chg_GetCableCap                         FEBBF1       9       9       2   .text       
+     Chg_UpdateCableCap                      FEBBFA       A      10       4   .text       
+     Chg_GetCcVolt                           FEBC04       9       9       6   .text       
+     Chg_UpdateCCVolt                        FEBC0D       A      10       2   .text       
+     Chg_UpdateCpPeriod                      FEBC17       A      10       2   .text       
+     Chg_GetCpDutyCycle                      FEBC21       9       9       8   .text       
+     Chg_UpdateCpDutyCycle                   FEBC2A       9       9       2   .text       
+     Chg_GetDcLinkSt                         FEBC33       9       9      18   .text       
+     Chg_UpdateDcLinkSt                      FEBC3C       9       9       2   .text       
+     Chg_GetCc2Volt                          FEBC45       9       9       4   .text       
+     Chg_UpdateCc2Volt                       FEBC4E       A      10       2   .text       
+     Chg_GetPermitMaxT                       FEBC58       9       9       6   .text       
+     Chg_UpdatePermitMaxT                    FEBC61       9       9       2   .text       
+     Chg_GetPermitMinT                       FEBC6A       9       9       2   .text       
+     Chg_UpdatePermitMinT                    FEBC73       9       9       2   .text       
+     Chg_GetPermitMaxSumV                    FEBC7C       9       9      16   .text       
+     Chg_UpdatePermitMaxSumV                 FEBC85       A      10       2   .text       
+     Chg_GetPermitMaxCellV                   FEBC8F       9       9      14   .text       
+     Chg_UpdatePermitMaxCellV                FEBC98       A      10       2   .text       
+     Chg_GetPermitMinCellV                   FEBCA2       9       9       2   .text       
+     Chg_UpdatePermitMinCellV                FEBCAB       A      10       2   .text       
+     Chg_GetPermitMaxCurrent                 FEBCB5       9       9       8   .text       
+     Chg_UpdatePermitMaxCurrent              FEBCBE       A      10       2   .text       
+     Chg_GetPermitMinCurrent                 FEBCC8       9       9       4   .text       
+     Chg_UpdatePermitMinCurrent              FEBCD1       A      10       2   .text       
+     Chg_GetDownCurrentStep                  FEBCDB       9       9       4   .text       
+     Chg_UpdateDownCurrentStep               FEBCE4       A      10       2   .text       
+     Chg_GetPermitChgExtSt                   FEBCEE       9       9      10   .text       
+     Chg_UpdatePermitChgExtSt                FEBCF7       9       9       2   .text       
+     Chg_GetPermitChgOnSt                    FEBD00       9       9       6   .text       
+     Chg_UpdatePermitChgOnSt                 FEBD09       9       9       4   .text       
+     Chg_GetPermitChgCurOn                   FEBD12       9       9       4   .text       
+     Chg_UpdatePermitChgCurOn                FEBD1B       A      10       2   .text       
+     Chg_GetPermitChgCurExt                  FEBD25       9       9       6   .text       
+     Chg_UpdatePermitChgCurExt               FEBD2E       A      10       2   .text       
+     Chg_GetChgSt                            FEBD38       9       9      40   .text       
+     Chg_UpdateChgSt                         FEBD41       9       9       2   .text       
+     Chg_GetChgStage                         FEBD4A       9       9      10   .text       
+     Chg_UpdateChgStage                      FEBD53       9       9       2   .text       
+     Chg_GetAccumulatedChgTime               FEBD5C       9       9       2   .text       
+     Chg_GetRemainChgTime                    FEBD65       9       9       4   .text       
+     Chg_UpdateRemainChgTime                 FEBD6E       A      10       2   .text       
+     Chg_GetBmsStopReason                    FEBD78       D      13       2   .text       
+     Chg_UpdateBmsStopReason                 FEBD85       E      14       2   .text       
+     Chg_GetChargerStopReason                FEBD93       9       9       2   .text       
+     Chg_UpdateChargerStopReason             FEBD9C      48      72       2   .text       
+     Chg_GetChargerFault                     FEBDE4       9       9       2   .text       
+     Chg_UpdateChargerFault                  FEBDED      9B     155       2   .text       
+     Chg_GetChargerSt                        FEBE88       9       9       4   .text       
+     Chg_GetOutPutVoltage                    FEBE91       9       9       2   .text       
+     Chg_UpdateOutPutVoltage                 FEBE9A       A      10       2   .text       
+     Chg_GetOutPutCurrent                    FEBEA4       9       9       2   .text       
+     Chg_UpdateOutPutCurrent                 FEBEAD       A      10       2   .text       
+     Chg_UpdateMaxOutPutVoltage              FEBEB7       A      10       2   .text       
+     Chg_UpdateMinOutPutVoltage              FEBEC1       A      10       2   .text       
+     Chg_GetOutPutMinCurrent                 FEBECB       9       9       2   .text       
+     Chg_UpdateOutPutMinCurrent              FEBED4       A      10       2   .text       
+     Chg_GetOutPutMaxCurrent                 FEBEDE       9       9       2   .text       
+     Chg_UpdateOutPutMaxCurrent              FEBEE7       A      10       2   .text       
+     Chg_GetOutPutEnergy                     FEBEF1       9       9       2   .text       
+     Chg_GetSeteLockCmd                      FEBEFA       9       9       2   .text       
+     Chg_UpdateSeteLockCmd                   FEBF03       9       9       2   .text       
+     Chg_GetFdSignalType                     FEBF0C       9       9       2   .text       
+     Chg_UpdateFdSignalType                  FEBF15       9       9       2   .text       
+     Chg_GetNtcType                          FEBF1E       9       9       2   .text       
+     Chg_GetElockRecSt                       FEBF27       9       9       2   .text       
+     Chg_UpdateElockRecSt                    FEBF30       9       9       2   .text       
+     Chg_UpdateElockStErr                    FEBF39       9       9       2   .text       
+     Chg_UpdateElockTemper                   FEBF42      1F      31       2   .text       
+     Chg_UpdateElockHdErr                    FEBF61       9       9       2   .text       
 - VARIABLES:
      Chg_Info                                 F0E44'G      50      80     167   PAGED_RAM   
 MODULE:                 -- BatteryStAllPack.c.o --
@@ -1409,13 +1409,13 @@ MODULE:                 -- BatteryStAllPack.c.o --
      Bat_UpdateMaxPermitDchCur               FC873B      18      24       2   PAGE_FC_740 
      Bat_GetMaxFeedBackCur                   FC8753      13      19       2   PAGE_FC_740 
      Bat_UpdateMaxFeedBackCur                FC8766      18      24       2   PAGE_FC_740 
-     Bat_GetMaxPermitFeedbackPower           FC877E      13      19       2   PAGE_FC_740 
+     Bat_GetMaxPermitFeedbackPower           FC877E      13      19       4   PAGE_FC_740 
      Bat_UpdateMaxPermitFeedbackPower        FC8791      18      24       2   PAGE_FC_740 
-     Bat_GetMaxPermitDchPower                FC87A9      13      19       6   PAGE_FC_740 
+     Bat_GetMaxPermitDchPower                FC87A9      13      19       2   PAGE_FC_740 
      Bat_UpdateMaxPermitDchPower             FC87BC      18      24       2   PAGE_FC_740 
      Bat_UpdateMaxPulseDchCur                FC87D4      18      24       2   PAGE_FC_740 
      Bat_UpdateMaxPulseFeedBackCur           FC87EC      18      24       2   PAGE_FC_740 
-     Bat_GetMaxPulseDchPower                 FC8804      13      19       2   PAGE_FC_740 
+     Bat_GetMaxPulseDchPower                 FC8804      13      19       4   PAGE_FC_740 
      Bat_UpdateMaxPulseDchPower              FC8817      18      24       2   PAGE_FC_740 
      Bat_GetMaxPulseFeedbackPower            FC882F      13      19       2   PAGE_FC_740 
      Bat_UpdateMaxPulseFeedbackPower         FC8842      18      24       2   PAGE_FC_740 
@@ -3794,7 +3794,7 @@ MODULE STATISTIC
   SOF.c.o                                      0     24   3003
   HvM.c.o                                      0     19      0
   ThM.c.o                                      0     16      0
-  CarCan.c.o                                 402   3870     28
+  CarCan.c.o                                 402   3878     28
   ChgCan.c.o                                  22    324     28
   EcuConf.c.o                                  1     20     28
   SysConf.c.o                               2921   1411     28
@@ -7826,13 +7826,13 @@ OBJECT LIST SORTED BY ADDRESS
      Bat_UpdateMaxPermitDchCur               FC873B      18      24       2   PAGE_FC_740 
      Bat_GetMaxFeedBackCur                   FC8753      13      19       2   PAGE_FC_740 
      Bat_UpdateMaxFeedBackCur                FC8766      18      24       2   PAGE_FC_740 
-     Bat_GetMaxPermitFeedbackPower           FC877E      13      19       2   PAGE_FC_740 
+     Bat_GetMaxPermitFeedbackPower           FC877E      13      19       4   PAGE_FC_740 
      Bat_UpdateMaxPermitFeedbackPower        FC8791      18      24       2   PAGE_FC_740 
-     Bat_GetMaxPermitDchPower                FC87A9      13      19       6   PAGE_FC_740 
+     Bat_GetMaxPermitDchPower                FC87A9      13      19       2   PAGE_FC_740 
      Bat_UpdateMaxPermitDchPower             FC87BC      18      24       2   PAGE_FC_740 
      Bat_UpdateMaxPulseDchCur                FC87D4      18      24       2   PAGE_FC_740 
      Bat_UpdateMaxPulseFeedBackCur           FC87EC      18      24       2   PAGE_FC_740 
-     Bat_GetMaxPulseDchPower                 FC8804      13      19       2   PAGE_FC_740 
+     Bat_GetMaxPulseDchPower                 FC8804      13      19       4   PAGE_FC_740 
      Bat_UpdateMaxPulseDchPower              FC8817      18      24       2   PAGE_FC_740 
      Bat_GetMaxPulseFeedbackPower            FC882F      13      19       2   PAGE_FC_740 
      Bat_UpdateMaxPulseFeedbackPower         FC8842      18      24       2   PAGE_FC_740 
@@ -8036,176 +8036,176 @@ OBJECT LIST SORTED BY ADDRESS
      ThM_MainCountCbk                        FE8280       1       1       2   .text       
      ThM_MainCbk                             FE8281       1       1       2   .text       
      CarCan_Init                             FE8282     1F2     498       2   .text       
-     CarCan_MainLoadData                     FE8474     BDE    3038       2   .text       
-     CarCan_ProcMsg                          FE9052      56      86       2   .text       
-     CarCan_MainSendMsg                      FE90A8      81     129       2   .text       
-     CarCan_MainReceiveMsg                   FE9129      3B      59       2   .text       
-     CarCan_CountCbk                         FE9164      11      17       2   .text       
-     CarCan_ProMain                          FE9175      1D      29       2   .text       
-     CarCan_GetVesionModuleVer               FE9192       E      14       2   .text       
-     ChgCan_GetLife                          FE91A0       4       4       4   .text       
-     ChgCan_UpdateLife                       FE91A4       4       4       2   .text       
-     ChgCan_Init                             FE91A8      57      87       2   .text       
-     ChgCan_MainLoadData                     FE91FF      1D      29       2   .text       
-     ChgCan_ProcMsg                          FE921C      67     103       2   .text       
-     ChgCan_MainSendMsg                      FE9283       9       9       2   .text       
-     ChgCan_MainReceiveMsg                   FE928C      35      53       2   .text       
-     ChgCan_CountCbk                         FE92C1      15      21       2   .text       
-     ChgCan_GetVesionModuleVer               FE92D6       E      14       2   .text       
-     EcuConf_GetVesionModuleVer              FE92E4      14      20       2   .text       
-     SysConf_Init                            FE92F8     3C6     966       2   .text       
-     SysConf_InitParaTable                   FE96BE      5E      94     124   .text       
-     SysConf_GetParaHandle                   FE971C      6D     109      24   .text       
-     SysConf_GetParaAddrInEE                 FE9789      52      82      20   .text       
-     SysConf_UpdataParaToRam                 FE97DB      46      70     102   .text       
-     SysConf_GetParaValueFromRam             FE9821      46      70     234   .text       
-     SysConf_GetVesionModuleVer              FE9867      14      20       2   .text       
-     Version_GetProjectVer                   FE987B      60      96       4   .text       
-     Version_GetPlatformVer                  FE98DB      60      96       2   .text       
-     Version_SearchModule                    FE993B      4C      76       2   .text       
-     Version_GetModuleVer                    FE9987      4B      75       2   .text       
-     Version_GetPlatformHwVer                FE99D2      13      19       2   .text       
-     Version_GetVesionModuleVer              FE99E5      13      19       2   .text       
-     BatSys_StInit                           FE99F8      7E     126       2   .text       
-     BatSys_GetRunMode                       FE9A76       9       9       8   .text       
-     BatSys_UpdateRunMode                    FE9A7F       9       9       2   .text       
-     BatSys_GetIsoSt                         FE9A88       9       9       2   .text       
-     BatSys_GetIsoPosResistor                FE9A91       9       9       6   .text       
-     BatSys_UpdateIsoPosResistor             FE9A9A       A      10       2   .text       
-     BatSys_GetIsoNegResistor                FE9AA4       9       9       6   .text       
-     BatSys_UpdateIsoNegResistor             FE9AAD       A      10       2   .text       
-     BatSys_GetPosRlySt                      FE9AB7       9       9       8   .text       
-     BatSys_UpdatePosRlySt                   FE9AC0       9       9       4   .text       
-     BatSys_GetNegRlySt                      FE9AC9       9       9       6   .text       
-     BatSys_UpdateNegRlySt                   FE9AD2       9       9       4   .text       
-     BatSys_GetPreRlySt                      FE9ADB       9       9       8   .text       
-     BatSys_UpdatePreRlySt                   FE9AE4       9       9       8   .text       
-     BatSys_GetChgRlySt                      FE9AED       9       9       4   .text       
-     BatSys_UpdateChgRlySt                   FE9AF6       9       9       8   .text       
-     BatSys_GetAuxBSt                        FE9AFF       9       9       4   .text       
-     BatSys_UpdateAuxBSt                     FE9B08       9       9       2   .text       
-     BatSys_GetAuxASt                        FE9B11       9       9       4   .text       
-     BatSys_UpdateAuxASt                     FE9B1A       9       9       2   .text       
-     BatSys_GetPosRlyLifeTime                FE9B23      40      64       2   .text       
-     BatSys_UpdatePosRlyLifeTime             FE9B63      1B      27       2   .text       
-     BatSys_GetNegRlyLifeTime                FE9B7E      40      64       2   .text       
-     BatSys_UpdateNegRlyLifeTime             FE9BBE      1B      27       2   .text       
-     BatSys_GetPreRlyLifeTime                FE9BD9      40      64       2   .text       
-     BatSys_UpdatePreRlyLifeTime             FE9C19      1B      27       2   .text       
-     BatSys_GetChgRlyLifeTime                FE9C34      40      64       2   .text       
-     BatSys_UpdateChgRlyLifeTime             FE9C74      1B      27       2   .text       
-     BatSys_GetFanSpeed                      FE9C8F       9       9       2   .text       
-     BatSys_GetFanSt                         FE9C98       9       9       6   .text       
-     BatSys_UpdateFanSt                      FE9CA1       9       9       2   .text       
-     BatSys_GetHeaterSt                      FE9CAA       9       9       6   .text       
-     BatSys_GetHvilSt                        FE9CB3       9       9       2   .text       
-     BatSys_GetMaintainSwitchSt              FE9CBC       9       9       2   .text       
-     BatSys_GetSmokeDetectorSt               FE9CC5       9       9       2   .text       
-     BatSys_GetLatchingMechanismSt           FE9CCE       9       9       2   .text       
-     BatSys_GetCollisionSwitchSt             FE9CD7       9       9       2   .text       
-     BatSys_GetManualMaintenanceSwitchSt     FE9CE0       9       9       2   .text       
-     BatSys_GetHumiditySensorSt              FE9CE9       9       9       2   .text       
-     BatSys_GetPressureSensorSt              FE9CF2       9       9       2   .text       
-     BatSys_GetLiquidLevelSensorSt           FE9CFB       9       9       2   .text       
-     BatSys_GetFaultDryContactSt             FE9D04       9       9       2   .text       
-     BatSys_GetPreChgTime                    FE9D0D       9       9       2   .text       
-     BatSys_GetCarVinNum                     FE9D16      1C      28       6   .text       
-     BatSys_CalcRlyAgeCnt                    FE9D32     11B     283       8   .text       
-     BatSys_RlyLifeCalc                      FE9E4D      A2     162       2   .text       
-     Err_UpdateBatSysErrLevel                FE9EEF      7F     127       4   .text       
-     Err_UpdateHwErrLevel                    FE9F6E      5D      93      76   .text       
-     Err_UpdateHwErrDetail                   FE9FCB      21      33      86   .text       
-     Err_GetBatErrLevel                      FE9FEC      36      54     130   .text       
-     Err_GetBatAllErrLevel                   FEA022      33      51       6   .text       
-     Err_GetBatSysErrLevel                   FEA055      50      80      14   .text       
-     Err_GetBatSysAllErrLevel                FEA0A5      52      82      10   .text       
-     Err_GetHwErrLevel                       FEA0F7      36      54      44   .text       
-     Err_GetHwAllErrLevel                    FEA12D      33      51       6   .text       
-     Err_GetHwErrDetail                      FEA160      17      23      88   .text       
-     Err_GetErrLevel                         FEA177      CA     202      17   .text       
-     Err_Init                                FEA241     20F     527       2   .text       
-     Err_Count                               FEA450      25      37       2   .text       
-     Err_Main                                FEA475      AA     170       2   .text       
-     Err_CheckErrChanged                     FEA51F      88     136       2   .text       
-     Err_JudgeHighThrhd                      FEA5A7     20F     527      26   .text       
-     Err_JudgeLowThrhd                       FEA7B6     20F     527      12   .text       
-     Err_JudgeBatErrLevel                    FEA9C5     9A3    2467       2   .text       
-     Err_JudgeBatSysErrLevel                 FEB368     166     358       2   .text       
-     Err_DealHwErrLevel                      FEB4CE     67E    1662       2   .text       
-     Err_DealHwErrDetail                     FEBB4C      52      82       2   .text       
-     ChgInfo_Init                            FEBB9E      39      57       2   .text       
-     Chg_GetAcLinkSt                         FEBBD7       9       9      42   .text       
-     Chg_UpdateAcLinkSt                      FEBBE0       9       9       2   .text       
-     Chg_GetCableCap                         FEBBE9       9       9       2   .text       
-     Chg_UpdateCableCap                      FEBBF2       A      10       4   .text       
-     Chg_GetCcVolt                           FEBBFC       9       9       6   .text       
-     Chg_UpdateCCVolt                        FEBC05       A      10       2   .text       
-     Chg_UpdateCpPeriod                      FEBC0F       A      10       2   .text       
-     Chg_GetCpDutyCycle                      FEBC19       9       9       8   .text       
-     Chg_UpdateCpDutyCycle                   FEBC22       9       9       2   .text       
-     Chg_GetDcLinkSt                         FEBC2B       9       9      18   .text       
-     Chg_UpdateDcLinkSt                      FEBC34       9       9       2   .text       
-     Chg_GetCc2Volt                          FEBC3D       9       9       4   .text       
-     Chg_UpdateCc2Volt                       FEBC46       A      10       2   .text       
-     Chg_GetPermitMaxT                       FEBC50       9       9       6   .text       
-     Chg_UpdatePermitMaxT                    FEBC59       9       9       2   .text       
-     Chg_GetPermitMinT                       FEBC62       9       9       2   .text       
-     Chg_UpdatePermitMinT                    FEBC6B       9       9       2   .text       
-     Chg_GetPermitMaxSumV                    FEBC74       9       9      16   .text       
-     Chg_UpdatePermitMaxSumV                 FEBC7D       A      10       2   .text       
-     Chg_GetPermitMaxCellV                   FEBC87       9       9      14   .text       
-     Chg_UpdatePermitMaxCellV                FEBC90       A      10       2   .text       
-     Chg_GetPermitMinCellV                   FEBC9A       9       9       2   .text       
-     Chg_UpdatePermitMinCellV                FEBCA3       A      10       2   .text       
-     Chg_GetPermitMaxCurrent                 FEBCAD       9       9       8   .text       
-     Chg_UpdatePermitMaxCurrent              FEBCB6       A      10       2   .text       
-     Chg_GetPermitMinCurrent                 FEBCC0       9       9       4   .text       
-     Chg_UpdatePermitMinCurrent              FEBCC9       A      10       2   .text       
-     Chg_GetDownCurrentStep                  FEBCD3       9       9       4   .text       
-     Chg_UpdateDownCurrentStep               FEBCDC       A      10       2   .text       
-     Chg_GetPermitChgExtSt                   FEBCE6       9       9      10   .text       
-     Chg_UpdatePermitChgExtSt                FEBCEF       9       9       2   .text       
-     Chg_GetPermitChgOnSt                    FEBCF8       9       9       6   .text       
-     Chg_UpdatePermitChgOnSt                 FEBD01       9       9       4   .text       
-     Chg_GetPermitChgCurOn                   FEBD0A       9       9       4   .text       
-     Chg_UpdatePermitChgCurOn                FEBD13       A      10       2   .text       
-     Chg_GetPermitChgCurExt                  FEBD1D       9       9       6   .text       
-     Chg_UpdatePermitChgCurExt               FEBD26       A      10       2   .text       
-     Chg_GetChgSt                            FEBD30       9       9      40   .text       
-     Chg_UpdateChgSt                         FEBD39       9       9       2   .text       
-     Chg_GetChgStage                         FEBD42       9       9      10   .text       
-     Chg_UpdateChgStage                      FEBD4B       9       9       2   .text       
-     Chg_GetAccumulatedChgTime               FEBD54       9       9       2   .text       
-     Chg_GetRemainChgTime                    FEBD5D       9       9       4   .text       
-     Chg_UpdateRemainChgTime                 FEBD66       A      10       2   .text       
-     Chg_GetBmsStopReason                    FEBD70       D      13       2   .text       
-     Chg_UpdateBmsStopReason                 FEBD7D       E      14       2   .text       
-     Chg_GetChargerStopReason                FEBD8B       9       9       2   .text       
-     Chg_UpdateChargerStopReason             FEBD94      48      72       2   .text       
-     Chg_GetChargerFault                     FEBDDC       9       9       2   .text       
-     Chg_UpdateChargerFault                  FEBDE5      9B     155       2   .text       
-     Chg_GetChargerSt                        FEBE80       9       9       4   .text       
-     Chg_GetOutPutVoltage                    FEBE89       9       9       2   .text       
-     Chg_UpdateOutPutVoltage                 FEBE92       A      10       2   .text       
-     Chg_GetOutPutCurrent                    FEBE9C       9       9       2   .text       
-     Chg_UpdateOutPutCurrent                 FEBEA5       A      10       2   .text       
-     Chg_UpdateMaxOutPutVoltage              FEBEAF       A      10       2   .text       
-     Chg_UpdateMinOutPutVoltage              FEBEB9       A      10       2   .text       
-     Chg_GetOutPutMinCurrent                 FEBEC3       9       9       2   .text       
-     Chg_UpdateOutPutMinCurrent              FEBECC       A      10       2   .text       
-     Chg_GetOutPutMaxCurrent                 FEBED6       9       9       2   .text       
-     Chg_UpdateOutPutMaxCurrent              FEBEDF       A      10       2   .text       
-     Chg_GetOutPutEnergy                     FEBEE9       9       9       2   .text       
-     Chg_GetSeteLockCmd                      FEBEF2       9       9       2   .text       
-     Chg_UpdateSeteLockCmd                   FEBEFB       9       9       2   .text       
-     Chg_GetFdSignalType                     FEBF04       9       9       2   .text       
-     Chg_UpdateFdSignalType                  FEBF0D       9       9       2   .text       
-     Chg_GetNtcType                          FEBF16       9       9       2   .text       
-     Chg_GetElockRecSt                       FEBF1F       9       9       2   .text       
-     Chg_UpdateElockRecSt                    FEBF28       9       9       2   .text       
-     Chg_UpdateElockStErr                    FEBF31       9       9       2   .text       
-     Chg_UpdateElockTemper                   FEBF3A      1F      31       2   .text       
-     Chg_UpdateElockHdErr                    FEBF59       9       9       2   .text       
+     CarCan_MainLoadData                     FE8474     BE6    3046       2   .text       
+     CarCan_ProcMsg                          FE905A      56      86       2   .text       
+     CarCan_MainSendMsg                      FE90B0      81     129       2   .text       
+     CarCan_MainReceiveMsg                   FE9131      3B      59       2   .text       
+     CarCan_CountCbk                         FE916C      11      17       2   .text       
+     CarCan_ProMain                          FE917D      1D      29       2   .text       
+     CarCan_GetVesionModuleVer               FE919A       E      14       2   .text       
+     ChgCan_GetLife                          FE91A8       4       4       4   .text       
+     ChgCan_UpdateLife                       FE91AC       4       4       2   .text       
+     ChgCan_Init                             FE91B0      57      87       2   .text       
+     ChgCan_MainLoadData                     FE9207      1D      29       2   .text       
+     ChgCan_ProcMsg                          FE9224      67     103       2   .text       
+     ChgCan_MainSendMsg                      FE928B       9       9       2   .text       
+     ChgCan_MainReceiveMsg                   FE9294      35      53       2   .text       
+     ChgCan_CountCbk                         FE92C9      15      21       2   .text       
+     ChgCan_GetVesionModuleVer               FE92DE       E      14       2   .text       
+     EcuConf_GetVesionModuleVer              FE92EC      14      20       2   .text       
+     SysConf_Init                            FE9300     3C6     966       2   .text       
+     SysConf_InitParaTable                   FE96C6      5E      94     124   .text       
+     SysConf_GetParaHandle                   FE9724      6D     109      24   .text       
+     SysConf_GetParaAddrInEE                 FE9791      52      82      20   .text       
+     SysConf_UpdataParaToRam                 FE97E3      46      70     102   .text       
+     SysConf_GetParaValueFromRam             FE9829      46      70     234   .text       
+     SysConf_GetVesionModuleVer              FE986F      14      20       2   .text       
+     Version_GetProjectVer                   FE9883      60      96       4   .text       
+     Version_GetPlatformVer                  FE98E3      60      96       2   .text       
+     Version_SearchModule                    FE9943      4C      76       2   .text       
+     Version_GetModuleVer                    FE998F      4B      75       2   .text       
+     Version_GetPlatformHwVer                FE99DA      13      19       2   .text       
+     Version_GetVesionModuleVer              FE99ED      13      19       2   .text       
+     BatSys_StInit                           FE9A00      7E     126       2   .text       
+     BatSys_GetRunMode                       FE9A7E       9       9       8   .text       
+     BatSys_UpdateRunMode                    FE9A87       9       9       2   .text       
+     BatSys_GetIsoSt                         FE9A90       9       9       2   .text       
+     BatSys_GetIsoPosResistor                FE9A99       9       9       6   .text       
+     BatSys_UpdateIsoPosResistor             FE9AA2       A      10       2   .text       
+     BatSys_GetIsoNegResistor                FE9AAC       9       9       6   .text       
+     BatSys_UpdateIsoNegResistor             FE9AB5       A      10       2   .text       
+     BatSys_GetPosRlySt                      FE9ABF       9       9       8   .text       
+     BatSys_UpdatePosRlySt                   FE9AC8       9       9       4   .text       
+     BatSys_GetNegRlySt                      FE9AD1       9       9       6   .text       
+     BatSys_UpdateNegRlySt                   FE9ADA       9       9       4   .text       
+     BatSys_GetPreRlySt                      FE9AE3       9       9       8   .text       
+     BatSys_UpdatePreRlySt                   FE9AEC       9       9       8   .text       
+     BatSys_GetChgRlySt                      FE9AF5       9       9       4   .text       
+     BatSys_UpdateChgRlySt                   FE9AFE       9       9       8   .text       
+     BatSys_GetAuxBSt                        FE9B07       9       9       4   .text       
+     BatSys_UpdateAuxBSt                     FE9B10       9       9       2   .text       
+     BatSys_GetAuxASt                        FE9B19       9       9       4   .text       
+     BatSys_UpdateAuxASt                     FE9B22       9       9       2   .text       
+     BatSys_GetPosRlyLifeTime                FE9B2B      40      64       2   .text       
+     BatSys_UpdatePosRlyLifeTime             FE9B6B      1B      27       2   .text       
+     BatSys_GetNegRlyLifeTime                FE9B86      40      64       2   .text       
+     BatSys_UpdateNegRlyLifeTime             FE9BC6      1B      27       2   .text       
+     BatSys_GetPreRlyLifeTime                FE9BE1      40      64       2   .text       
+     BatSys_UpdatePreRlyLifeTime             FE9C21      1B      27       2   .text       
+     BatSys_GetChgRlyLifeTime                FE9C3C      40      64       2   .text       
+     BatSys_UpdateChgRlyLifeTime             FE9C7C      1B      27       2   .text       
+     BatSys_GetFanSpeed                      FE9C97       9       9       2   .text       
+     BatSys_GetFanSt                         FE9CA0       9       9       6   .text       
+     BatSys_UpdateFanSt                      FE9CA9       9       9       2   .text       
+     BatSys_GetHeaterSt                      FE9CB2       9       9       6   .text       
+     BatSys_GetHvilSt                        FE9CBB       9       9       2   .text       
+     BatSys_GetMaintainSwitchSt              FE9CC4       9       9       2   .text       
+     BatSys_GetSmokeDetectorSt               FE9CCD       9       9       2   .text       
+     BatSys_GetLatchingMechanismSt           FE9CD6       9       9       2   .text       
+     BatSys_GetCollisionSwitchSt             FE9CDF       9       9       2   .text       
+     BatSys_GetManualMaintenanceSwitchSt     FE9CE8       9       9       2   .text       
+     BatSys_GetHumiditySensorSt              FE9CF1       9       9       2   .text       
+     BatSys_GetPressureSensorSt              FE9CFA       9       9       2   .text       
+     BatSys_GetLiquidLevelSensorSt           FE9D03       9       9       2   .text       
+     BatSys_GetFaultDryContactSt             FE9D0C       9       9       2   .text       
+     BatSys_GetPreChgTime                    FE9D15       9       9       2   .text       
+     BatSys_GetCarVinNum                     FE9D1E      1C      28       6   .text       
+     BatSys_CalcRlyAgeCnt                    FE9D3A     11B     283       8   .text       
+     BatSys_RlyLifeCalc                      FE9E55      A2     162       2   .text       
+     Err_UpdateBatSysErrLevel                FE9EF7      7F     127       4   .text       
+     Err_UpdateHwErrLevel                    FE9F76      5D      93      76   .text       
+     Err_UpdateHwErrDetail                   FE9FD3      21      33      86   .text       
+     Err_GetBatErrLevel                      FE9FF4      36      54     130   .text       
+     Err_GetBatAllErrLevel                   FEA02A      33      51       6   .text       
+     Err_GetBatSysErrLevel                   FEA05D      50      80      14   .text       
+     Err_GetBatSysAllErrLevel                FEA0AD      52      82      10   .text       
+     Err_GetHwErrLevel                       FEA0FF      36      54      44   .text       
+     Err_GetHwAllErrLevel                    FEA135      33      51       6   .text       
+     Err_GetHwErrDetail                      FEA168      17      23      88   .text       
+     Err_GetErrLevel                         FEA17F      CA     202      17   .text       
+     Err_Init                                FEA249     20F     527       2   .text       
+     Err_Count                               FEA458      25      37       2   .text       
+     Err_Main                                FEA47D      AA     170       2   .text       
+     Err_CheckErrChanged                     FEA527      88     136       2   .text       
+     Err_JudgeHighThrhd                      FEA5AF     20F     527      26   .text       
+     Err_JudgeLowThrhd                       FEA7BE     20F     527      12   .text       
+     Err_JudgeBatErrLevel                    FEA9CD     9A3    2467       2   .text       
+     Err_JudgeBatSysErrLevel                 FEB370     166     358       2   .text       
+     Err_DealHwErrLevel                      FEB4D6     67E    1662       2   .text       
+     Err_DealHwErrDetail                     FEBB54      52      82       2   .text       
+     ChgInfo_Init                            FEBBA6      39      57       2   .text       
+     Chg_GetAcLinkSt                         FEBBDF       9       9      42   .text       
+     Chg_UpdateAcLinkSt                      FEBBE8       9       9       2   .text       
+     Chg_GetCableCap                         FEBBF1       9       9       2   .text       
+     Chg_UpdateCableCap                      FEBBFA       A      10       4   .text       
+     Chg_GetCcVolt                           FEBC04       9       9       6   .text       
+     Chg_UpdateCCVolt                        FEBC0D       A      10       2   .text       
+     Chg_UpdateCpPeriod                      FEBC17       A      10       2   .text       
+     Chg_GetCpDutyCycle                      FEBC21       9       9       8   .text       
+     Chg_UpdateCpDutyCycle                   FEBC2A       9       9       2   .text       
+     Chg_GetDcLinkSt                         FEBC33       9       9      18   .text       
+     Chg_UpdateDcLinkSt                      FEBC3C       9       9       2   .text       
+     Chg_GetCc2Volt                          FEBC45       9       9       4   .text       
+     Chg_UpdateCc2Volt                       FEBC4E       A      10       2   .text       
+     Chg_GetPermitMaxT                       FEBC58       9       9       6   .text       
+     Chg_UpdatePermitMaxT                    FEBC61       9       9       2   .text       
+     Chg_GetPermitMinT                       FEBC6A       9       9       2   .text       
+     Chg_UpdatePermitMinT                    FEBC73       9       9       2   .text       
+     Chg_GetPermitMaxSumV                    FEBC7C       9       9      16   .text       
+     Chg_UpdatePermitMaxSumV                 FEBC85       A      10       2   .text       
+     Chg_GetPermitMaxCellV                   FEBC8F       9       9      14   .text       
+     Chg_UpdatePermitMaxCellV                FEBC98       A      10       2   .text       
+     Chg_GetPermitMinCellV                   FEBCA2       9       9       2   .text       
+     Chg_UpdatePermitMinCellV                FEBCAB       A      10       2   .text       
+     Chg_GetPermitMaxCurrent                 FEBCB5       9       9       8   .text       
+     Chg_UpdatePermitMaxCurrent              FEBCBE       A      10       2   .text       
+     Chg_GetPermitMinCurrent                 FEBCC8       9       9       4   .text       
+     Chg_UpdatePermitMinCurrent              FEBCD1       A      10       2   .text       
+     Chg_GetDownCurrentStep                  FEBCDB       9       9       4   .text       
+     Chg_UpdateDownCurrentStep               FEBCE4       A      10       2   .text       
+     Chg_GetPermitChgExtSt                   FEBCEE       9       9      10   .text       
+     Chg_UpdatePermitChgExtSt                FEBCF7       9       9       2   .text       
+     Chg_GetPermitChgOnSt                    FEBD00       9       9       6   .text       
+     Chg_UpdatePermitChgOnSt                 FEBD09       9       9       4   .text       
+     Chg_GetPermitChgCurOn                   FEBD12       9       9       4   .text       
+     Chg_UpdatePermitChgCurOn                FEBD1B       A      10       2   .text       
+     Chg_GetPermitChgCurExt                  FEBD25       9       9       6   .text       
+     Chg_UpdatePermitChgCurExt               FEBD2E       A      10       2   .text       
+     Chg_GetChgSt                            FEBD38       9       9      40   .text       
+     Chg_UpdateChgSt                         FEBD41       9       9       2   .text       
+     Chg_GetChgStage                         FEBD4A       9       9      10   .text       
+     Chg_UpdateChgStage                      FEBD53       9       9       2   .text       
+     Chg_GetAccumulatedChgTime               FEBD5C       9       9       2   .text       
+     Chg_GetRemainChgTime                    FEBD65       9       9       4   .text       
+     Chg_UpdateRemainChgTime                 FEBD6E       A      10       2   .text       
+     Chg_GetBmsStopReason                    FEBD78       D      13       2   .text       
+     Chg_UpdateBmsStopReason                 FEBD85       E      14       2   .text       
+     Chg_GetChargerStopReason                FEBD93       9       9       2   .text       
+     Chg_UpdateChargerStopReason             FEBD9C      48      72       2   .text       
+     Chg_GetChargerFault                     FEBDE4       9       9       2   .text       
+     Chg_UpdateChargerFault                  FEBDED      9B     155       2   .text       
+     Chg_GetChargerSt                        FEBE88       9       9       4   .text       
+     Chg_GetOutPutVoltage                    FEBE91       9       9       2   .text       
+     Chg_UpdateOutPutVoltage                 FEBE9A       A      10       2   .text       
+     Chg_GetOutPutCurrent                    FEBEA4       9       9       2   .text       
+     Chg_UpdateOutPutCurrent                 FEBEAD       A      10       2   .text       
+     Chg_UpdateMaxOutPutVoltage              FEBEB7       A      10       2   .text       
+     Chg_UpdateMinOutPutVoltage              FEBEC1       A      10       2   .text       
+     Chg_GetOutPutMinCurrent                 FEBECB       9       9       2   .text       
+     Chg_UpdateOutPutMinCurrent              FEBED4       A      10       2   .text       
+     Chg_GetOutPutMaxCurrent                 FEBEDE       9       9       2   .text       
+     Chg_UpdateOutPutMaxCurrent              FEBEE7       A      10       2   .text       
+     Chg_GetOutPutEnergy                     FEBEF1       9       9       2   .text       
+     Chg_GetSeteLockCmd                      FEBEFA       9       9       2   .text       
+     Chg_UpdateSeteLockCmd                   FEBF03       9       9       2   .text       
+     Chg_GetFdSignalType                     FEBF0C       9       9       2   .text       
+     Chg_UpdateFdSignalType                  FEBF15       9       9       2   .text       
+     Chg_GetNtcType                          FEBF1E       9       9       2   .text       
+     Chg_GetElockRecSt                       FEBF27       9       9       2   .text       
+     Chg_UpdateElockRecSt                    FEBF30       9       9       2   .text       
+     Chg_UpdateElockStErr                    FEBF39       9       9       2   .text       
+     Chg_UpdateElockTemper                   FEBF42      1F      31       2   .text       
+     Chg_UpdateElockHdErr                    FEBF61       9       9       2   .text       
      gby_para_CfgVer                          F0000'G       8       8       4   PAGED_RAM   
      gby_para_CfgSt                           F0008'G       1       1       3   PAGED_RAM   
      ParameterIndexTable                      F0009'G     37E     894      10   PAGED_RAM   
@@ -15787,5 +15787,5 @@ STATISTIC SECTION
 ExeFile:
 --------
 Number of blocks to be downloaded: 52
-Total size of all blocks to be downloaded: 148472
+Total size of all blocks to be downloaded: 148480
 

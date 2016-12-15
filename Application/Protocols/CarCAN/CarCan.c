@@ -694,7 +694,7 @@ void CarCan_MainLoadData(void)
         sCarCan_Msg[13].Msg.data[0] = GET_LOW_BYTE(wtmp);
         sCarCan_Msg[13].Msg.data[1] = GET_HIGH_BYTE(wtmp); 
         wtmp=0;
-        wtmp=Bat_GetMaxPermitDchPower();
+        wtmp=Bat_GetMaxPulseDchPower();
         sCarCan_Msg[13].Msg.data[2] = GET_LOW_BYTE(wtmp);
         sCarCan_Msg[13].Msg.data[3] = GET_HIGH_BYTE(wtmp);                
         wtmp=0;
@@ -716,12 +716,13 @@ void CarCan_MainLoadData(void)
         sCarCan_Msg[14].Msg.data[2] = GET_LOW_BYTE(wtmp);
         sCarCan_Msg[14].Msg.data[3] = GET_HIGH_BYTE(wtmp);                
         wtmp=0;
-        wtmp=Bat_GetMaxPermitDchPower();
+        wtmp=Bat_GetMaxPermitFeedbackPower();   
         sCarCan_Msg[14].Msg.data[4] = GET_LOW_BYTE(wtmp);
         sCarCan_Msg[14].Msg.data[5] = GET_HIGH_BYTE(wtmp);                 
         wtmp=0;
         wtmp=Chg_GetPermitMaxCurrent();
-        wtmp += 350;
+        wtmp /=10 ;
+        wtmp +=350;
         sCarCan_Msg[14].Msg.data[6] = GET_LOW_BYTE(wtmp);
         sCarCan_Msg[14].Msg.data[7] = GET_HIGH_BYTE(wtmp);
         /*

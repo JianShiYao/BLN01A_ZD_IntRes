@@ -17,7 +17,7 @@
 #define SOF_FD_CUR_VOLT_MODIFY    SOF_FUN_ENABLE
 #define SOF_FD_CUR_ERR_MODIFY     SOF_FUN_ENABLE
 #define SOF_PLUSE_CUR_MODIFY      SOF_FUN_ENABLE
-#define SOF_CALC_MAX_POWER        SOF_FUN_DISABLE
+#define SOF_CALC_MAX_POWER        SOF_FUN_ENABLE
 #define SOF_USER_FUN              SOF_FUN_DISABLE
 /* end of sub function enable macro */
  
